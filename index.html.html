@@ -1,0 +1,3194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>VOCA CLINIC | 산본 오아시스 영어학원</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0F2357;
+  --navy-deep: #091740;
+  --navy-mid: #1a3370;
+  --cream: #F5EDD9;
+  --cream-dark: #EDE0C4;
+  --cream-bg: #F0E6CE;
+  --gold: #C9A84C;
+  --gold-light: #e0c06a;
+  --white: #ffffff;
+  --card-bg: #ffffff;
+  --text-main: #0F2357;
+  --text-sub: #7a8aaa;
+  --green: #27ae60;
+  --green-bg: rgba(39,174,96,0.13);
+  --red: #e74c3c;
+  --red-bg: rgba(231,76,60,0.13);
+  --radius: 16px;
+  --shadow: 0 2px 16px rgba(15,35,87,0.10);
+  --shadow-md: 0 4px 24px rgba(15,35,87,0.13);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html,body{height:100%;overflow-x:hidden;}
+body{
+  font-family:'Noto Sans KR',sans-serif;
+  background:var(--cream-bg);
+  color:var(--text-main);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ── HEADER ── */
+header{
+  width:100%;
+  background:var(--navy);
+  border-bottom:3px solid var(--gold);
+  padding:14px 20px 13px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  position:sticky;top:0;z-index:200;
+  box-shadow:0 2px 12px rgba(9,23,64,0.35);
+}
+.header-logo{
+  width:44px;height:44px;
+  background:var(--gold);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;flex-shrink:0;
+}
+.header-text{}
+.header-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-size:1.15rem;
+  letter-spacing:0.18em;
+  color:var(--white);
+}
+.header-sub{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:0.68rem;
+  color:rgba(255,255,255,0.55);
+  margin-top:1px;
+  word-break:keep-all;
+}
+
+/* ── SCREENS ── */
+.screen{display:none;width:100%;max-width:600px;padding:28px 16px 60px;}
+.screen.active{display:block;}
+
+/* ── START SCREEN ── */
+.start-hero{
+  text-align:center;
+  margin-bottom:28px;
+  padding-top:8px;
+}
+.start-hero h2{
+  font-family:'Noto Serif KR',serif;
+  font-size:1.45rem;font-weight:600;
+  color:var(--navy);margin-bottom:6px;
+}
+.start-hero p{
+  font-size:0.82rem;color:var(--text-sub);
+  word-break:keep-all;
+}
+.start-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  box-shadow:var(--shadow-md);
+  margin-bottom:20px;
+}
+.start-section-title{
+  font-size:0.82rem;font-weight:700;
+  color:var(--text-sub);
+  letter-spacing:0.06em;
+  margin-bottom:16px;
+  display:flex;align-items:center;gap:6px;
+}
+.range-selects{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:18px;
+}
+.range-selects select{
+  flex:1;
+  background:var(--cream-bg);
+  border:1.5px solid var(--cream-dark);
+  border-radius:10px;
+  color:var(--navy);
+  font-family:'Noto Sans KR',sans-serif;
+  font-weight:700;font-size:0.95rem;
+  padding:11px 32px 11px 14px;
+  cursor:pointer;
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230F2357' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 10px center;
+  background-color:var(--cream-bg);
+}
+.range-selects select:focus{outline:none;border-color:var(--gold);}
+.range-selects .sep{
+  font-size:0.82rem;color:var(--text-sub);
+  white-space:nowrap;font-weight:500;
+}
+.range-info{
+  background:var(--navy);
+  border-radius:12px;
+  padding:18px 20px;
+  display:flex;justify-content:space-around;gap:12px;
+}
+.range-info-item{text-align:center;}
+.range-info-num{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;font-size:2rem;
+  color:var(--gold);display:block;
+}
+.range-info-label{
+  font-size:0.72rem;color:rgba(255,255,255,0.55);
+  display:block;margin-top:2px;
+  letter-spacing:0.04em;
+}
+.btn-primary{
+  width:100%;
+  background:var(--navy);
+  color:var(--white);
+  font-family:'Noto Sans KR',sans-serif;
+  font-weight:700;font-size:1.05rem;
+  border:none;border-radius:14px;
+  padding:17px;cursor:pointer;
+  transition:all 0.18s;
+  box-shadow:0 4px 18px rgba(15,35,87,0.25);
+  letter-spacing:0.04em;
+}
+.btn-primary:hover{background:#1a3370;transform:translateY(-1px);}
+.btn-primary:active{transform:scale(0.98);}
+
+/* ── QUIZ SCREEN ── */
+.progress-wrap{margin-bottom:22px;}
+.progress-top{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:8px;
+}
+.progress-count{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;font-size:0.88rem;color:var(--text-sub);
+}
+.progress-day-badge{
+  background:var(--gold);
+  color:var(--navy);
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;font-size:0.72rem;
+  letter-spacing:0.1em;
+  padding:4px 12px;border-radius:999px;
+}
+.progress-bar-bg{
+  background:var(--cream-dark);
+  border-radius:999px;height:5px;overflow:hidden;
+}
+.progress-bar-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--navy),#3a5fbf);
+  border-radius:999px;
+  transition:width 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.question-card{
+  background:var(--navy);
+  border-radius:var(--radius);
+  padding:36px 24px 32px;
+  margin-bottom:16px;
+  box-shadow:var(--shadow-md);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.question-card::before{
+  content:'';
+  position:absolute;right:-30px;top:-30px;
+  width:130px;height:130px;
+  background:rgba(255,255,255,0.05);
+  border-radius:50%;
+}
+.q-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.72rem;font-weight:600;
+  color:rgba(255,255,255,0.45);
+  letter-spacing:0.12em;
+  margin-bottom:12px;display:block;
+}
+.q-word{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-size:clamp(2rem,9vw,3rem);
+  color:var(--white);
+  letter-spacing:0.02em;
+  line-height:1.1;
+  word-break:break-all;
+  margin-bottom:10px;
+}
+.q-sub{
+  font-size:0.73rem;
+  color:rgba(255,255,255,0.35);
+  font-family:'Noto Sans KR',sans-serif;
+}
+
+.choices-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:12px;
+}
+.choice-btn{
+  background:var(--white);
+  border:2px solid var(--cream-dark);
+  border-radius:12px;
+  color:var(--text-main);
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:0.93rem;font-weight:500;
+  padding:16px 10px 14px;
+  cursor:pointer;
+  transition:all 0.14s;
+  text-align:center;
+  word-break:keep-all;
+  line-height:1.45;
+  min-height:60px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:4px;
+  box-shadow:var(--shadow);
+}
+.choice-btn .choice-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.68rem;font-weight:700;
+  color:var(--gold);letter-spacing:0.06em;
+}
+.choice-btn:hover:not(:disabled){
+  border-color:var(--navy);
+  background:var(--cream-bg);
+  transform:translateY(-1px);
+  box-shadow:var(--shadow-md);
+}
+.choice-btn:active:not(:disabled){transform:scale(0.97);}
+.choice-btn.correct{
+  background:var(--green-bg);
+  border-color:var(--green);
+  color:var(--green);
+  font-weight:700;
+  pointer-events:none;
+}
+.choice-btn.correct .choice-num{color:var(--green);}
+.choice-btn.wrong{
+  background:var(--red-bg);
+  border-color:var(--red);
+  color:var(--red);
+  font-weight:700;
+  pointer-events:none;
+}
+.choice-btn.wrong .choice-num{color:var(--red);}
+.choice-btn.reveal{
+  background:rgba(39,174,96,0.08);
+  border-color:var(--green);
+  pointer-events:none;
+}
+.choice-btn.reveal .choice-num{color:var(--green);}
+.choice-btn:disabled{pointer-events:none;opacity:0.55;}
+
+.action-row{display:flex;gap:8px;flex-direction:column;}
+.btn-skip{
+  width:100%;
+  background:var(--white);
+  border:1.5px solid var(--cream-dark);
+  border-radius:12px;
+  color:var(--text-sub);
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:0.85rem;font-weight:500;
+  padding:13px 8px;cursor:pointer;
+  transition:all 0.14s;word-break:keep-all;
+  box-shadow:var(--shadow);
+}
+.btn-skip:hover{border-color:var(--text-sub);color:var(--navy);}
+.btn-skip.back{
+  color:rgba(15,35,87,0.4);
+  border-color:var(--cream-dark);
+}
+.btn-skip.back:hover{
+  border-color:var(--navy);
+  color:var(--navy);
+}
+.btn-skip.back:disabled{
+  opacity:0.35;cursor:not-allowed;
+  pointer-events:none;
+}
+
+/* ── RESULT SCREEN ── */
+.result-header{
+  text-align:center;
+  margin-bottom:24px;
+}
+.result-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;font-size:1.4rem;
+  letter-spacing:0.15em;color:var(--navy);
+  margin-bottom:5px;
+}
+.result-subtitle{
+  font-size:0.8rem;color:var(--text-sub);
+  font-family:'Noto Sans KR',sans-serif;
+  word-break:keep-all;
+}
+.ring-wrap{
+  display:flex;justify-content:center;
+  margin-bottom:24px;
+}
+.ring-svg{display:block;}
+.ring-text-score{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;font-size:2rem;
+  fill:var(--navy);
+}
+.ring-text-total{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:0.72rem;
+  fill:var(--text-sub);
+}
+
+.result-stats{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:10px;margin-bottom:24px;
+}
+.stat-box{
+  background:var(--white);
+  border:1.5px solid var(--cream-dark);
+  border-radius:12px;
+  padding:16px 8px;text-align:center;
+  box-shadow:var(--shadow);
+}
+.stat-num{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;font-size:1.6rem;
+  display:block;
+}
+.stat-num.green{color:var(--green);}
+.stat-num.red{color:var(--red);}
+.stat-num.gold{color:var(--gold);}
+.stat-label{
+  font-size:0.7rem;color:var(--text-sub);
+  display:block;margin-top:3px;
+  word-break:keep-all;
+}
+
+.result-list-title{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:0.82rem;font-weight:700;
+  color:var(--text-sub);letter-spacing:0.04em;
+  margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.result-list{
+  display:flex;flex-direction:column;gap:7px;
+  margin-bottom:28px;
+}
+.result-item{
+  background:var(--white);
+  border-radius:10px;
+  padding:12px 14px;
+  display:flex;align-items:center;gap:12px;
+  border-left:3px solid transparent;
+  box-shadow:var(--shadow);
+}
+.result-item.correct-item{border-left-color:var(--green);}
+.result-item.wrong-item{border-left-color:var(--red);}
+.result-item.skip-item{border-left-color:var(--cream-dark);}
+.result-icon{font-size:0.95rem;min-width:18px;}
+.result-word{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;font-size:0.88rem;
+  color:var(--navy);flex:1;
+}
+.result-meaning{
+  font-size:0.78rem;color:var(--text-sub);
+  word-break:keep-all;text-align:right;
+}
+.result-meaning.correct-ans{color:var(--green);font-weight:600;}
+
+.btn-home{
+  width:100%;
+  background:var(--navy);
+  border:none;border-radius:14px;
+  color:var(--white);
+  font-family:'Noto Sans KR',sans-serif;
+  font-weight:700;font-size:1rem;
+  padding:16px;cursor:pointer;
+  transition:all 0.18s;
+  box-shadow:0 4px 18px rgba(15,35,87,0.22);
+}
+.btn-home:hover{background:#1a3370;}
+
+/* ── MODAL ── */
+.modal-overlay{
+  position:fixed;inset:0;
+  background:rgba(9,23,64,0.7);
+  display:flex;align-items:center;justify-content:center;
+  z-index:500;padding:20px;
+  backdrop-filter:blur(6px);
+}
+.modal-overlay.hidden{display:none;}
+.modal-box{
+  background:var(--white);
+  border-radius:20px;
+  padding:32px 24px;
+  max-width:360px;width:100%;
+  text-align:center;
+  box-shadow:0 12px 48px rgba(15,35,87,0.25);
+}
+.modal-icon{font-size:2.2rem;margin-bottom:10px;}
+.modal-title{
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:1.05rem;color:var(--navy);
+  margin-bottom:8px;font-weight:700;
+}
+.modal-body{
+  font-size:0.83rem;color:var(--text-sub);
+  line-height:1.65;margin-bottom:22px;
+  word-break:keep-all;
+}
+.modal-btns{display:flex;gap:10px;}
+.modal-btn{
+  flex:1;border-radius:10px;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:0.88rem;font-weight:700;
+  padding:13px 8px;cursor:pointer;
+  transition:all 0.15s;
+  word-break:keep-all;
+}
+.modal-btn.primary{
+  background:var(--navy);border:none;
+  color:var(--white);
+}
+.modal-btn.secondary{
+  background:transparent;
+  border:1.5px solid var(--cream-dark);
+  color:var(--text-sub);
+}
+.modal-btn:hover{opacity:0.85;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-logo">⚕</div>
+  <div class="header-text">
+    <div class="header-title">VOCA CLINIC</div>
+    <div class="header-sub">백신 VOCA 2200 | 산본 오아시스 영어학원</div>
+  </div>
+</header>
+
+<!-- ── START SCREEN ── -->
+<div class="screen active" id="screen-start">
+  <div class="start-hero">
+    <h2>Day 범위를 선택하세요</h2>
+    <p>선택한 범위의 단어를 순서대로 출제합니다</p>
+  </div>
+  <div class="start-card">
+    <div class="start-section-title">📖 학습 범위</div>
+    <div class="range-selects">
+      <select id="sel-start" onchange="updateRangeInfo()"></select>
+      <span class="sep">일 부터</span>
+      <select id="sel-end" onchange="updateRangeInfo()"></select>
+      <span class="sep">일 까지</span>
+    </div>
+    <div class="range-info">
+      <div class="range-info-item">
+        <span class="range-info-num" id="info-days">1</span>
+        <span class="range-info-label">Days</span>
+      </div>
+      <div class="range-info-item">
+        <span class="range-info-num" id="info-words">55</span>
+        <span class="range-info-label">단어 수</span>
+      </div>
+    </div>
+  </div>
+  <button class="btn-primary" onclick="startQuiz()">▶ 시작하기</button>
+</div>
+
+<!-- ── QUIZ SCREEN ── -->
+<div class="screen" id="screen-quiz">
+  <div class="progress-wrap">
+    <div class="progress-top">
+      <span class="progress-count" id="progress-text">1 / 1</span>
+      <span class="progress-day-badge" id="q-day-badge">Day 1</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="question-card">
+    <span class="q-num" id="q-num">No.1</span>
+    <div class="q-word" id="q-word">word</div>
+    <div class="q-sub" id="q-sub">완자 고등 · Day 1 · #1</div>
+  </div>
+
+  <div class="choices-grid" id="choices-grid">
+    <button class="choice-btn" onclick="choose(0)"><span class="choice-num">1</span><span></span></button>
+    <button class="choice-btn" onclick="choose(1)"><span class="choice-num">2</span><span></span></button>
+    <button class="choice-btn" onclick="choose(2)"><span class="choice-num">3</span><span></span></button>
+    <button class="choice-btn" onclick="choose(3)"><span class="choice-num">4</span><span></span></button>
+  </div>
+
+  <div class="action-row">
+    <button class="btn-skip" onclick="skipQuestion()">→ 모르겠어요 (넘기기)</button>
+    <button class="btn-skip back" id="btn-back" onclick="goBack()" disabled>← 실수로 눌렀어요 (한 칸 앞으로)</button>
+  </div>
+</div>
+
+<!-- ── RESULT SCREEN ── -->
+<div class="screen" id="screen-result">
+  <div class="result-header">
+    <div class="result-title">RESULT</div>
+    <div class="result-subtitle" id="result-subtitle">Day 1 완료</div>
+  </div>
+
+  <div class="ring-wrap">
+    <svg class="ring-svg" width="160" height="160" viewBox="0 0 160 160">
+      <circle cx="80" cy="80" r="64" fill="none" stroke="var(--cream-dark)" stroke-width="14"/>
+      <circle id="ring-circle" cx="80" cy="80" r="64" fill="none"
+        stroke="var(--navy)" stroke-width="14"
+        stroke-linecap="round"
+        stroke-dasharray="402" stroke-dashoffset="402"
+        transform="rotate(-90 80 80)"
+        style="transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)"/>
+      <text x="80" y="74" text-anchor="middle" class="ring-text-score" id="ring-score-text">0</text>
+      <text x="80" y="96" text-anchor="middle" class="ring-text-total" id="ring-total-text">/ 0문제</text>
+    </svg>
+  </div>
+
+  <div class="result-stats">
+    <div class="stat-box">
+      <span class="stat-num green" id="stat-correct">0</span>
+      <span class="stat-label">정답</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num red" id="stat-wrong">0</span>
+      <span class="stat-label">오답</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num gold" id="stat-skip">0</span>
+      <span class="stat-label">넘기기</span>
+    </div>
+  </div>
+
+  <div class="result-list-title">📋 전체 답안</div>
+  <div class="result-list" id="result-list"></div>
+
+  <button class="btn-home" onclick="goHome()">← 처음으로 돌아가기</button>
+</div>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay hidden" id="modal">
+  <div class="modal-box">
+    <div class="modal-icon">📚</div>
+    <div class="modal-title" id="modal-title">이전 학습이 남아있어요!</div>
+    <div class="modal-body" id="modal-body">저장된 학습 기록이 있습니다.<br>이어서 풀까요?</div>
+    <div class="modal-btns">
+      <button class="modal-btn secondary" id="modal-btn-new" onclick="modalNew()">처음부터 시작</button>
+      <button class="modal-btn primary" id="modal-btn-cont" onclick="modalContinue()">이어서 풀기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+//  DATA
+// ═══════════════════════════════════════════════
+const DAYS = {
+  1: [
+    {w:'superiority',a:3,c:['홍수','증발시키다','흐릿한','탁월함']},
+    {w:'illuminate',a:0,c:['밝히다','주장하다','발생','파산한']},
+    {w:'diminish',a:0,c:['줄다','신호를 넣다','호소하다','폭발']},
+    {w:'invention',a:1,c:['추측','발명품','특권','찬성하지 않다']},
+    {w:'paradox',a:3,c:['마지못해 하는','가입하다','부여하다','역설']},
+    {w:'reliable',a:0,c:['믿을 수 있는','연기하다','타자','묶다']},
+    {w:'undermine',a:0,c:['훼손하다','휘젓다','본질적인','얻다']},
+    {w:'oral',a:1,c:['가족','구두의','몰두','바꾸다']},
+    {w:'hollow',a:1,c:['전문용어','속이 빈','일치하다','적합한']},
+    {w:'misfortune',a:1,c:['살금살금 들어오다','불운','유형의','재난']},
+    {w:'activate',a:3,c:['전환','통지','회전하다','작동시키다']},
+    {w:'fraction',a:3,c:['집어올리다','볼륨을 높이다','황야','소량']},
+    {w:'dilute',a:0,c:['묽게하다','폭탄','자제하다','비참']},
+    {w:'sweep',a:1,c:['신체적 외모','쓸다','문지르다','추방하다']},
+    {w:'auction',a:0,c:['경매','말기의','시끄러운','재단사']},
+    {w:'continuum',a:0,c:['연속체','보증하다','전염성의','규칙']},
+    {w:'asset',a:0,c:['자산','(물건.장소를) 둘러싸다','접촉','발전']},
+    {w:'employ',a:0,c:['고용하다','위반','고고학자','~와 동행하다']},
+    {w:'continent',a:2,c:['추정하다','선거구','대륙','조심']},
+    {w:'hysterical',a:0,c:['이성을 잃은','채널','진정인','규모축소']},
+    {w:'compelling',a:3,c:['자세','거친 손','다음의','설득력 있는']},
+    {w:'garbage',a:1,c:['환영','쓰레기','비서','잘못 놓다']},
+    {w:'diverse',a:2,c:['영향을 미치다','필요','다양한','금지하다']},
+    {w:'stem',a:3,c:['동기','묘사하다','가짜의','비롯되다']},
+    {w:'reproduce',a:1,c:['~을 잘라내다','복제하다','~라고 여기다','유리한']},
+    {w:'resentment',a:1,c:['투표하다','분개','상호작용하다','조절하다']},
+    {w:'muscle',a:1,c:['구분하다','근육','호소하다','짐']},
+    {w:'conquer',a:2,c:['장대한','최소의','정복하다','아주 멋진']},
+    {w:'contemporary',a:3,c:['정직한','추적','음향의','동시대의']},
+    {w:'resolve',a:1,c:['사람들','결심하다','의의','잠복 중인']},
+    {w:'abundance',a:0,c:['풍부함','소유물','즉시의','알아채다']},
+    {w:'forefather',a:0,c:['선조','만족시키다','비추다','확대']},
+    {w:'demolition',a:2,c:['감사장','잘 익은','파괴','초과하다']},
+    {w:'commuter',a:0,c:['통근자','결속력 있는','널리 알려지다','포함하다']},
+    {w:'preconception',a:2,c:['이성적인','움직이지 않는','예상','~을 이용하다']},
+    {w:'marine',a:3,c:['장난','동등한','검사','바다의']},
+    {w:'regularity',a:0,c:['규칙성','살다','예견하다','친밀한']},
+    {w:'handle',a:0,c:['손잡이','인플레이션','재단사','접촉']},
+    {w:'cultivate',a:2,c:['화살','제출하다','경작하다','기구']},
+    {w:'omission',a:2,c:['액체','철자를 쓰다','생략','점차적으로']},
+    {w:'landscape',a:3,c:['턱','상징','제출하다','풍경']},
+    {w:'steer',a:0,c:['조종하다','둘러싸다','기구','가사']},
+    {w:'citation',a:1,c:['계산','감사장','열이나게','도약']},
+    {w:'raid',a:1,c:['승객','침입하다','의도하지 않게','실']},
+    {w:'supplement',a:0,c:['보충하다','귀중한','음량','송아지장딴지']},
+    {w:'counterproductive',a:0,c:['비생산적인','손실','방어하다','깜짝 놀란']},
+    {w:'objective',a:3,c:['속이다','축하하다','설득하다','목표의']},
+    {w:'sympathetic',a:0,c:['동정적인','껴안다','가로질러 갔다','친족 혈족 관계']},
+    {w:'prohibition',a:0,c:['금지','취소하다','도시의','인구']},
+    {w:'disobedient',a:1,c:['재능이 있는','위반하는','팽창시키다','번창하다']},
+    {w:'deceitful',a:3,c:['득점','상품 진열대','음향의','기만적인']},
+    {w:'locate',a:1,c:['고체의','위치를 파악하다','제공하다','사실대로 말하자면']},
+    {w:'operate',a:0,c:['작동하다','이용하다','거리','친족 혈족 관계']},
+    {w:'manipulate',a:1,c:['잡담','조작하다','어디에나 있는','상속하다']},
+    {w:'prose',a:0,c:['산문','의례에 따르는','짜증나게 하다','물러나다']},
+  ],
+  2: [
+    {w:'approve',a:3,c:['신호','직사각형의','결심하다','승인하다']},
+    {w:'rate',a:2,c:['우아함','많이 만들어 내는','비율','필요']},
+    {w:'discharge',a:0,c:['방출하다','촉구하다','대로','감소']},
+    {w:'risk',a:0,c:['위험','제일의','오염','환대']},
+    {w:'academic',a:3,c:['적합한','침착하게 기다리다','고려하다','학문의']},
+    {w:'medicine',a:1,c:['농업','약','미묘한','전의']},
+    {w:'decision',a:1,c:['특권','결정','지각의','제조하다']},
+    {w:'stir',a:1,c:['압도하다','휘젓다','물러나다','가짜의']},
+    {w:'bypass',a:3,c:['수용하다','분석하다','표류하다','우회하다']},
+    {w:'dim',a:2,c:['저자','두려워하다','희미한','가전제품']},
+    {w:'execute',a:1,c:['연구','실행하다','고약한 냄새가 나다','민감한']},
+    {w:'budding',a:3,c:['앙갚음하다(take revenge on)','흔들리다','줏대없는','떠오르는']},
+    {w:'overhear',a:3,c:['솔직한','솜씨 좋은','운임','우연히 듣다']},
+    {w:'prior',a:2,c:['주요산물','나무줄기','먼저의','개별의']},
+    {w:'trunk',a:3,c:['진화하다','독감','보증','나무줄기']},
+    {w:'bottom',a:0,c:['밑바닥','근본적인','상당한','보증']},
+    {w:'critic',a:0,c:['비평가','승인하다','큰 슬픔','보충적인']},
+    {w:'account',a:3,c:['오두막집','말할 필요도 없이','전원의','계좌']},
+    {w:'litter',a:0,c:['쓰레기','이익','필수적인','노동조합']},
+    {w:'gesture',a:3,c:['충격','독립한','(도로를)포장하다','몸짓']},
+    {w:'bind',a:0,c:['묶다','흐릿한','담그다','~에 널리 퍼지다']},
+    {w:'unintentionally',a:1,c:['화폐의','의도하지 않게','자격을 주다','녹슬다']},
+    {w:'drill',a:2,c:['바꾸다','연기하다','구멍을 내다','더럽히다']},
+    {w:'property',a:0,c:['재산','그릇된 생각','가락','통로']},
+    {w:'integrity',a:0,c:['진실성','충돌하다','대로','집중하다']},
+    {w:'distribution',a:2,c:['~으로 여기다','공평한','분배','발전']},
+    {w:'curious',a:3,c:['제한하다','반응','나빠지다','호기심이 강한']},
+    {w:'selfishness',a:3,c:['둘러싸다','심사 숙고하다','닻','이기적임']},
+    {w:'contribute',a:1,c:['소매','기여하다','뛰어난','선언']},
+    {w:'adrift',a:3,c:['주관적인','차량','~에 익숙해진','표류하여']},
+    {w:'sail',a:3,c:['동일한','더 좋아하다','결백한','배로 가다']},
+    {w:'dominate',a:3,c:['배제','쉬움','감염시키다','지배하다']},
+    {w:'worsen',a:2,c:['방문하다','준비하다','악화되다','통제']},
+    {w:'attend',a:3,c:['~을 구성하다','지능이 높은','묽게하다','출석하다']},
+    {w:'chill',a:2,c:['신념','파다','냉기','연약한']},
+    {w:'note',a:1,c:['좌절한','메모','친척','잘못 판단한']},
+    {w:'enforce',a:3,c:['위반하는','일화','실제의','시행하다']},
+    {w:'version',a:0,c:['(어떤 것의) 변형','정신의','구분하다','흘끗 봄']},
+    {w:'raw',a:2,c:['전시하다','원의','날것의','홈']},
+    {w:'spark',a:1,c:['신뢰','불꽃','예상하다','전략']},
+    {w:'crisis',a:2,c:['먹이','정의로운','위기','고요한']},
+    {w:'wane',a:1,c:['범위','줄어들다','조치를 취하다','추정하다']},
+    {w:'corrode',a:0,c:['부식하다','윤리적 정당화','동시에','계획']},
+    {w:'subscribe',a:0,c:['구독하다','익명의','부패','유익']},
+    {w:'license',a:2,c:['별개의','주로','면허증','명료함']},
+    {w:'rot',a:3,c:['알리다','갈겨쓰다','대조','썩다']},
+    {w:'zip',a:3,c:['부끄러운','정확한','완전한','지퍼로 잠그다']},
+    {w:'utilize',a:2,c:['철자를 쓰다','동정','활용하다','버리다']},
+    {w:'former',a:0,c:['전의','노동인구','음색','타고난']},
+    {w:'wither',a:0,c:['시들다','신학','다수의','예약하다']},
+    {w:'weaken',a:1,c:['가로질러 갔다','약화시키다','비평가','예상하다']},
+    {w:'slash',a:1,c:['물질','대폭적으로 인하하다','여백','궁형으로 구부리다']},
+    {w:'tap',a:0,c:['톡톡 두드리다','대로','모으다','버리다']},
+    {w:'folk',a:1,c:['분명한','사람들','요인','크게 하다']},
+    {w:'lecture',a:0,c:['강의','반응하다','실수를 저지르다','목적']},
+  ],
+  3: [
+    {w:'prominent',a:3,c:['약해지다','빈번한','이국적인','두드러진']},
+    {w:'incompatible',a:2,c:['오랫동안 지속되는','계좌','성미가 맞지 않는','놀라움']},
+    {w:'vast',a:1,c:['구걸하다','광대한','증거','개요']},
+    {w:'solitary',a:2,c:['표류하다','숨다','고독한','떠서']},
+    {w:'affect',a:0,c:['영향을 미치다','순환','장기간으로','위기']},
+    {w:'make a mistake',a:0,c:['실수를 저지르다','심리학','직면하다','쓰레기']},
+    {w:'define',a:0,c:['정의하다','습기','흐르다','줄다']},
+    {w:'lean',a:3,c:['친족 혈족 관계','편집자','영역','기울다']},
+    {w:'overpowering',a:0,c:['압도적인','단서','제거하다','삼키다']},
+    {w:'stock',a:2,c:['피할 수 없는','생각지 못한 위험','주식','무너지다']},
+    {w:'availability',a:2,c:['바래다주다','긴급한','이용 가능성','과감한']},
+    {w:'furnish',a:3,c:['결과','확대','경험적인','제공하다']},
+    {w:'command',a:1,c:['전자의','명령','선조','짐']},
+    {w:'furry',a:2,c:['불만족스러운','보급','털의','신속한']},
+    {w:'oppress',a:3,c:['중독','부푼 것','생략하다','억압하다']},
+    {w:'vacuum',a:3,c:['추정하다','파다','행동하다','진공의']},
+    {w:'make arrangements',a:3,c:['비위맞추다','발명의 재주','실행하다','준비를 하다']},
+    {w:'sarcastic',a:1,c:['치다','빈정대는','추방하다','목적지']},
+    {w:'poverty',a:3,c:['불평하다','축하연','뚜렷한','빈곤']},
+    {w:'sow',a:0,c:['씨를 뿌리다','회사','불경기','밀도']},
+    {w:'aquatic',a:1,c:['자세','물의','씨를 뿌리다','폭탄']},
+    {w:'bite',a:0,c:['물다','덜다','느슨하게','이주하다']},
+    {w:'annual',a:1,c:['비용','연간의','비난하다','수입']},
+    {w:'mourn',a:1,c:['~와 동행하다','슬퍼하다','일치하다','정복하다']},
+    {w:'rule',a:2,c:['노동조합','읽고 쓸 줄 아는','규칙','~을 요약하다']},
+    {w:'moisture',a:0,c:['습기','솔직한','준비를 하다','쏘다']},
+    {w:'utter',a:0,c:['완전한','배관공','부화하다','비판하다']},
+    {w:'scorn',a:1,c:['가볍게 던지다','경멸','빨갛게 불타다','지성']},
+    {w:'deal',a:2,c:['공격하다','중고의','거래','떠돌아다니다']},
+    {w:'timber',a:1,c:['절대적인','재목','껍질이 딱딱한','중간의']},
+    {w:'mist',a:2,c:['노동인구','수직의','안개','결심한']},
+    {w:'tip',a:1,c:['결심하다','팁','운명','목초지']},
+    {w:'manner',a:2,c:['타원형','분별있는','방법','가슴설레게하다']},
+    {w:'abundant',a:0,c:['풍족한','윤기 있는 머리','실험실','새롭게 하다']},
+    {w:'string',a:2,c:['비판하다','위반하는','끈','교외']},
+    {w:'wear',a:3,c:['약해지다','침해','부인하다','착용하다']},
+    {w:'avoid',a:0,c:['피하다','자발적인','짧음','물러나다']},
+    {w:'make a choice',a:2,c:['소나무','팽창시키다','선택을 하다','보존하다']},
+    {w:'virtue',a:1,c:['보행자','미덕','우연히 듣다','~를 집어들다']},
+    {w:'deceive',a:3,c:['아픔','유형의','더럽히다','속이다']},
+    {w:'active',a:2,c:['두루마리','새겨진 글자','활동적인','도덕적인']},
+    {w:'evolve',a:2,c:['도덕적인','턱','진화하다','식민지']},
+    {w:'disappear',a:2,c:['촉진하다','문의하다','사라지다','매우 낮은 가능성']},
+    {w:'familiar',a:0,c:['잘아는','강화하다','가파른','충돌하다']},
+    {w:'drift',a:3,c:['피로','빨갛게 불타다','결심한','표류하다']},
+    {w:'habitat',a:1,c:['단서','서식지','실','위를 쳐다보다']},
+    {w:'make an excuse',a:1,c:['경영하다','변명을 하다','열이나게','처음의']},
+    {w:'counsellor',a:2,c:['유전자의','타고난','상담가','주제']},
+    {w:'via',a:2,c:['감정이입의','깜박거리는','~을 경유하여','바다표범']},
+    {w:'make an effort',a:3,c:['감정이입의','냉장','버리다','노력하다']},
+    {w:'delicate',a:1,c:['내포하다','연약한','신경','방법']},
+    {w:'encourage',a:0,c:['격려하다','정신','물리학자','애국자']},
+    {w:'motor',a:1,c:['부르다','동력','중간의','무딘']},
+    {w:'usage',a:2,c:['줄무늬','증인','어법','추상적인']},
+    {w:'chronically',a:1,c:['놀라움','만성적으로','재능이 있는','중간의']},
+  ],
+  4: [
+    {w:'amplify',a:0,c:['(소리등을) 크게 하다','어디에나 있는','침착하게 기다리다','억누르다']},
+    {w:'vacancy',a:0,c:['빈자리','고물','불에 타다','모으다']},
+    {w:'scale',a:2,c:['부서지기 쉬운','난파','규모','주창하다']},
+    {w:'digest',a:1,c:['파괴하다','소화하다','결합시키다','후한']},
+    {w:'vital',a:3,c:['끼워 넣다','재해','잠시','필수적인']},
+    {w:'inflation',a:0,c:['인플레이션','수족관','녹이다','활기를 띠게하다']},
+    {w:'recipe',a:3,c:['연결하다','부족','올리다','조리법']},
+    {w:'anxious',a:1,c:['운반하다','걱정하는','가족','문의하다']},
+    {w:'random',a:1,c:['허락하다','무작위의','느슨하게','범죄자']},
+    {w:'count',a:1,c:['차고','세다','민주주의','폭발']},
+    {w:'accomplish',a:0,c:['성취하다','위협','지휘자','지속적으로']},
+    {w:'encode',a:0,c:['암호화하다','헌신','존경','더러움']},
+    {w:'innovate',a:2,c:['떨어질 수 없는','신념','혁신하다','타격']},
+    {w:'depend',a:2,c:['다수','톡특한','의지하다','선정적인']},
+    {w:'dare',a:3,c:['음량','강탈하다','회복하다','감히~하다']},
+    {w:'erect',a:1,c:['식욕','세우다','~을 요약하다','특권']},
+    {w:'mental',a:0,c:['정신의','지구','횃불','표준']},
+    {w:'gigantic',a:1,c:['침해하다','거대한','강력한','지루한']},
+    {w:'outlook',a:0,c:['전망','떠돌아다니다','읽고 쓸 줄 아는','넓은']},
+    {w:'adhere',a:1,c:['유리한 점','고수하다','작은','조절하다']},
+    {w:'greasy food',a:3,c:['경작하다','정반대의','구제책','기름진 음식']},
+    {w:'economy',a:3,c:['삽입하다','반대하다','끌다','경제']},
+    {w:'coarse hand',a:2,c:['오랫동안 지속되는','의뢰인','거친 손','도살']},
+    {w:'beg',a:1,c:['소개하다','구걸하다','군대','총알']},
+    {w:'improbable',a:0,c:['개연성이없는','마음속에 품다','기둥','모순']},
+    {w:'moral',a:3,c:['강조','왈칵 흘러나오다','접촉','도덕적인']},
+    {w:'steam',a:3,c:['중대한','난파','확대','김을 내다']},
+    {w:'tender meat',a:1,c:['경작하다','연한 고기','모으다','연루']},
+    {w:'proportion',a:3,c:['방','빨갛게 불타다','오두막집','비율']},
+    {w:'revolt',a:1,c:['타자','반란','통로','방수의']},
+    {w:'extend',a:3,c:['보증하다','왈칵 흘러나오다','거르다','늘리다']},
+    {w:'spur',a:3,c:['우연한 만남','자비로운','자세','박차']},
+    {w:'twist',a:2,c:['~보다오래가다','새겨진 글자','비틀다','필수적인']},
+    {w:'mud',a:2,c:['한가롭게 거닐다','근육','진흙','필요']},
+    {w:'surgery',a:1,c:['일축하다','외과','뿌리다','졸업증서']},
+    {w:'calculate',a:3,c:['흡수하다','덫','묘사하다','계산하다']},
+    {w:'panel',a:0,c:['합판','고요한','준비하다','기대']},
+    {w:'glossy hair',a:0,c:['윤기 있는 머리','정체','절차적 정당성','조리법']},
+    {w:'courtesy',a:3,c:['소스','깜짝 놀란','자발적인','예의범절']},
+    {w:'bumpy road',a:1,c:['본능적인','울퉁불퉁한 길','~을 책임지다','도래']},
+    {w:'arch',a:2,c:['가능성이 있는','상담가','궁형으로 구부리다','직경']},
+    {w:'thrill',a:1,c:['동양','가슴설레게하다','파괴하다','예견하다']},
+    {w:'composition',a:3,c:['톡톡 두드리다','다발','다짐','구성']},
+    {w:'bottle',a:1,c:['총계의','병','위반하는','임금']},
+    {w:'hedge',a:1,c:['생산하다','울타리','비틀다','쾅닫다']},
+    {w:'treasure',a:1,c:['청각의','보물','잡담','유연성']},
+    {w:'equip',a:3,c:['정책','동물학자','김을 내다','장비를 갖추다']},
+    {w:'common',a:3,c:['교리','쓸다','결속','일반의']},
+    {w:'donate',a:3,c:['거대한','~와 결별하다','기둥','기부하다']},
+    {w:'bar',a:1,c:['제일의','주점','포함하다','자유']},
+    {w:'transport',a:2,c:['세금','상처','운송하다','마지못해 하는']},
+    {w:'chief',a:0,c:['주요한','보통의','오염','가혹한']},
+    {w:'mold',a:3,c:['나빠지다','종류','무의미한 말','(주조용의) 틀']},
+    {w:'minimum',a:3,c:['사과','촉진하다','위험','최소']},
+    {w:'dwell',a:0,c:['살다','진수시키다','변장','혁신하다']},
+  ],
+  5: [
+    {w:'succession',a:1,c:['튀다','계승','유익','문장']},
+    {w:'stimulate',a:0,c:['자극하다','구성하다','지원하다','보증하다']},
+    {w:'empirical',a:3,c:['신뢰','진짜의','받아쓰기를 하다','경험적인']},
+    {w:'scent',a:2,c:['잠재능력','자세','냄새','반대의']},
+    {w:'thin',a:0,c:['여윈','껍질이 딱딱한','타이어','무색하게 하다']},
+    {w:'wave',a:0,c:['파도','개별의','다음의','송아지장딴지']},
+    {w:'mislead',a:2,c:['생태학','~할 가치가 있다','잘못 인도하다','고용하다']},
+    {w:'globe',a:1,c:['회사의','지구','무심결의','꽃']},
+    {w:'graceful',a:2,c:['주목할 만한','기뻐하다','우아한','정신과 의사']},
+    {w:'voyage',a:1,c:['조심하다','항해','소중히 간직된','인체하다']},
+    {w:'stink',a:0,c:['고약한 냄새가 나다','보상하다','장비를 갖추다','무색하게 하다']},
+    {w:'lose one\'s appetite',a:3,c:['도전','즐겁게하다','깜박거리는','식욕을 잃다']},
+    {w:'frustrated',a:3,c:['잘 익은','근거없는 이야기','보상','좌절한']},
+    {w:'runaway',a:0,c:['저지할 수 없는','설치하다','저자','상품']},
+    {w:'dig',a:1,c:['살금살금 들어오다','파다','(학교 수업의) 교시','물러나다']},
+    {w:'remaining',a:0,c:['남아 있는','관광','위급한','생산하다']},
+    {w:'plant',a:0,c:['식물','설명','축하연','믿을수 없는']},
+    {w:'batter',a:2,c:['성큼성큼 걷다','속이다','타자','(짐승의)무리']},
+    {w:'beam',a:2,c:['차고','고약한 냄새가 나다','송신하다','가정']},
+    {w:'current',a:0,c:['흐름','직면하다','수업료','예산을 세우다']},
+    {w:'blank',a:1,c:['파산한','텅 빈','웅변의','물을 빼다']},
+    {w:'remove',a:3,c:['소개하다','분리된','내포하다','제거하다']},
+    {w:'demand',a:2,c:['공간적인','(자원의)보존','요구','파편']},
+    {w:'lose one\'s temper',a:0,c:['흥분하다','등록하다','자산','노력하다']},
+    {w:'minimal',a:1,c:['등록하다','최소의','기만적인','출발']},
+    {w:'load',a:2,c:['어디에나 있는','감소','짐','우울한']},
+    {w:'decent',a:1,c:['영원히','예의 바른','창립','경매']},
+    {w:'seal',a:0,c:['봉인하다','낙담한','간청하다','통제']},
+    {w:'dishonorable',a:1,c:['집중하다','수치스러운','내용','매달다']},
+    {w:'explanation',a:2,c:['적응시키다','전망','설명','검열']},
+    {w:'conclusion',a:3,c:['경매','방사능','무작위의','결말']},
+    {w:'sensible',a:2,c:['요리','방사능의','분별있는','참가자']},
+    {w:'controversy',a:2,c:['냉기','박수갈채','논쟁','평판']},
+    {w:'fold',a:1,c:['추상적인','접다','신속한','분별있는']},
+    {w:'male',a:2,c:['역경','계단','수컷','이성적인']},
+    {w:'insist',a:2,c:['운하','재개발','주장하다','~하기 쉬운']},
+    {w:'lose one\'s patience',a:1,c:['소매','인내심을 잃다','충격','극복하다']},
+    {w:'partial',a:1,c:['부서지기 쉬운','부분적인','구조','달라붙다']},
+    {w:'unsatisfactory',a:2,c:['제한하다','노력하다','불만족스러운','진공의']},
+    {w:'corporate',a:2,c:['통합하다','붕괴','회사의','쾅닫다']},
+    {w:'stair',a:0,c:['계단','발표하다','타이어','책임있는']},
+    {w:'web',a:0,c:['거미집','숫자','이성','염려하는']},
+    {w:'surgical',a:0,c:['외과수술의','반응','세탁소','의식']},
+    {w:'presume',a:1,c:['굽다','추정하다','길들이다','붙잡다']},
+    {w:'signal',a:2,c:['초조한','~을 대신하다','신호를 넣다','익명의']},
+    {w:'violent',a:1,c:['기대','격렬한','짖다','의심하는']},
+    {w:'reception',a:2,c:['신','~을 잘라내다','환영','친족 혈족 관계']},
+    {w:'crusty',a:0,c:['껍질이 딱딱한','허영심이 강한','강한','퍼뜨리다']},
+    {w:'frequent',a:2,c:['요인','송신하다','빈번한','자비로운']},
+    {w:'swallow one\'s grief',a:3,c:['어디에나 있는','~을 위협하다','축하연','슬픔을 억누르다']},
+    {w:'swallow one\'s pride',a:0,c:['자존심을 억누르다','보이지 않는','깜짝 놀란','방']},
+    {w:'entangle',a:3,c:['물질','전망','요구하다','얽히게하다']},
+    {w:'coherent',a:0,c:['일관성 있는','녹이다','유연성','잠복 중인']},
+    {w:'vision',a:2,c:['붙잡다','악화시키다','시력','운하']},
+    {w:'reasonable',a:2,c:['상의하다','공개하다','합리적인','편향되지 않은']},
+  ],
+  6: [
+    {w:'necessity',a:0,c:['필요','난폭하게 운전하다','엄격한','예견하다']},
+    {w:'bullet',a:0,c:['총알','연속체','아주 훌륭한','제공하다']},
+    {w:'penetrate',a:3,c:['분명한','두꺼운','챙겨두다','침투하다']},
+    {w:'persistently',a:2,c:['힘','줄무늬','지속적으로','숙달된']},
+    {w:'flexible',a:3,c:['대폭적으로 인하하다','모양','과감히~을 하다','유연한']},
+    {w:'hoop',a:1,c:['지시하다','테','위치를 파악하다','발견하다']},
+    {w:'remnant',a:3,c:['불꽃','연기하다','암호화하다','나머지']},
+    {w:'spin',a:2,c:['거주하다','이성을 잃은','잣다','지성']},
+    {w:'sociology',a:1,c:['접근','사회학','전진하다','재간있는']},
+    {w:'leave out',a:3,c:['되돌려주다','추상적인','감염시키다','~을 빼다']},
+    {w:'glide',a:0,c:['미끄러지듯 가다','조치를 취하다','계급구조','도']},
+    {w:'stumble',a:2,c:['감소','계급에 따른','비틀거리다','모방']},
+    {w:'responsible',a:2,c:['극장','살','책임있는','이용도']},
+    {w:'terminology',a:2,c:['빠지다','~하기를 학수고대하다','전문용어','탐험하다']},
+    {w:'prospect',a:3,c:['차지하다','각각','중력','전망']},
+    {w:'bomb',a:1,c:['추천하다','폭탄','목마름','임대료']},
+    {w:'suspect',a:0,c:['의심하다','발생하다','계좌','응시하다']},
+    {w:'recruit',a:3,c:['은유','유사','속이다','채용하다']},
+    {w:'assess',a:1,c:['매료된','평가하다','인정하다','통계치']},
+    {w:'draft',a:3,c:['설득하다','기구','목표의','원고']},
+    {w:'basis',a:3,c:['색인','언급하다','전쟁이 일어나다','기초']},
+    {w:'respect',a:3,c:['차별하다','분별있는','우연히 듣다','존경']},
+    {w:'mercy',a:2,c:['정책','활성화','자비','적극적으로']},
+    {w:'personnel',a:2,c:['수용하다','용어','인원','호기심이 강한']},
+    {w:'sort out',a:0,c:['정리하다','의회','충분한','기사']},
+    {w:'worship',a:2,c:['결백한','규칙적인','경배하다','구성 요소']},
+    {w:'wire',a:1,c:['무모한','철사','고무시키다','보내다']},
+    {w:'bloom',a:2,c:['흉내내다','유감','꽃','아사']},
+    {w:'collaboration',a:1,c:['간섭','협동','직경','결속']},
+    {w:'primarily',a:1,c:['꽃','주로','끊임없는','~하는 경향이 있는']},
+    {w:'decisive',a:1,c:['전원의','결정적인','요리','보존하다']},
+    {w:'overtake',a:3,c:['밝히다','결정하다','검열','따라잡다']},
+    {w:'set out',a:1,c:['정서','~하기 시작하다','전략','정의']},
+    {w:'petitioner',a:3,c:['위임','먹이를 주다','불변의','진정인']},
+    {w:'laborious',a:0,c:['힘든','구두의','다양한','보이지 않는']},
+    {w:'literally',a:0,c:['문자 그대로','제일의','연기하다','일관성있는']},
+    {w:'opposite',a:0,c:['정반대의','공급하다','적의','다치게하다']},
+    {w:'conviction',a:3,c:['텅 빈','끼워 넣다','동력','신념']},
+    {w:'switch',a:3,c:['경계','감각 기관','방대함','스위치']},
+    {w:'emerge',a:1,c:['개혁','나오다','맹렬한','마침내']},
+    {w:'scan',a:3,c:['내향성인 사람','기만적인','추정하다','훑어보다']},
+    {w:'enormous',a:0,c:['거대한','재개발','정중한','보장하다']},
+    {w:'industry',a:2,c:['하강','항아리','산업','붕괴']},
+    {w:'drop out',a:0,c:['중퇴하다(quit','정체를 밝히다','이성적인','저지하다']},
+    {w:'advantage',a:0,c:['유리한 점','풍부한','교리','그네']},
+    {w:'capital',a:2,c:['자손','고려하다','수도','움직이지 않는']},
+    {w:'cry out',a:1,c:['활용하다','소리치다','등록하다','묵상하다']},
+    {w:'blast',a:2,c:['노력하다','거래','폭발','신의']},
+    {w:'session',a:3,c:['저항 운동','결합시키다','독창적인','회기']},
+    {w:'rapid',a:1,c:['진정인','빠른','다양성','휘파람을 불다']},
+    {w:'savory',a:2,c:['향상시키는','좌절한','맛좋은','지원자']},
+    {w:'nerve',a:0,c:['신경','암호화하다','배로 가다','독창적인']},
+    {w:'accelerate',a:0,c:['가속화하다','수치스러운','배로 가다','이동하다']},
+    {w:'hut',a:0,c:['오두막집','상호작용하다','연대순의','송아지장딴지']},
+    {w:'serve',a:0,c:['제공하다','우선순위를 매기다','대로','요금']},
+  ],
+  7: [
+    {w:'look around',a:0,c:['주위를 둘러보다','비서','앞서다','(고통의)경감']},
+    {w:'scatter',a:0,c:['뿌리다','생각지 못한 위험','화나게 하다','~을 요약하다']},
+    {w:'censor',a:0,c:['검열','사전에 결정된','뛰어난','다양한']},
+    {w:'progress',a:0,c:['전진하다','결합시키다','만족시키다','생물학자']},
+    {w:'track',a:3,c:['신','즉시의','전술','추적하다']},
+    {w:'exclusion',a:3,c:['회사의','규제하다','구성하다','배제']},
+    {w:'rust',a:2,c:['풍부함','끌어내다','녹슬다','통로']},
+    {w:'arrange',a:1,c:['추적','준비하다','축소','귀중한']},
+    {w:'sweat',a:2,c:['처음의','도래','땀','뇌물']},
+    {w:'inborn',a:0,c:['타고난','특성','관광','목적지']},
+    {w:'mean',a:3,c:['의회','우연한 만남','손잡이','의미하다']},
+    {w:'look down on',a:0,c:['~을 경멸하다','조직하다','발생','비율']},
+    {w:'resource',a:0,c:['자원','최대화 하다','필수적인','파괴하다']},
+    {w:'judge',a:0,c:['재판관','다양성','지지하다','비탈']},
+    {w:'professional',a:3,c:['무너지다','재판','의상','전문의']},
+    {w:'resistant',a:1,c:['식사를 하다','저항하는','겉모습','비서']},
+    {w:'wound',a:2,c:['즐겁게하다','편집하다','상처','꺼지다']},
+    {w:'withdraw',a:3,c:['공손한','폐렴','타고난','물러나다']},
+    {w:'involvement',a:1,c:['변장','연루','분명한','무모한']},
+    {w:'prison',a:2,c:['바다의','초조한','감옥','수출하다']},
+    {w:'repeat',a:2,c:['널리 알려지다','힘이 드는','반복하다','타당한']},
+    {w:'aware',a:0,c:['인식하는','유선형의','화산의','공개하다']},
+    {w:'annoyed',a:2,c:['애국자','감각 기관','화난','확보하다']},
+    {w:'calf',a:0,c:['송아지','신진의','궁형으로 구부리다','막다']},
+    {w:'survive',a:3,c:['균일한','기쁨','자식','살아남다']},
+    {w:'offer',a:2,c:['말의','재능이 있는','제의하다','부식하다']},
+    {w:'feed',a:3,c:['(소리온도등을)낮추다','무딘','투표하다','먹이를 주다']},
+    {w:'tease',a:1,c:['비교하다','놀리다','휘파람을 불다','잘 익은']},
+    {w:'serene',a:3,c:['자세','결속','그릇된 생각','고요한']},
+    {w:'adequate',a:2,c:['미숙한','경직된','적절한','지원자']},
+    {w:'rent',a:2,c:['기분','고용하다','임대료','∼을 헤치고 나아가다']},
+    {w:'upright',a:0,c:['똑바로 선','번갈아 하다','배반','회사']},
+    {w:'latter',a:2,c:['비극','인종의','후자의','단언하다']},
+    {w:'discard',a:3,c:['아주 멋진','진흙','지각의','버리다']},
+    {w:'concentrate',a:0,c:['집중하다','구체적으로','많이 만들어 내는','비참']},
+    {w:'bribe',a:0,c:['뇌물','부푼 것','환호하다','채택하다']},
+    {w:'bullying',a:2,c:['휴대할수 있는','특허','괴롭히기','생생한']},
+    {w:'contrast',a:3,c:['비극적인','친척','전시하다','대조']},
+    {w:'apparent',a:3,c:['타원형','그릇된 인식','손바닥','분명한']},
+    {w:'look through',a:2,c:['대조','방사능','자세히살펴보다','독립한']},
+    {w:'episode',a:0,c:['일화','~을 구성하다','자원봉사자','관계가 있다']},
+    {w:'abuse',a:2,c:['주저하다','전쟁이 일어나다','남용하다','가슴설레게하다']},
+    {w:'ward',a:3,c:['각각','울퉁불퉁한 길','도덕적인','선거구']},
+    {w:'respond',a:3,c:['생산하다','봉투','방문하다','반응하다']},
+    {w:'deduce',a:3,c:['방법','추적','광대한','연역하다']},
+    {w:'transfer',a:2,c:['결정','논쟁','옮기다','타협']},
+    {w:'look forward to',a:2,c:['뜨다','강박감에 사로잡혀서','~하기를 학수고대하다','규제하다']},
+    {w:'immediate',a:0,c:['즉시의','종류','발표하다','계승']},
+    {w:'occasion',a:0,c:['경우','위업','식욕을 잃다','상징']},
+    {w:'nourish',a:1,c:['의심하다','영양분을 주다','높이다','신용하지 않다']},
+    {w:'proceed',a:0,c:['나아가다','방대함','지역','다치게하다']},
+    {w:'bury',a:1,c:['풍습','묻다','상인','언론인']},
+    {w:'directive',a:0,c:['지시적인','마당','껍질이 딱딱한','~와 충돌하다']},
+    {w:'look up to',a:3,c:['일치하다','내포하다','관료정치','~을 존경하다']},
+    {w:'psychology',a:1,c:['여행','심리학','비난하다','힘']},
+  ],
+  8: [
+    {w:'cheat',a:3,c:['열이나게','산출하다','정리하다','부정행위하다']},
+    {w:'colleague',a:0,c:['동료','오도하는','유혹하다','평가하다']},
+    {w:'blame',a:1,c:['역설','비난하다','지지하다','효율적인']},
+    {w:'chip',a:1,c:['공포','조각','가리키다','눈에 잘띄는']},
+    {w:'imitation',a:3,c:['일치하다','대안','필수 조건','모방']},
+    {w:'rigor',a:3,c:['구분하다','신경의','함축적인','엄격']},
+    {w:'run off',a:2,c:['이용하다','현상','흘러내리다','자비']},
+    {w:'pain',a:2,c:['결과','설명','아픔','침입하다']},
+    {w:'drain',a:0,c:['물을 빼다','움츠리다','고려하다','신용할 수 있는']},
+    {w:'absolute',a:1,c:['무지','절대적인','원시적인','비행']},
+    {w:'check',a:2,c:['주창하다','상','점검하다','복잡한']},
+    {w:'sentiment',a:1,c:['대조','감정','재판','비추다']},
+    {w:'cite',a:2,c:['경험적인','결속력 있는','인용하다','미숙한']},
+    {w:'transaction',a:0,c:['거래','상쾌한','파산하다','가축화']},
+    {w:'purpose',a:3,c:['취소하다','처형하다','왈칵 흘러나오다','목적']},
+    {w:'outstanding',a:3,c:['병','재목','간섭','뛰어난']},
+    {w:'sophisticated',a:0,c:['정교한','가혹한','유연한','새기다']},
+    {w:'burn',a:0,c:['불에 타다','공연하다','널리 퍼진','시끄러운']},
+    {w:'bundle',a:1,c:['고민','다발','~을 이용하다','불운']},
+    {w:'dine',a:0,c:['식사를 하다','토론','~을 잘라내다','~와 사이좋게 지내다']},
+    {w:'treat',a:3,c:['일축하다','타락하다','철학적인','치료하다']},
+    {w:'back up',a:1,c:['언급하다','지지하다','경계를 이루다','빈정대는']},
+    {w:'brush',a:1,c:['부정행위하다','솔','적당한','재료']},
+    {w:'distinct',a:0,c:['뚜렷한','살아남다','허락하다','자세']},
+    {w:'sanction',a:3,c:['미묘한','수입','명확히','제재']},
+    {w:'artistic',a:3,c:['막다','포기하다','섞다','예술의']},
+    {w:'staple',a:0,c:['주요산물','덫','은신처','얽히게하다']},
+    {w:'go off',a:1,c:['(짐승의)무리','꺼지다','확보하다','단서']},
+    {w:'incur',a:3,c:['지각하다','간격','전망','초래하다']},
+    {w:'dot',a:2,c:['통찰력','육체 노동의','점','별로 크지 않은']},
+    {w:'transition',a:3,c:['존엄','항구','수입','전환']},
+    {w:'fluently',a:0,c:['유창하게','흐름','호기심','번창하다']},
+    {w:'refresh',a:2,c:['선조','자세히살펴보다','새롭게 하다','긴']},
+    {w:'layout',a:0,c:['설계','허드렛 일','보내다','저지할 수 없는']},
+    {w:'concept',a:1,c:['회의','개념','임금','문학']},
+    {w:'shallow',a:1,c:['맛','얕은','배제','적의']},
+    {w:'celebrity',a:2,c:['동경하다','변명을 하다','유명인','유기체']},
+    {w:'strategy',a:0,c:['전략','번영','선거','처형하다']},
+    {w:'journalism',a:1,c:['근시의','신문 잡지계','길들여진','슬픔을 억누르다']},
+    {w:'inseparable',a:1,c:['둘의','떨어질 수 없는','식욕을 잃다','보수적인']},
+    {w:'expert',a:2,c:['사라지다','정치','전문가','밑에 깔린']},
+    {w:'fashion',a:0,c:['유행','작동시키다','더미','모듈']},
+    {w:'broad',a:2,c:['저지하다','중대한','넓은','주목할 만한']},
+    {w:'log off',a:0,c:['사용 종료하다','탁월함','축소','미숙한']},
+    {w:'pick up',a:3,c:['해충','추측','윤리적 정당화','집어올리다']},
+    {w:'hardship',a:1,c:['할당하다','고난','(도로를)포장하다','재간있는']},
+    {w:'expansion',a:1,c:['열이나게','확장','위를 쳐다보다','찬성하지 않다']},
+    {w:'bear',a:1,c:['요구하다','곰','전적으로','나뭇가지']},
+    {w:'depict',a:2,c:['유명한','수지를 맞추다','묘사하다','옷을 입히다']},
+    {w:'budget',a:0,c:['예산','보수적인','회전하다','회의']},
+    {w:'force',a:0,c:['힘','혼돈','담수','재산']},
+    {w:'faith',a:0,c:['신뢰','존경하다','주창하다','전적으로']},
+    {w:'workforce',a:2,c:['많이 만들어 내는','묶다','노동인구','높이다']},
+    {w:'irrelevant',a:2,c:['총알','거대한','(~와) 관계가 없는','손잡이']},
+    {w:'accompany',a:0,c:['~와 동행하다','냉장','경향','주목']},
+  ],
+  9: [
+    {w:'stance',a:3,c:['썩다','생태학','비율','태도']},
+    {w:'control',a:2,c:['요금','새롭게 하다','통제','잘 익은']},
+    {w:'evaluate',a:0,c:['평가하다','명백한','섞다','규모축소']},
+    {w:'ethnic',a:3,c:['중대한','생각지 못한 위험','잘라내다','인종의']},
+    {w:'decay',a:2,c:['일시적인','특징적인','부패','노력하다']},
+    {w:'retail',a:2,c:['철학','되풀이하는','소매','실제의']},
+    {w:'naive',a:0,c:['순진한','이용도','타자','개성']},
+    {w:'constraint',a:3,c:['반대의','충분한','시민의','제약']},
+    {w:'prey',a:0,c:['먹이','사전에 결정된','쳐부수다','전시하다']},
+    {w:'authority',a:3,c:['부화하다','찬란한','수술을 받다','권위']},
+    {w:'elastic',a:3,c:['동력','너그러운','비만','탄력 있는']},
+    {w:'immigrant',a:3,c:['계몽하다','의심하는','상당한','이민자']},
+    {w:'liquid',a:0,c:['액체','합판','초과하다','지친']},
+    {w:'publication',a:3,c:['비참','원의','과장','발표']},
+    {w:'pursuit',a:1,c:['참가자','추구','가능성이 있는','삭제하다']},
+    {w:'ratio',a:0,c:['비율','연한 고기','이용하다','오랫동안 지속되는']},
+    {w:'furious',a:2,c:['희박한 가망','외과수술의','격노한','일치하다']},
+    {w:'bond',a:3,c:['높이다','해치다','할당하다','결속']},
+    {w:'abolish',a:0,c:['폐지하다','~라고 여기다','경의를 표하다','상당한']},
+    {w:'restriction',a:1,c:['굉장히 멋진','제한','흐릿한','비위맞추다']},
+    {w:'ecological',a:1,c:['~을 줄이다','생태적인','인플레이션','번식하다']},
+    {w:'hypothesis',a:1,c:['흡수하다','가설','계획','공연하다']},
+    {w:'defend',a:3,c:['경의를 표하다','휴대할수 있는','회사','방어하다']},
+    {w:'politics',a:1,c:['주로','정치','방사능의','본질적인']},
+    {w:'motive',a:2,c:['매료된','~을 연장하다','동기','먼저의']},
+    {w:'urge',a:3,c:['위반하는','재갈','놀라게 하다','촉구하다']},
+    {w:'scholarship',a:0,c:['장학금','가짜의','이루다','예의범절']},
+    {w:'consistent',a:1,c:['불쾌한','일관된','안으로','고요한']},
+    {w:'yard',a:0,c:['마당','막다','동정','가뭄']},
+    {w:'quarrel',a:1,c:['이전의','다투다','분출하다','내밀다']},
+    {w:'ritual',a:1,c:['식물학자','의식','폐지하다','상호 작용']},
+    {w:'limitation',a:3,c:['발생','붓다','전진하다','제한']},
+    {w:'utility',a:0,c:['유익','보수적인','확신시키다','관료정치']},
+    {w:'prone',a:0,c:['~하기 쉬운','모으다','구성하다','허드렛 일']},
+    {w:'tale',a:3,c:['보장하다','낙담한','맡기다','이야기']},
+    {w:'suppression',a:0,c:['억압','다투다','폭로하다','군대']},
+    {w:'inquire',a:1,c:['흘러내리다','문의하다','필요','진행 중인']},
+    {w:'huge',a:1,c:['성미가 맞지 않는','거대한','평가하다','잘 익은']},
+    {w:'whisper',a:1,c:['동시에','속삭임','쓸다','자유']},
+    {w:'overlap',a:3,c:['매우드문','기부하다','부정의','겹치다']},
+    {w:'lessen',a:3,c:['부담','건축','유창하게','감소하다']},
+    {w:'transit',a:3,c:['투명한','열망하는','(유령이)출몰하다','통과']},
+    {w:'monitor',a:0,c:['모니터','쉬움','기만적인','상표']},
+    {w:'float',a:3,c:['잠복 중인','보충적인','식물','뜨다']},
+    {w:'profession',a:2,c:['부패','출석하다','전문직','발표하다']},
+    {w:'warrior',a:0,c:['병사','친척','~을 구성하다','같은']},
+    {w:'resign',a:2,c:['성직자','지적 교양','사임하다','결점']},
+    {w:'exceed',a:1,c:['제출하다','초과하다','궁형으로 구부리다','옆 모습']},
+    {w:'parallel',a:0,c:['나란한','나뭇가지','더미','내향성인 사람']},
+    {w:'standard',a:1,c:['이론적으로 타당한 이유','표준','미적인','송어']},
+    {w:'visual',a:0,c:['시각적인','의회','거래','회의']},
+    {w:'flourish',a:0,c:['번창하다','명령','예산','재판']},
+    {w:'finite',a:3,c:['조종하다','해방하다','수치스러운','유한한']},
+    {w:'modest',a:1,c:['제안하다','별로 크지 않은','아주 훌륭한','잡종']},
+    {w:'custom',a:2,c:['턱','동맹','풍습','없어서는 안 될']},
+  ],
+  10: [
+    {w:'planet',a:1,c:['암호화하다','혹성','방법','타격']},
+    {w:'obscure',a:3,c:['신념','불변의','앙갚음하다(take revenge on)','불명료한']},
+    {w:'grateful',a:0,c:['감사하는','산출하다','쓰레기','발명품']},
+    {w:'take responsibility for',a:2,c:['연루','유행병','~을 책임지다','숨 쉬다']},
+    {w:'trace',a:0,c:['흔적','어디에나 있는','신화','사실대로 말하자면']},
+    {w:'flush',a:0,c:['왈칵 흘러나오다','항해','소리치다','놀라는']},
+    {w:'perception',a:1,c:['얽히게하다','인식','다가오는','동력']},
+    {w:'benevolent',a:3,c:['일축하다','비극','품질','자애로운']},
+    {w:'ingredient',a:2,c:['비율','중요한','성분','편의시설']},
+    {w:'invasion',a:1,c:['사용 종료하다','침입','요리','공평한']},
+    {w:'forbid',a:3,c:['문명','지시적인','통합하다','금지하다']},
+    {w:'hostility',a:0,c:['적의','중요한','개성','감옥']},
+    {w:'absorb',a:3,c:['동기','원고','취소하다','흡수하다']},
+    {w:'take a measure',a:0,c:['조치를 취하다','세련된','타격','주관적인']},
+    {w:'cheer',a:2,c:['항아리','숨 쉬다','환호하다','분리된']},
+    {w:'stereotype',a:3,c:['부패','중력','함유하다','고정관념']},
+    {w:'terrific',a:0,c:['훌륭한','저지할 수 없는','시간엄수','마당']},
+    {w:'import',a:1,c:['운동','수입','적자','기계장치']},
+    {w:'take the initiative',a:2,c:['포용하다','탈출','솔선하다','치료약']},
+    {w:'realize',a:0,c:['깨닫다','자세','한가롭게 거닐다','경배하다']},
+    {w:'tuition',a:1,c:['알고 있는','수업료','배 위에','선조']},
+    {w:'feedback',a:1,c:['바꾸다','피드백','숨기다','예언']},
+    {w:'crop',a:3,c:['억제','바꾸다','지각의','농작물']},
+    {w:'desire',a:3,c:['회사의','분명한','움츠리다','몹시 바라다']},
+    {w:'subjective',a:0,c:['주관적인','비용','운동의','바꾸다']},
+    {w:'modify',a:2,c:['투표하다','일반의','수정하다','희박한 가망']},
+    {w:'perform',a:1,c:['물다','공연하다','거래','제출하다']},
+    {w:'grief',a:2,c:['침입하다','증상','큰 슬픔','잡아채다']},
+    {w:'suspicious',a:2,c:['계좌','축소','의심하는','횃불']},
+    {w:'instrument',a:3,c:['식욕','바다표범','묻다','기구']},
+    {w:'displace',a:3,c:['훈육하다','~와 동행하다','활력','대체하다']},
+    {w:'deserve',a:0,c:['~할 가치가 있다','증인','견고한','병']},
+    {w:'distrust',a:0,c:['신용하지 않다','추상적인','통치하다','연속체']},
+    {w:'inscribe',a:0,c:['새기다','고난','과감한','잔인한']},
+    {w:'deficit',a:0,c:['적자','~와 충돌하다','상','모듈']},
+    {w:'drag',a:1,c:['재산','질질끌다','가사','~에 대해 안 좋게 말하다']},
+    {w:'contrary',a:2,c:['선택을 하다','부서지기 쉬운','반대의','예의 바른']},
+    {w:'take into account',a:2,c:['일축하다','긴','고려하다','식물']},
+    {w:'take advantage of',a:2,c:['촉진하다','비판하다','~을 이용하다','범주']},
+    {w:'circulation',a:1,c:['이주하다','순환','모호','모으다']},
+    {w:'outspoken',a:2,c:['보증하다','흡수하다','솔직한','근거없는 이야기']},
+    {w:'install',a:3,c:['쓰레기','식물','제거하다','설치하다']},
+    {w:'slope',a:0,c:['비탈','대조','수지를 맞추다','자격을 주다']},
+    {w:'snap',a:2,c:['곡식','허락하다','똑 부러짐','폐렴']},
+    {w:'fantasy',a:3,c:['등록하다','억누르다','타자','공상']},
+    {w:'passenger',a:3,c:['오도하는','빈곤','~를 집어들다','승객']},
+    {w:'breakthrough',a:3,c:['제의하다','타고난','다재 다능한','돌파구']},
+    {w:'mutual',a:0,c:['상호의','비위맞추다','임금','시간엄수']},
+    {w:'gut',a:2,c:['독창적인','조종하다','본능적인','보수적인']},
+    {w:'navigate',a:0,c:['길을 찾다','습기','격렬한','바래다주다']},
+    {w:'delete',a:3,c:['선두','조잡한','두려워하여','삭제하다']},
+    {w:'crash',a:3,c:['번영','회사','문지르다','충돌하다']},
+    {w:'attain',a:2,c:['전시하다','허드렛 일','달성하다','연기하다']},
+    {w:'seize',a:3,c:['빈자리','더럽히다','불변의','붙잡다']},
+    {w:'explicit',a:1,c:['축하하다','뚜렷한','차지하다','생략']},
+  ],
+  11: [
+    {w:'strip',a:0,c:['벗기다','구체','가구','해임']},
+    {w:'population',a:3,c:['신성한','믿을수 없는','매우드문','인구']},
+    {w:'symbol',a:2,c:['긴','고집','상징','엄청난']},
+    {w:'liberate',a:1,c:['즉석에서','자유롭게 하다','민주주의','요리']},
+    {w:'inhabit',a:0,c:['살다','대로','장식하다','텅 빈']},
+    {w:'personality',a:2,c:['공개하다','할당하다','개성','허영심이 강한']},
+    {w:'administer',a:0,c:['경영하다','소송을 제기하다','황야','퇴직하다']},
+    {w:'decrease',a:2,c:['희생','다치게하다','감소','한뼘']},
+    {w:'positive',a:0,c:['긍정적인','타원형','무작위의','모으다']},
+    {w:'frank',a:2,c:['염세주의','대조','솔직한','휴대할수 있는']},
+    {w:'insult',a:1,c:['팽창시키다','모욕하다','활력','~을 구성하다']},
+    {w:'arrogant',a:3,c:['인식','악명높은','거대한','오만한']},
+    {w:'flow',a:1,c:['키','흐르다','가죽','격려하다']},
+    {w:'feast',a:3,c:['성숙한','지속적으로','자제하다','축하연']},
+    {w:'differentiate',a:3,c:['표류하여','평판','절망','구별하다']},
+    {w:'enclose',a:0,c:['(물건.장소를) 둘러싸다','침식','공포','성큼성큼 걷다']},
+    {w:'infectious',a:2,c:['예의범절','임명하다','전염성의','내던지다']},
+    {w:'ethical justification',a:2,c:['녹슬다','승객','윤리적 정당화','짜다']},
+    {w:'burst',a:3,c:['휴대할수 있는','지배하다','정적인','폭발하다']},
+    {w:'wildlife',a:0,c:['야생 생물','혼돈','적응력','별로 크지 않은']},
+    {w:'spirit',a:3,c:['풍부하다','질질끌다','임대료','정신']},
+    {w:'aisle',a:1,c:['분명히 하다','통로','세탁소','관광']},
+    {w:'famine',a:0,c:['기근','말못하는','경멸','통제']},
+    {w:'disorder',a:3,c:['미신','소설','기부하다','무질서']},
+    {w:'hierarchical',a:3,c:['비율','자제하다','통근자','계급에 따른']},
+    {w:'royal',a:0,c:['왕의','준비하다','총계의','한뼘']},
+    {w:'ample justification',a:2,c:['단서','발표','충분히 타당한 사유','위협']},
+    {w:'sensational',a:2,c:['문명','구별하다','선정적인','종사하다']},
+    {w:'legal justification',a:3,c:['곡식','정신','돌출한','법적 타당성']},
+    {w:'minimize',a:1,c:['가사','최소화하다','총알','~으로 여기다']},
+    {w:'outdated',a:1,c:['열정','구식의','찬란한','솔직한']},
+    {w:'volunteer',a:1,c:['아담한','자원봉사자','붓다','예술의']},
+    {w:'companion',a:0,c:['친구','두려워하여','환호하다','고통을 겪다']},
+    {w:'barren',a:2,c:['단순한','유기체의','척박한','위험']},
+    {w:'density',a:3,c:['강화하다','주의를 흩뜨리다','자비','밀도']},
+    {w:'procedural justification',a:1,c:['대리인','절차적 정당성','방','상기시키다']},
+    {w:'cruel',a:2,c:['임대료','별개의','잔인한','~을 존경하다']},
+    {w:'superficial',a:3,c:['순회','신의','~에 익숙해진','피상적인']},
+    {w:'drought',a:3,c:['후자의','과장하다','불평하다','가뭄']},
+    {w:'theoretical justification',a:3,c:['어울리다','오염','환상','이론적으로 타당한 이유']},
+    {w:'colony',a:1,c:['예술의','식민지','의심하는','구제책']},
+    {w:'eternally',a:3,c:['암호화하다','규칙성','정적','영원히']},
+    {w:'tiny',a:2,c:['소유물','매료된','작은','중세의']},
+    {w:'pilot',a:1,c:['재판관','조종사','말못하는','배제']},
+    {w:'outbreak',a:0,c:['발생','가사','덜다','추정하다']},
+    {w:'instantly',a:0,c:['즉석에서','얼굴 생김새','내뿜음','특권이 있는']},
+    {w:'precede',a:1,c:['가구','앞서다','우연히 듣다','논쟁']},
+    {w:'blurred',a:3,c:['활동적인','동물학자','공급하다','흐릿한']},
+    {w:'confine',a:2,c:['찬성하지 않다','증상','제한하다','전망']},
+    {w:'negative',a:1,c:['새겨진 글자','부정의','준비하다','모든 것을 투자하다']},
+    {w:'appetite',a:3,c:['아주 멋진','부식하다','메모','식욕']},
+    {w:'fabulous',a:3,c:['인공의','방사능의','침입하다','아주 멋진']},
+    {w:'flavor',a:1,c:['해결','맛','화해','인류학자']},
+    {w:'discouraged',a:1,c:['마지못해 하는','낙담한','허드렛 일','필요로 하다']},
+    {w:'gracious',a:2,c:['중대한','몇 대몇의','정중한','간격']},
+  ],
+  12: [
+    {w:'defeat',a:0,c:['쳐부수다','부화하다','중력','정확히 찾아내다']},
+    {w:'cherished',a:0,c:['소중히 간직된','적도','경제','비율']},
+    {w:'intake',a:1,c:['확장','섭취','세다','고려하다']},
+    {w:'elegance',a:1,c:['성분','우아함','의뢰인','몸짓']},
+    {w:'swiftly',a:0,c:['신속히','유연한','보이지 않는','지시']},
+    {w:'disclose',a:1,c:['점','공개하다','유기체의','예견하다']},
+    {w:'erupt',a:0,c:['분출하다','선조','속삭임','망쳐놓다']},
+    {w:'obstacle',a:1,c:['~하기 쉬운','장애','부르다','검색하다']},
+    {w:'original',a:0,c:['독창적인','주로','재료','저지하다']},
+    {w:'gross',a:3,c:['부정행위하다','내향성인 사람','받아쓰기를 하다','총계의']},
+    {w:'incorporate',a:3,c:['인체하다','부수하여 일어나는','임무','통합하다']},
+    {w:'suck',a:0,c:['빨다','이야기','특권이 있는','내용']},
+    {w:'literary',a:1,c:['자존심을 억누르다','문학의','믿을수 없는','청중']},
+    {w:'tragic',a:0,c:['비극적인','계급에 따른','원정','소리치다']},
+    {w:'under oath',a:3,c:['(장래의 일등을)상상하다','~하고도 무사하다','더럽히다','법정에서 선서를 한 상태인']},
+    {w:'distance',a:0,c:['거리','모으다','특징','거르다']},
+    {w:'grab',a:1,c:['다음의','잡아채다','복잡한','예술의']},
+    {w:'imply',a:0,c:['내포하다','갈라진 금','증거','선택을 하다']},
+    {w:'innocent until proven guilty',a:0,c:['유죄 판결이 날 때까지 무죄인','움직이지 않는','변경하다','(소리등을) 크게 하다']},
+    {w:'detect',a:0,c:['발견하다','중세의','반응','살금살금 기다']},
+    {w:'narrow',a:2,c:['역설','중독','폭이 좁은','극복하다']},
+    {w:'adopt',a:0,c:['채택하다','증상','항아리','법정에서 선서를 한 상태인']},
+    {w:'precious',a:3,c:['정신과 의사','공평한','아담한','귀중한']},
+    {w:'rest one\'s case',a:0,c:['~의 진술을 마치다','요구','법적 타당성','식민지로 만들다']},
+    {w:'trial',a:1,c:['높은 가능성','재판','울타리','최근의']},
+    {w:'destroy',a:1,c:['모으다','파괴하다','은유','유죄 판결이 날 때까지 무죄인']},
+    {w:'enter into evidence',a:1,c:['주창하다','~을 증거로 제출하다','쌓아올리다','진정한']},
+    {w:'slide',a:1,c:['가죽','미끄러지다','힘','착수']},
+    {w:'rescue',a:3,c:['껍질이 딱딱한','정상의','혀','구조']},
+    {w:'destination',a:1,c:['구별하다','목적지','소중히 하다','항체']},
+    {w:'irony',a:1,c:['자세','반어법','유명인','단언하다']},
+    {w:'hide',a:1,c:['병','숨다','달라붙다','발명품']},
+    {w:'sentence',a:2,c:['감사하는','사이좋게 지내다','문장','타격']},
+    {w:'file a suit',a:2,c:['대참사','끼워 넣다','소송을 제기하다','그만두다']},
+    {w:'grave',a:1,c:['아끼다','중대한','무모한','해치다']},
+    {w:'row',a:1,c:['경계하는','배를 젓다','끝내다','냉장']},
+    {w:'organic',a:3,c:['장기의','권위','재정의','유기적인']},
+    {w:'acquire',a:0,c:['얻다','보존하다','특성','일관성있는']},
+    {w:'prime',a:3,c:['삭제하다','발생하다','타고난','제일의']},
+    {w:'fade',a:3,c:['그만두다','교리','이용도','희미해지다']},
+    {w:'appoint',a:3,c:['이동하다','명료함','허영심이 강한','임명하다']},
+    {w:'insert',a:1,c:['현상','삽입하다','등록하다','목마름']},
+    {w:'circuit',a:1,c:['테','순회','논쟁','선조']},
+    {w:'domestication',a:2,c:['이주하는','설립하다','가축화','득점']},
+    {w:'advent',a:2,c:['부분','턱','도래','흔적']},
+    {w:'behave',a:3,c:['난파선','식물','재능이 있는','행동하다']},
+    {w:'function',a:1,c:['매우드문','기능','~의 진술을 마치다','알리다']},
+    {w:'shock',a:0,c:['충격','심사 숙고하다','정의하다','되찾다']},
+    {w:'evoke',a:3,c:['비옥','전시하다','과장하다','불러일으키다']},
+    {w:'laughter',a:1,c:['줄다','웃음','번갈아 하다','유전']},
+    {w:'genuine',a:3,c:['~할 수 있게 하다','기름진 음식','의회','진정한']},
+    {w:'doom',a:1,c:['잔인한','운명','치료하다','사로잡히다']},
+    {w:'propose',a:1,c:['외과의사','제안하다','이타주의','잣다']},
+    {w:'tune',a:1,c:['먼저의','가락','실제의','변장']},
+    {w:'seemingly',a:1,c:['지각의','겉보기에는','병','순회']},
+  ],
+  13: [
+    {w:'lengthy',a:1,c:['최대','긴','모든 것을 투자하다','흐름']},
+    {w:'construct',a:3,c:['편의시설','인종의','가입하다','건설하다']},
+    {w:'compassion',a:3,c:['격려하다','소리치다','통찰력','연민']},
+    {w:'reference',a:0,c:['참조','계승','음색','유명인']},
+    {w:'ban',a:3,c:['위치를 파악하다','회전하다','기계장치','금지하다']},
+    {w:'fuse',a:1,c:['과체중의','퓨즈','결정적인','회사']},
+    {w:'organize',a:1,c:['조치를 취하다','조직하다','느슨한','신속한']},
+    {w:'remedy',a:1,c:['폐지하다','치료법','본질적인','관찰']},
+    {w:'recognize',a:0,c:['인정하다','거래','변장','헝겊 조각']},
+    {w:'hospitality',a:2,c:['증가','준비하다','환대','심오한']},
+    {w:'plenty',a:0,c:['풍부함','도매업자','우수한','두꺼운']},
+    {w:'apprehensive',a:0,c:['염려하는','의회','동기','양']},
+    {w:'regular',a:3,c:['비난하다','~으로 변하다','규제하다','규칙적인']},
+    {w:'loosely',a:3,c:['건전한','저축하다','사실상','느슨하게']},
+    {w:'mythology',a:0,c:['신화','열망하는','붕괴','제안하다']},
+    {w:'delay',a:1,c:['준비를 하다','연기하다','곱하다','엄청난']},
+    {w:'extraordinary',a:2,c:['쏘다','휘젓다','놀라운','집중하다']},
+    {w:'stuff',a:1,c:['세금','재료','앙갚음하다(take revenge on)','정의하다']},
+    {w:'aspect',a:1,c:['나오다','측면','성숙한','인구']},
+    {w:'kin',a:0,c:['친척','무모한','명확히','동일한']},
+    {w:'straightforward',a:1,c:['축하연','정직한','제거하다','거친 손']},
+    {w:'breathe',a:1,c:['이례','숨 쉬다','감옥','대조']},
+    {w:'replace',a:3,c:['바치다','물러나다','감소하다','~을 대신하다']},
+    {w:'magnificent',a:0,c:['장대한','특수한','압도적인','자애']},
+    {w:'warranty',a:2,c:['고집','재미있는','보증','기준']},
+    {w:'afraid',a:0,c:['두려워하여','겹치다','감각 기관','놀람']},
+    {w:'aim',a:0,c:['목표','테','절대적인','건축']},
+    {w:'request',a:1,c:['위험','요청','위기','제도']},
+    {w:'aggressively',a:0,c:['적극적으로','투명한','거래','밀어 올리다']},
+    {w:'pour',a:1,c:['협동','붓다','발음하다','병']},
+    {w:'surface',a:0,c:['표면','종','고려하다','정확히 찾아내다']},
+    {w:'recession',a:2,c:['떠서','의회','경기침체','궁형으로 구부리다']},
+    {w:'lie',a:3,c:['영토','칭찬','절망','거짓말']},
+    {w:'degrade',a:0,c:['저하시키다','비탈','유지하다','해석']},
+    {w:'hesitant',a:2,c:['지시적인','동시대의','주저하는','뽑다']},
+    {w:'invisible',a:3,c:['주목하다','알고 있는','발표하다','보이지 않는']},
+    {w:'wage',a:1,c:['비위맞추다','임금','테두리','분자']},
+    {w:'competent',a:3,c:['쳐부수다','뽑다','변천','유능한']},
+    {w:'poet',a:2,c:['설득하다','특징','시인','악화되다']},
+    {w:'frightened',a:0,c:['놀란','회사','합리적인','원시적인']},
+    {w:'insure',a:0,c:['보증하다','현미경','모으다','확인하다']},
+    {w:'wreck',a:0,c:['난파','꽃','~와 결별하다','사전에 결정된']},
+    {w:'relief',a:2,c:['승객','재개발','(고통의)경감','비틀거리다']},
+    {w:'amazing',a:3,c:['신학','무모한','귀중한','놀랄만한']},
+    {w:'pronounce',a:0,c:['발음하다','태아','연약한','중독']},
+    {w:'vote',a:3,c:['충돌하다','유전','헝겊 조각','투표하다']},
+    {w:'section',a:2,c:['담그다','윤리적 정당화','부분','관련있는']},
+    {w:'severe',a:1,c:['상의하다','엄격한','기록보관소','그만두다']},
+    {w:'tone',a:3,c:['통합하다','사실상의','돌리다','음색']},
+    {w:'alarmed',a:2,c:['내용','황야','불안해 하는','번갈아 하다']},
+    {w:'wrinkle',a:1,c:['별로 크지 않은','주름지다','주입하다','식물']},
+    {w:'scared',a:0,c:['겁을 먹은','초과근무','계급에 따른','섭취']},
+    {w:'frame',a:0,c:['구조','경작하다','얼굴 생김새','상담가']},
+    {w:'tailor',a:1,c:['충분히 타당한 사유','재단사','감정이입의','일치하다']},
+    {w:'doctrine',a:0,c:['교리','베끼다','재목','장대한']},
+  ],
+  14: [
+    {w:'notice',a:3,c:['어둠침침한','의무를 지우다','체육관','주목하다']},
+    {w:'specific',a:3,c:['늘리다','실','애매한','특수한']},
+    {w:'conceive',a:0,c:['마음속에 품다','유형의','무너지다','검사']},
+    {w:'adapt',a:0,c:['적응시키다','도전','밑바닥','재검토']},
+    {w:'initial',a:0,c:['처음의','모욕하다','거꾸로','되풀이하는']},
+    {w:'surround',a:1,c:['실용적인','둘러싸다','관광','거대한']},
+    {w:'entity',a:0,c:['개체','물러나다','간섭','출발하다']},
+    {w:'set off',a:3,c:['몹시 탐내다','깜박거리는','털의','출발하다']},
+    {w:'costume',a:1,c:['요구하다','의상','상호작용하다','재능이 있는']},
+    {w:'quality',a:1,c:['연결하다','품질','이야기','감각 기관']},
+    {w:'crack',a:1,c:['얻다','갈라진 금','모순되다','천장']},
+    {w:'repair',a:0,c:['수리하다','고수하다','강박감에 사로잡혀서','사임하다']},
+    {w:'indulge',a:3,c:['특허','지시적인','적극적으로','탐닉하다']},
+    {w:'disaster',a:3,c:['파편','출생지의','기계장치','재해']},
+    {w:'profound',a:2,c:['요청','남용하다','심오한','지속적으로']},
+    {w:'constant',a:0,c:['끊임없는','결심하다','감히~하다','감소']},
+    {w:'refuse',a:0,c:['거절하다','빈정대는','더럽히다','실망한']},
+    {w:'plague',a:0,c:['역병','생산하다','양','배관공']},
+    {w:'guilty',a:1,c:['회의','유죄의','학생','다양한']},
+    {w:'minute',a:0,c:['분','여행','한숨','전원의']},
+    {w:'characteristic',a:2,c:['전통적인','줄기','특징적인','표면의']},
+    {w:'introduce',a:0,c:['소개하다','귀중한','긁다','책임지다']},
+    {w:'efficient',a:3,c:['일치하다','채널','희생','효율적인']},
+    {w:'union',a:2,c:['상표','천문학','노동조합','붙잡다']},
+    {w:'steady',a:0,c:['굳건한','과대평가하다','목초지','놀리다']},
+    {w:'escort',a:1,c:['시들다','바래다주다','시력','추천하다']},
+    {w:'pollute',a:2,c:['감옥','(자원의)보존','오염시키다','달라붙다']},
+    {w:'wholesaler',a:0,c:['도매업자','공손한','환영','이전의']},
+    {w:'committee',a:0,c:['위원회','탐욕','조종하다','경계하는']},
+    {w:'rehearse',a:2,c:['번창하다','냉장','되풀이 하다','보증하다']},
+    {w:'fiction',a:2,c:['동시에','~ 할생각이 있는','소설','~으로 변하다']},
+    {w:'nervous',a:1,c:['견고한','초조한','투자','생각지 못한 위험']},
+    {w:'concretely',a:2,c:['미신','층','구체적으로','부끄러운']},
+    {w:'accept',a:0,c:['수락하다','결정하다','인식','생태적인']},
+    {w:'palm',a:1,c:['기르다','손바닥','추상적인','개혁']},
+    {w:'set aside',a:3,c:['외과의사','해치다','공동 사회의','챙겨두다']},
+    {w:'uniform',a:0,c:['균일한','가설','양','돌리다']},
+    {w:'settle',a:3,c:['편집자','적당한','위치를 파악하다','해결하다']},
+    {w:'variation',a:0,c:['변화','우연히 듣다','격렬한','바꾸다']},
+    {w:'broadcast',a:1,c:['타락하다','방송','~을 경유하여','경제']},
+    {w:'exercise',a:1,c:['노력하다','운동','배반','부끄러운']},
+    {w:'regime',a:0,c:['체제','넓은','통합하다','짧은']},
+    {w:'transcribe',a:3,c:['우선순위를 매기다','감각 기관','전술','베끼다']},
+    {w:'combat',a:2,c:['김을 내다','신뢰','투쟁하다','줄기']},
+    {w:'retreat',a:0,c:['물러나다','두려워하다','얻다','유연한']},
+    {w:'conscience',a:3,c:['유창하게','정치','웃음','양심']},
+    {w:'routine',a:3,c:['거절하다','획기적 발전','전진하다','일상의 일']},
+    {w:'envelope',a:3,c:['운명','귀찮게하다','역설','봉투']},
+    {w:'ripe',a:1,c:['아픔','잘 익은','철학','(도로를)포장하다']},
+    {w:'set back',a:3,c:['자비','야망','임금','저지하다']},
+    {w:'contemplate',a:3,c:['참다','확인하다','설립하다','심사 숙고하다']},
+    {w:'formal',a:2,c:['일치하다','부가의','의례에 따르는','논증하다']},
+    {w:'set apart from',a:3,c:['묘사','나오다','운명','~을 ~와 구별하다']},
+    {w:'income',a:1,c:['끼워 넣다','수입','이익','이용할 수 있는']},
+    {w:'set up',a:0,c:['~을 설치하다','수사','이동하다','사이좋게 지내다']},
+  ],
+  15: [
+    {w:'retire',a:3,c:['많이 만들어 내는','인체하다','혁신','퇴직하다']},
+    {w:'good chance',a:1,c:['조직하다','높은 가능성','∼을 헤치고 나아가다','다투다']},
+    {w:'overshadow',a:3,c:['거대한','산들바람','주저하다','무색하게 하다']},
+    {w:'shoot',a:1,c:['결말','쏘다','질질 끌다','내향성인 사람']},
+    {w:'cause',a:2,c:['특허','방해하다','원인','주저하다']},
+    {w:'cancer',a:2,c:['평가하다','반사하다','암','기계장치']},
+    {w:'interpretation',a:3,c:['적당한','저지할 수 없는','침해','해석']},
+    {w:'trap',a:3,c:['책임지다','내던지다','거래','덫']},
+    {w:'inspection',a:3,c:['우아함','갑자기','임무','검사']},
+    {w:'strike',a:0,c:['치다','주위의 사정','홈','~에 종사하다']},
+    {w:'chance encounter',a:0,c:['우연한 만남','진단하다','운반하다','유행']},
+    {w:'regard',a:2,c:['으르렁거리다','비난하다','~으로 여기다','요청']},
+    {w:'interact',a:3,c:['충돌하다','빈정대는','정책','상호작용하다']},
+    {w:'gossip',a:1,c:['저항 운동','잡담','행위','(~와) 관계가 없는']},
+    {w:'prosperity',a:0,c:['번영','감각 기관','변화','사람들']},
+    {w:'scroll',a:1,c:['연주회','두루마리','액체','신경']},
+    {w:'slight chance',a:3,c:['요인','두꺼운','화살','희박한 가능성']},
+    {w:'lack',a:3,c:['슬퍼하다','(~와) 관계가 없는','의뢰인','부족']},
+    {w:'undergo',a:0,c:['겪다','짐','토의하다','훈육하다']},
+    {w:'refund',a:1,c:['잡아찢다','반환','파산하다','단언하다']},
+    {w:'infrastructure',a:2,c:['이동하다','경험적인','기반시설','거대한']},
+    {w:'ease',a:2,c:['산들바람','위험','완화하다','오두막집']},
+    {w:'furniture',a:1,c:['자극','가구','반란','모순']},
+    {w:'tame',a:3,c:['마음','악화시키다','견디어내다','길들이다']},
+    {w:'trout',a:1,c:['농업','송어','몹시 탐내다','난파']},
+    {w:'decorate',a:0,c:['장식하다','연속체','물리학자','붙이다']},
+    {w:'struggle',a:1,c:['미숙한','투쟁','내부의','영양분을 주다']},
+    {w:'prove',a:1,c:['~에 대해 안 좋게 말하다','증명하다','거주하다','중독']},
+    {w:'retrospect',a:3,c:['피로','만족시키다','동정','회상']},
+    {w:'executive',a:0,c:['경영간부','종','보장하다','재능이 있는']},
+    {w:'significant',a:1,c:['~는 말할 필요도 없이','중요한','상처','수컷']},
+    {w:'rage',a:0,c:['격노','세련된','안정된','~ 할생각이 있는']},
+    {w:'gentle',a:0,c:['온화한','본질적인','부족한','톡특한']},
+    {w:'fat chance',a:1,c:['비판하다','희박한 가망','이주하는','박차']},
+    {w:'erosion',a:2,c:['뒤','순환','침식','책임있는']},
+    {w:'joint',a:2,c:['솜씨 좋은','조종사','공동의','겁을 먹은']},
+    {w:'vehicle',a:3,c:['자갈','할당하다','일시적인','차량']},
+    {w:'absence',a:1,c:['논증하다','부재','운전하다','피드백']},
+    {w:'complain',a:0,c:['불평하다','창립','유창하게','장애가 있는']},
+    {w:'slim chance',a:3,c:['해치다','원의','깨닫다','매우 낮은 가능성']},
+    {w:'mere',a:3,c:['군대','확인하다','판지상자','단순한']},
+    {w:'disappointed',a:2,c:['이전의','갈라진 금','실망한','~을 인가하다']},
+    {w:'thick',a:2,c:['지켜보는 사람','약해지다','두꺼운','다가오는']},
+    {w:'guarantee',a:2,c:['음색','매료된','보증하다','도시의']},
+    {w:'detach',a:2,c:['휘파람을 불다','소스','분리하다','명백한']},
+    {w:'drive',a:2,c:['박차','충분히 타당한 사유','운전하다','금지하다']},
+    {w:'journey',a:3,c:['총계의','접촉','쓰레기','여행']},
+    {w:'norm',a:3,c:['완전히 폐지하다','해석','규칙','표준']},
+    {w:'election',a:1,c:['힘','선거','충격','사라지다']},
+    {w:'idle',a:1,c:['자극','게으른','수락하다','흘러내리다']},
+    {w:'overcome',a:2,c:['반대의','공연하다','극복하다','강력한']},
+    {w:'period',a:0,c:['(학교 수업의) 교시','결심하다','아주 훌륭한','농작물']},
+    {w:'clue',a:3,c:['하위의','기준','파멸하다','실마리']},
+    {w:'investment',a:0,c:['투자','채용하다','동정','유연성']},
+    {w:'identical',a:3,c:['피해를 주다','중세의','빨갛게 불타다','동일한']},
+  ],
+  16: [
+    {w:'pity',a:0,c:['동정','거주하다','다과','표류하여']},
+    {w:'rotate',a:0,c:['회전하다','~와 결별하다','신중한','~에 존재하다']},
+    {w:'stare',a:3,c:['난파','잘못 인도하다','팽창시키다','응시하다']},
+    {w:'hurt',a:0,c:['다치게하다','묘사','저주하다','박차']},
+    {w:'channel',a:0,c:['채널','가능성이 있는','외딴','근면한']},
+    {w:'charge',a:3,c:['비위맞추다','쾅닫다','접촉','요금']},
+    {w:'exchange',a:1,c:['축복하다','주고받기','비극적인','다수의']},
+    {w:'go for broke',a:0,c:['모든 것을 투자하다','망쳐놓다','재산','친구']},
+    {w:'prompt',a:1,c:['정기구독','즉각적인','훑어보다','세련된']},
+    {w:'submit',a:2,c:['얻다','울퉁불퉁한 길','제출하다','느슨한']},
+    {w:'drown',a:1,c:['가상의','물에 빠져 죽다','분명히 하다','조종하다']},
+    {w:'break even',a:3,c:['그만두다','정직한','음향의','수지를 맞추다']},
+    {w:'charity',a:0,c:['자선','적법한','우회로','창']},
+    {w:'complete',a:0,c:['끝내다','곱하다','애매한','화나게 하다']},
+    {w:'raise',a:3,c:['이상한','다치게하다','~을 ~와 구별하다','올리다']},
+    {w:'portray',a:2,c:['높은 가능성','희박한 가망','묘사하다','운하']},
+    {w:'eager',a:2,c:['접근','~의 밑을 파다','열망하는','난폭하게 운전하다']},
+    {w:'diplomacy',a:1,c:['극복하다','외교','매우 낮은 가능성','재목']},
+    {w:'scrap',a:1,c:['겁을 먹은','폐물이 된','쌓아올리다','고고학자']},
+    {w:'advocacy',a:2,c:['목수','계급에 따른','옹호','재검토']},
+    {w:'radiation',a:2,c:['획기적 발전','묵상하다','방사능','긴급한']},
+    {w:'forefront',a:3,c:['현상','대륙','논증하다','선두']},
+    {w:'imitate',a:3,c:['하강','통계치','~의 밑을 파다','모방하다']},
+    {w:'make a budget',a:0,c:['예산을 세우다','우연한 만남','활성화','의식']},
+    {w:'wonder',a:1,c:['직사각형','놀라움','정도','평가하다']},
+    {w:'consensus',a:2,c:['과체중의','금지하다','합의','분']},
+    {w:'include',a:2,c:['조각','충분함','포함하다','오염']},
+    {w:'awful',a:2,c:['신뢰','처방하다','끔찍한','분수']},
+    {w:'hinder',a:3,c:['주목하다','추정하다','발','막다']},
+    {w:'profit',a:2,c:['전통적인','진행 중인','이득','발표']},
+    {w:'require',a:0,c:['필요로 하다','혁명','조종사','날것의']},
+    {w:'reduce',a:3,c:['내던지다','철학적인','화학자','감소시키다']},
+    {w:'reckless',a:1,c:['운송하다','무모한','연상하다','재활시키다']},
+    {w:'priest',a:2,c:['자갈','확대','성직자','봉투']},
+    {w:'assume',a:2,c:['적도','위로하다','추정하다','대처하다']},
+    {w:'shelter',a:2,c:['행위','전망','은신처','열망하는']},
+    {w:'hatch',a:0,c:['부화하다','그만두다','폭발','추론하다']},
+    {w:'base',a:0,c:['기초','냄새','거절하다','발견하다']},
+    {w:'go to the wall',a:0,c:['파산하다','묶다','~에 익숙해진','채용하다']},
+    {w:'evaporate',a:0,c:['증발시키다','직물','느슨하게','가파른']},
+    {w:'turn a profit',a:2,c:['비행','환영','이익을 내다','중대한']},
+    {w:'host',a:1,c:['구조','주인','역설','한가롭게 거닐다']},
+    {w:'blend',a:3,c:['항해','영원히','습기','섞다']},
+    {w:'relevant',a:0,c:['관련있는','충분한','불경기','착수']},
+    {w:'physical',a:3,c:['감옥','수혜자','개척자','신체의']},
+    {w:'federal',a:1,c:['논리 정연한','연방 정부의','착용하다','울퉁불퉁한 길']},
+    {w:'jar',a:0,c:['항아리','계획','구성하다','비추다']},
+    {w:'inhibit',a:3,c:['역설','근시의','뛰어난','억누르다']},
+    {w:'misery',a:1,c:['외적인','비참','감소시키다','일그러지게하다']},
+    {w:'design',a:1,c:['유전','계획','물의','보상']},
+    {w:'upset',a:3,c:['~하고도 무사하다','사실상','항아리','언짢게 생각하는']},
+    {w:'phase',a:1,c:['화살','국면','언짢게 생각하는','널리 알려지다']},
+    {w:'odd',a:2,c:['인기 있는','영원히','이상한','거절하다']},
+    {w:'capture',a:0,c:['붙잡다','치다','빈정대는','쌓아올리다']},
+    {w:'discount',a:1,c:['깜짝 놀란','할인','공식화하다','촉진하다']},
+  ],
+  17: [
+    {w:'manual',a:1,c:['세우다','육체 노동의','~하고도 무사하다','근육']},
+    {w:'prosecutor',a:3,c:['소스','폭탄','면허증','검사']},
+    {w:'transform',a:3,c:['언짢게 생각하는','염세주의','공급하다','바꾸다']},
+    {w:'constitute',a:0,c:['구성하다','배 위에','자식','호소하다']},
+    {w:'layer',a:0,c:['층','눈의','독립한','앞서다']},
+    {w:'unique',a:1,c:['두루마리','톡특한','도래','태도']},
+    {w:'arise',a:0,c:['발생하다','왕의','정신과 의사','방어하다']},
+    {w:'compliment',a:1,c:['동시대의','칭찬','반환','치료약']},
+    {w:'conservation',a:2,c:['모순되다','침착하게 기다리다','보존','정체']},
+    {w:'maintain',a:1,c:['구성','유지하다','외부의','감염시키다']},
+    {w:'curse',a:0,c:['저주하다','전술','혜택','잘라내다']},
+    {w:'browse',a:3,c:['제의하다','이해하다','신용할 수 있는','검색하다']},
+    {w:'observation',a:0,c:['관찰','예술의','방사능','누출']},
+    {w:'yearn',a:3,c:['기준','협동','장애','갈망하다']},
+    {w:'quest',a:0,c:['원정','위험','청중','몇 대몇의']},
+    {w:'concise',a:1,c:['공급하다','간결한','취임하다','식별하다']},
+    {w:'swallow',a:1,c:['유아','삼키다','사라지다','파괴하다']},
+    {w:'athletic',a:3,c:['수컷','∼을 헤치고 나아가다','탐험','운동의']},
+    {w:'long',a:0,c:['긴','목표','유연성','단언하다']},
+    {w:'precise',a:2,c:['수컷','이성','정확한','악화되다']},
+    {w:'suffer',a:1,c:['가전제품','고통을 겪다','낙천주의','능가하다']},
+    {w:'shipwreck',a:0,c:['난파선','엉뚱한 방향(곳)으로','매우드문','(어떤 것의) 변형']},
+    {w:'applause',a:0,c:['박수갈채','상당한','진단하다','강렬한']},
+    {w:'distress',a:3,c:['친족 혈족 관계','중퇴하다(quit','독특한','고민']},
+    {w:'underlie',a:0,c:['~의 아래에 있다','비율','엉뚱한 방향(곳)으로','연방 정부의']},
+    {w:'pervade',a:0,c:['~에 널리 퍼지다','위임','폭이 좁은','구조']},
+    {w:'facilitate',a:1,c:['겹치다','촉진하다','(시의)각운','발전']},
+    {w:'whistle',a:2,c:['목적','건설하다','휘파람을 불다','약화시키다']},
+    {w:'accustomed',a:3,c:['충분한','이용하다','친구','~에 익숙해진']},
+    {w:'inquiry',a:0,c:['연구','바치다','위반하는','회사']},
+    {w:'leather',a:0,c:['가죽','불경기','제한하다','배관공']},
+    {w:'pine',a:2,c:['구멍을 내다','장관의','소나무','기부하다']},
+    {w:'conductor',a:3,c:['독감','입법','황폐화시키다','지휘자']},
+    {w:'talented',a:3,c:['우수한','손톱','추상적인','재능이 있는']},
+    {w:'accumulate',a:2,c:['일치하다','공격하다','축적하다','공포']},
+    {w:'encounter',a:1,c:['~을 잘라내다','마주치다','비평가','과체중의']},
+    {w:'crave',a:3,c:['풍부함','유명한','탐험하다','갈망하다']},
+    {w:'fatality',a:1,c:['독립한','사망자','협동','인도주의적인']},
+    {w:'regain',a:3,c:['가짜의','수직의','이용할 수 있는','되찾다']},
+    {w:'disguise',a:2,c:['주로','이성적인','변장','녹슬다']},
+    {w:'covet',a:2,c:['매료된','예상','몹시 탐내다','게으른']},
+    {w:'streamlined',a:3,c:['유기체의','우울한','대로','능률화된']},
+    {w:'circumstance',a:2,c:['경계하는','능가하다','환경','주름지다']},
+    {w:'literacy',a:1,c:['전자의','문해력','되풀이하는','떠서']},
+    {w:'spatial',a:1,c:['판지상자','공간적인','뒤','혁명']},
+    {w:'boost',a:0,c:['높이다','제공하다','악순환','곱하다']},
+    {w:'intuition',a:3,c:['채용하다','중대한','수정하다','직관']},
+    {w:'waterproof',a:3,c:['장식하다','(소리등을) 크게 하다','톡특한','방수의']},
+    {w:'inherit',a:2,c:['맛','보물','상속하다','잘못 놓다']},
+    {w:'connect',a:1,c:['소스','연결하다','재정의','흡수하다']},
+    {w:'foresee',a:1,c:['삽','예견하다','가락','균일한']},
+    {w:'excerpt',a:2,c:['저주하다','최소화하다','발췌','예상하다']},
+    {w:'collide',a:0,c:['충돌하다','등록하다','수용하다','건축']},
+    {w:'persistence',a:2,c:['축소','우울한','고집','혼동하다']},
+    {w:'arrow',a:1,c:['바꾸다','화살','적도','안으로']},
+  ],
+  18: [
+    {w:'offend',a:1,c:['탈출','화나게 하다','음모','지위']},
+    {w:'score',a:0,c:['득점','할당하다','예의 바른','신경']},
+    {w:'pay heed',a:2,c:['쓸다','일치하다','주의하다','과감히~을 하다']},
+    {w:'calculation',a:2,c:['안개','동물학자','계산','다수의']},
+    {w:'district',a:0,c:['구역','동정','예의범절','행동하다']},
+    {w:'prerequisite',a:3,c:['도전','신학','끈','필수 조건']},
+    {w:'mediate',a:3,c:['탐험하다','김을 내다','자세','조정하다']},
+    {w:'carton',a:2,c:['공동 사회의','병','판지상자','처방하다']},
+    {w:'accommodate',a:3,c:['파편','무딘','증발시키다','수용하다']},
+    {w:'criterion',a:0,c:['기준','조절하다','무적의','경배하다']},
+    {w:'fluctuate',a:2,c:['결과','볼륨을 높이다','변동하다','유전']},
+    {w:'optimism',a:3,c:['격렬한','주목','수도','낙천주의']},
+    {w:'disapprove',a:3,c:['전자의','인원','과체중의','찬성하지 않다']},
+    {w:'tedious',a:0,c:['지루한','진흙','저주하다','수치스러운']},
+    {w:'pay a tribute',a:2,c:['시행하다','기하급수적인','경의를 표하다','경배하다']},
+    {w:'conversion',a:1,c:['이상한','전환','상표','덜다']},
+    {w:'console',a:1,c:['자세히살펴보다','위로하다','저주하다','색인']},
+    {w:'delight',a:3,c:['~하기 쉬운','속이다','생략하다','기쁨']},
+    {w:'attribute',a:1,c:['창','~의 탓으로 돌리다','들어 올리다','간격']},
+    {w:'enroll',a:0,c:['등록하다','추측','경고','억누르다']},
+    {w:'combine',a:0,c:['결합시키다','수용하다','화나게하다','억누르다']},
+    {w:'pay homage',a:0,c:['경의를 표하다','비추다','검사','신뢰']},
+    {w:'appreciate',a:0,c:['감사하다','천문학자','어법','재판관']},
+    {w:'pirate',a:0,c:['해적','천문학','공급하다','추적']},
+    {w:'perceive',a:3,c:['부가의','풍족한','반어적으로','지각하다']},
+    {w:'measure',a:1,c:['숨','치수','노력하다','제한']},
+    {w:'vanish',a:2,c:['(장래의 일등을)상상하다','차별하다','사라지다','훈육하다']},
+    {w:'reject',a:1,c:['기분','거절하다','추방하다','지각하다']},
+    {w:'foster',a:0,c:['육성하다','탄력 있는','창립','연관성']},
+    {w:'consist',a:1,c:['흐르다','~로 이루어지다','수컷','노력하다']},
+    {w:'ancient',a:2,c:['전형적인','노동인구','먼옛날의','재료']},
+    {w:'pay a visit',a:3,c:['교대','정중한','타이어','방문하다']},
+    {w:'gravel',a:0,c:['자갈','일시적인','추천하다','지역']},
+    {w:'dread',a:1,c:['옹호','두려워하다','몇 대몇의','왕의']},
+    {w:'suddenly',a:2,c:['특권이 있는','기록보관소','갑자기','떠돌아다니다']},
+    {w:'swelling',a:2,c:['대륙','문의하다','부푼 것','변장']},
+    {w:'valid',a:1,c:['감소','타당한','국면','(소리등을) 크게 하다']},
+    {w:'isolated',a:3,c:['눈의','다양성','~을 증거로 제출하다','외딴']},
+    {w:'attempt',a:2,c:['파괴하다','크게 하다','시도','구조']},
+    {w:'spectrum',a:0,c:['범위','촉진하다','악명높은','내부의']},
+    {w:'chaos',a:2,c:['잡아채다','인도주의적인','혼돈','희생']},
+    {w:'devote',a:1,c:['설명하다','헌신하다','설립하다','~으로 변하다']},
+    {w:'illusion',a:3,c:['동력','방송','득점','환상']},
+    {w:'initiate',a:1,c:['올리다','시작하다','오염','조종하다']},
+    {w:'curiosity',a:1,c:['완전한','호기심','가죽','방아쇠']},
+    {w:'overestimate',a:1,c:['부서지기 쉬운','과대평가하다','비옥','예상하다']},
+    {w:'illustration',a:2,c:['부가의','밀도','삽화','섞다']},
+    {w:'freshwater',a:2,c:['생물학자','난파선','담수','계획']},
+    {w:'affluent',a:2,c:['손바닥','굳건한','풍부한','주점']},
+    {w:'embrace',a:0,c:['포용하다','전쟁이 일어나다','계급에 따른','압도적인']},
+    {w:'pay attention',a:0,c:['집중하다','알아채다','외과','구별하다']},
+    {w:'moderate',a:3,c:['주의하는','성명','구성','적당한']},
+    {w:'favorable',a:2,c:['파산한','천문학','유리한','전시하다']},
+    {w:'inward',a:1,c:['압도하다','안으로','제한','성직자']},
+    {w:'apology',a:3,c:['높은 가능성','의식','허락하다','사과']},
+  ],
+  19: [
+    {w:'administrative',a:2,c:['꽃','선두','관리의','짧음']},
+    {w:'terminal',a:2,c:['주식','점차적으로','말기의','불모의']},
+    {w:'surgeon',a:0,c:['외과의사','행위','문의하다','존경하다']},
+    {w:'motion',a:1,c:['지적 교양','움직임','중대한','방법']},
+    {w:'oblivious',a:3,c:['배관공','물을 빼다','배로 가다','깨닫지 못하는']},
+    {w:'internal',a:2,c:['원정','순회','내부의','(일을) 끝마치다']},
+    {w:'spoil',a:2,c:['지시','윤기 있는 머리','망쳐놓다','타고난']},
+    {w:'colonize',a:0,c:['식민지로 만들다','총알','항의','재정의']},
+    {w:'tangible',a:3,c:['따라잡다','정체를 밝히다','바치다','유형의']},
+    {w:'pediatrician',a:2,c:['돌리다','자동의','소아과 의사','귀중한']},
+    {w:'flickering',a:2,c:['기쁨','정리하다','깜박거리는','엄격']},
+    {w:'cognitive',a:0,c:['인지적인','방어하다','(관심활동)영역','찬란한']},
+    {w:'mimic',a:0,c:['흉내내다','서투른','산업','독특한 외모']},
+    {w:'geology',a:2,c:['혁신','폐물이 된','지질학','~을 빼다']},
+    {w:'introvert',a:1,c:['애국자','내향성인 사람','중독','타락하다']},
+    {w:'speculation',a:2,c:['총알','질질끌다','추측','통과']},
+    {w:'reputation',a:2,c:['~라고 여기다','납득시키다','평판','실망한']},
+    {w:'filter',a:2,c:['전임자','증상','거르다','작은']},
+    {w:'distort',a:0,c:['일그러지게하다','(~와) 관계가 없는','자격을 주다','방법']},
+    {w:'wilderness',a:0,c:['황야','병','정신의','섭취']},
+    {w:'compatibility',a:2,c:['막다','지시하다','양립 가능성','옷감']},
+    {w:'eloquent',a:0,c:['웅변의','쪼개다','개혁','신진의']},
+    {w:'bound',a:1,c:['세련된','경계를 이루다','보상','조사하다']},
+    {w:'interaction',a:2,c:['돌출한','상징','상호 작용','층']},
+    {w:'psychiatrist',a:2,c:['구걸하다','세탁소','정신과 의사','영토']},
+    {w:'grasp',a:2,c:['약해지다','퍼뜨리다','이해하다','적응시키다']},
+    {w:'utilitarian',a:3,c:['영양분을 주다','직관','팁','실용적인']},
+    {w:'deliver',a:1,c:['여백','배달하다','중요한','영역']},
+    {w:'texture',a:1,c:['추적','질감','자세','종사하다']},
+    {w:'yield',a:1,c:['단편','생산하다','먼','통합하다']},
+    {w:'acknowledge',a:3,c:['독창적인','위원회','끌어내다','인정하다']},
+    {w:'enlarge',a:3,c:['풍경','~을 설치하다','마지못해 하는','크게 하다']},
+    {w:'discrete',a:2,c:['고요한','미끄러지다','별개의','다양한']},
+    {w:'remote',a:2,c:['흘러내리다','손바닥','먼','인식의']},
+    {w:'elevate',a:0,c:['향상시키다','고용하다','특권이 있는','복잡한']},
+    {w:'potent',a:0,c:['강력한','반어법','화나게하다','남용하다']},
+    {w:'pioneer',a:3,c:['순진한','줄기','불모의','개척자']},
+    {w:'dentist',a:1,c:['고수하다','치과 의사','소중히 하다','논리 정연한']},
+    {w:'convince',a:2,c:['흔적','상당한','납득시키다','시인']},
+    {w:'depiction',a:3,c:['기부하다','일치하다','결심한','묘사']},
+    {w:'secondhand',a:2,c:['범위','위협','중고의','의심하는']},
+    {w:'physician',a:1,c:['폭탄','내과의사','묽게하다','배반']},
+    {w:'maximum',a:0,c:['최대','묘사','상당한','노력하다']},
+    {w:'affair',a:0,c:['일','선택','막다','돈을 벌다']},
+    {w:'opponent',a:1,c:['신념','상대','과체중의','유지하다']},
+    {w:'alert',a:0,c:['경계하는','토론','설치하다','동정']},
+    {w:'neglect',a:1,c:['말할 필요도 없이','무시하다','불운','강렬한']},
+    {w:'sacrifice',a:0,c:['희생','건전한','화학자','잠복 중인']},
+    {w:'incredible',a:3,c:['회사의','연기하다','식민지로 만들다','믿을수 없는']},
+    {w:'equal',a:0,c:['같은','군대','경멸','실마리']},
+    {w:'demonstrate',a:3,c:['경향','잡아채다','의뢰인','논증하다']},
+    {w:'urban',a:2,c:['무너지다','적법한','도시의','기우는']},
+    {w:'pursue',a:1,c:['계단','추구하다','대안','거절하다']},
+    {w:'impact',a:0,c:['충격','비행','물러나다','연간의']},
+    {w:'vibration',a:3,c:['살금살금 들어오다','상기하다','화살','진동']},
+  ],
+  20: [
+    {w:'put up with',a:2,c:['들어 올리다','더 좋아하다','참다','극복하다']},
+    {w:'repetitive',a:2,c:['마침내','생략','되풀이하는','가볍게 던지다']},
+    {w:'company',a:2,c:['혼동하다','모호','회사','선택']},
+    {w:'compare',a:2,c:['~의 진술을 마치다','가파른','비교하다','방사능']},
+    {w:'intervention',a:1,c:['매달다','개입','손잡이','계몽하다']},
+    {w:'mobile',a:1,c:['보내다','이동성이 있는','고치다','줄기']},
+    {w:'deception',a:0,c:['속임수','혼동하다','고체의','부분']},
+    {w:'civilian',a:1,c:['운명','일반국민','감사하는','그릇된 인식']},
+    {w:'put forward',a:1,c:['반응','제안하다','정반대의','왕의']},
+    {w:'adjust',a:0,c:['조절하다','색인','비탈','~을 잘라내다']},
+    {w:'destructive',a:3,c:['거주하다','모방하다','동기를 부여하다','파괴적인']},
+    {w:'conceal',a:2,c:['인원','부재','숨기다','유혹하다']},
+    {w:'celebration',a:0,c:['축하','안심시키다','간섭','힘']},
+    {w:'abandon',a:1,c:['저지할 수 없는','버리다','자비로운','같은']},
+    {w:'unanimously',a:2,c:['다루다','관찰','만장일치로','위반']},
+    {w:'tempt',a:2,c:['현상','흡수하다','유혹하다','모방하다']},
+    {w:'infer',a:2,c:['생물권','연기하다','추론하다','살금살금 들어오다']},
+    {w:'stature',a:3,c:['높이다','조종하다','떠돌아다니다','키']},
+    {w:'multitude',a:1,c:['유연한','다수','액체','신경의']},
+    {w:'divine',a:2,c:['채택하다','임명하다','신의','흡수하다']},
+    {w:'prejudice',a:1,c:['장치','편견','오만한','진짜의']},
+    {w:'limit',a:2,c:['정직한','동료','제한','일시적인']},
+    {w:'herd',a:1,c:['흡수하다','(짐승의)무리','시대에 뒤떨어진','처음의']},
+    {w:'predecessor',a:1,c:['구별하다','전임자','할인','독특한']},
+    {w:'affection',a:3,c:['상당한','발언','공연하다','애정']},
+    {w:'financial',a:0,c:['재정의','출생지의','판지상자','미묘한']},
+    {w:'trauma',a:0,c:['외상','결합시키다','처리','불에 타다']},
+    {w:'anticipation',a:1,c:['호기심이 강한','기대','거의 ~않다','촉진하다']},
+    {w:'put down',a:3,c:['솔직한','단서','긍정적인','~을 내려놓다']},
+    {w:'put aside',a:3,c:['~을 빼다','전통문화유산','강탈하다','저축하다']},
+    {w:'alliance',a:0,c:['동맹','집중하다','자유','동물학자']},
+    {w:'abound',a:3,c:['과정','빈자리','공동 사회의','풍부하다']},
+    {w:'overwhelm',a:0,c:['압도하다','전자의','종류','헌신']},
+    {w:'compete',a:2,c:['높은 가능성','유익','경쟁하다','편집자']},
+    {w:'sufficient',a:1,c:['외부의','충분한','나직이 속삭이다','진공의']},
+    {w:'editor',a:2,c:['설계','무질서','편집자','관찰']},
+    {w:'stiff',a:3,c:['~의 탓으로 돌리다','큰 슬픔','타고난','뻣뻣한']},
+    {w:'inspire',a:2,c:['사과','접근하다','영감을 주다','잠재능력']},
+    {w:'advocate',a:1,c:['화난','주창하다','선택','조심']},
+    {w:'breath',a:3,c:['갑자기','꺼지다','모방하다','숨']},
+    {w:'decline',a:1,c:['정교한','감소하다','~하기로 되어 있는','능가하다']},
+    {w:'corruption',a:3,c:['종사하다','높이다','소개하다','부패']},
+    {w:'remark',a:2,c:['이동하다','날것의','발언','사실대로 말하자면']},
+    {w:'put off',a:2,c:['털의','활기를 띠게하다','연기하다','득점']},
+    {w:'mess',a:3,c:['세련된','수락하다','숫자','더러움']},
+    {w:'bitter',a:3,c:['화학','제한','도시의','쓴']},
+    {w:'occupy',a:1,c:['목마름','차지하다','이를테면','활력']},
+    {w:'superb',a:1,c:['보증하다','뛰어난','단편','유사성']},
+    {w:'peer',a:1,c:['~와 사이좋게 지내다','동료','공개하다','자극하다']},
+    {w:'compensate',a:3,c:['구성 요소','알다','이성','보상하다']},
+    {w:'infant',a:0,c:['유아','충돌하다','맛','몰두한']},
+    {w:'catastrophe',a:3,c:['팽창시키다','질질끌다','뽑다','대참사']},
+    {w:'deposit',a:2,c:['해충','통로','맡기다','장치']},
+    {w:'carpenter',a:3,c:['옹호','타고난','가능성이 있는','목수']},
+    {w:'preserve',a:2,c:['명백한','쳐부수다','보존하다','제한']},
+  ],
+  21: [
+    {w:'numeral',a:1,c:['모으다','숫자','운전하다','화나게 하다']},
+    {w:'contagious',a:2,c:['사막','추적','전염성의','솔직한']},
+    {w:'twilight',a:0,c:['여명','감소하다','기반시설','(물건.장소를) 둘러싸다']},
+    {w:'nursery',a:0,c:['유아원','다가오는','덫','자격을 주다']},
+    {w:'eligible',a:3,c:['먼옛날의','선두','침입하다','적격의']},
+    {w:'volcanic',a:1,c:['신뢰','화산의','목표의','바꾸다']},
+    {w:'hilarious',a:0,c:['유쾌한','가슴설레게하다','수컷','짜다']},
+    {w:'compulsively',a:0,c:['강박감에 사로잡혀서','강의','취소하다','민감한']},
+    {w:'uproarious',a:2,c:['부족한','운하','시끄러운','주의하다']},
+    {w:'legislation',a:0,c:['입법','친구','요리','진행 중인']},
+    {w:'domain',a:2,c:['조각하다','닮다','(관심활동)영역','갈라진 금']},
+    {w:'barrier',a:1,c:['높은 가능성','장애물','주소','살다']},
+    {w:'distract',a:3,c:['엄격','잔인한','영양분을 주다','주의를 분산시키다']},
+    {w:'subordinate',a:0,c:['하위의','실수를 저지르다','복잡한','시력']},
+    {w:'additional',a:2,c:['발명의 재주','동맹','부가의','착수']},
+    {w:'momentous',a:3,c:['충분한','웅변의','완전한','중대한']},
+    {w:'summarize',a:2,c:['감염시키다','불평하다','~을 요약하다','명백한']},
+    {w:'meditate',a:3,c:['방대함','정상','설명','묵상하다']},
+    {w:'native',a:2,c:['흐릿한','울타리','출생지의','해안']},
+    {w:'innate',a:0,c:['타고난','혁신하다','방사능의','버리다']},
+    {w:'polish',a:3,c:['기록보관소','상처 입은','조심하다','닦다']},
+    {w:'expense',a:3,c:['명료함','경의를 표하다','선언','비용']},
+    {w:'sedentary',a:1,c:['독특한 외모','앉아 있는 시간이 많은','정적','배심원단']},
+    {w:'medication',a:0,c:['치료약','버리다','신속한','기둥']},
+    {w:'harbor',a:1,c:['제외하다','항구','콘테스트 참가자','턱']},
+    {w:'flatter',a:1,c:['규칙성','비위맞추다','곰','운문']},
+    {w:'vain',a:2,c:['사막','담수','허영심이 강한','추적']},
+    {w:'contradict',a:0,c:['모순되다','수지를 맞추다','흔들리다','유선형의']},
+    {w:'revolve',a:0,c:['돌리다','위험','시대에 뒤떨어진','연기하다']},
+    {w:'suit',a:1,c:['차별하다','어울리다','지구','미끄러지듯 가다']},
+    {w:'luxury',a:3,c:['부재','필요','길들이다','사치']},
+    {w:'unbiased',a:1,c:['개성','편향되지 않은','이익을 내다','불꽃']},
+    {w:'endure',a:2,c:['사과','필요로 하다','견디다','편견']},
+    {w:'squeeze',a:0,c:['짜내다','따르다','한가롭게 거닐다','장애']},
+    {w:'injustice',a:2,c:['~을 증거로 제출하다','사실대로 말하자면','불의','공개적으로 망신을 주다']},
+    {w:'jovial',a:3,c:['중대한','신기한 것','제공하다','명랑한']},
+    {w:'trigger',a:2,c:['인종의','수적으로 이기다','유발하다','구']},
+    {w:'misguided',a:0,c:['잘못 판단한','최소','금지하다','부족']},
+    {w:'intense',a:1,c:['품질','강렬한','먼옛날의','굳건한']},
+    {w:'philosophical',a:2,c:['복잡한','비난하다','철학적인','표현하다']},
+    {w:'neural',a:0,c:['신경의','타협','용어','전략']},
+    {w:'pedestrian',a:1,c:['강의','보행자','확대','유능한']},
+    {w:'disrupt',a:2,c:['아사','친척','혼란에 빠뜨리다','취소하다']},
+    {w:'conform',a:3,c:['어디에나 있는','긴급한','앞서다','따르다']},
+    {w:'amusing',a:0,c:['재미있는','장기간으로','금지하다','반어적으로']},
+    {w:'annoyance',a:0,c:['성가심','식별하다','널리 퍼진','강박감에 사로잡혀서']},
+    {w:'rare',a:2,c:['풍요하게하다','부르다','매우드문','고수하다']},
+    {w:'rationality',a:3,c:['단서','규모축소','거주하다','합리성']},
+    {w:'criticize',a:2,c:['가파른','다양한','비판하다','꽃']},
+    {w:'stationary',a:1,c:['세우다','움직이지 않는','사실상','얽히게하다']},
+    {w:'stimulus',a:1,c:['밀도','자극','외상','부화하다']},
+    {w:'exhilarating',a:1,c:['바꾸다','상쾌한','은신처','상징']},
+    {w:'motivate',a:2,c:['자극하다','방사능','동기를 부여하다','다양성']},
+    {w:'fierce',a:1,c:['계속 잡고 있다','맹렬한','개성','보상']},
+    {w:'extract',a:3,c:['매료된','튀다','확대','뽑다']},
+  ],
+  22: [
+    {w:'spell',a:0,c:['철자를 쓰다','살금살금 들어오다','안개','자발적인']},
+    {w:'gain time',a:1,c:['분류하다','시간을 벌다','수리하다','처방하다']},
+    {w:'vivid',a:0,c:['생생한','할당하다','외과수술의','전문적 기술']},
+    {w:'interference',a:3,c:['가로질러 갔다','인용하다','미덕','간섭']},
+    {w:'gain face',a:1,c:['적당한','널리 알려지다','외과수술의','전통적인']},
+    {w:'compact',a:2,c:['시인','정리하다','아담한','냉기']},
+    {w:'perceptual',a:2,c:['상기하다','전통적인','지각의','~와 사이좋게 지내다']},
+    {w:'myth',a:3,c:['껍질을 벗기다','산소','주목할 만한','신화']},
+    {w:'prolific',a:0,c:['많이 만들어 내는','이주하는','높이다','빈곤']},
+    {w:'disturb',a:0,c:['방해하다','식물학자','똑 부러짐','널리 퍼진']},
+    {w:'absorbed',a:3,c:['버리다','억누르다','동맹하다','몰두한']},
+    {w:'avenue',a:1,c:['독특한 외모','대로','농작물','표면의']},
+    {w:'independent',a:3,c:['묘사','기름진 음식','준비하다','독립한']},
+    {w:'auditory',a:3,c:['신의','굶주리다','인류학자','청각의']},
+    {w:'departure',a:2,c:['장애','저항하는','출발','치수']},
+    {w:'solely',a:2,c:['대륙','반대의','전적으로','고안하다']},
+    {w:'recall',a:0,c:['상기하다','보급','정기구독','(법적도덕적인) 의무']},
+    {w:'precaution',a:2,c:['분','처음의','예방책','질질끌다']},
+    {w:'grant',a:1,c:['자비','허락하다','속삭임','출판하다']},
+    {w:'mission',a:1,c:['표류하여','임무','과대평가하다','증인']},
+    {w:'refer',a:2,c:['조심','다양한','언급하다','기구']},
+    {w:'legitimate',a:2,c:['길을 찾다','솔선하다','합법의','불모의']},
+    {w:'subscription',a:2,c:['문장','침착하게 기다리다','정기구독','담수']},
+    {w:'predetermined',a:2,c:['반응','유형의','사전에 결정된','문의하다']},
+    {w:'outline',a:1,c:['정확히 찾아내다','개요','정적','성큼성큼 걷다']},
+    {w:'restore',a:0,c:['되돌려주다','고민','솔직한','엄청난']},
+    {w:'punctuality',a:0,c:['시간엄수','측면','거주하다','성숙한']},
+    {w:'glance',a:0,c:['흘끗 봄','일시적인','해','눈의']},
+    {w:'describe',a:1,c:['가정','묘사하다','맛좋은','파편']},
+    {w:'gain the mastery',a:1,c:['위로하다','지배하다','모호','초라한 외모']},
+    {w:'immerse',a:0,c:['담그다','제공하다','호소하다','제거하다']},
+    {w:'available',a:0,c:['이용할 수 있는','유혹하다','설립하다','먹이']},
+    {w:'actual',a:1,c:['반사하다','실제의','수입','친척']},
+    {w:'assert',a:2,c:['~의 아래에 있다','호소하다','주장하다','김을 내다']},
+    {w:'fossil',a:1,c:['금지하다','화석','경계','위험']},
+    {w:'spare',a:0,c:['아끼다','중세의','스위치','화나게하다']},
+    {w:'gain access',a:1,c:['원천','접근하다','보행자','가설']},
+    {w:'trivial',a:1,c:['가상의','사소한','모순','얽히게하다']},
+    {w:'abruptly',a:1,c:['분명히 하다','갑자기','태아','방대함']},
+    {w:'cancel',a:2,c:['명료함','대체하다','취소하다','독특한 외모']},
+    {w:'pupil',a:2,c:['붙잡다','지하층','학생','출석하다']},
+    {w:'conference',a:2,c:['연기하다','무서운','회의','항의']},
+    {w:'subject',a:0,c:['복종','성장하여 벗어나다','설명','공고']},
+    {w:'scarcely',a:1,c:['세우다','거의 ~않다','~를 집어들다','중세의']},
+    {w:'ironically',a:3,c:['신진의','관여하다','비탈','반어적으로']},
+    {w:'dismiss',a:3,c:['시간엄수','교대','할당하다','일축하다']},
+    {w:'fallacy',a:1,c:['감정이입의','오류','비난하다','친척']},
+    {w:'restrict',a:0,c:['제한하다','주입하다','뒤','간격']},
+    {w:'chronological',a:1,c:['속이다','연대순의','외과의사','존엄']},
+    {w:'gain weight',a:3,c:['실행하다','경멸','조리법','살이찌다']},
+    {w:'justify',a:2,c:['가족','의심하는','정당화하다','전환']},
+    {w:'rectangular',a:1,c:['본부','직사각형의','챙겨두다','존경']},
+    {w:'satisfy',a:0,c:['만족시키다','이발사','미숙한','인원']},
+    {w:'recite',a:2,c:['새겨진 글자','(도로를)포장하다','낭송하다','후자의']},
+    {w:'complicated',a:0,c:['복잡한','소중히 간직된','체육관','시인']},
+  ],
+  23: [
+    {w:'hazard',a:1,c:['감각 기관','위험','눈에 잘띄는','떠서']},
+    {w:'discourse',a:3,c:['온화한','납득시키다','긍정적인','이야기']},
+    {w:'deforestation',a:1,c:['되풀이하는','산림파괴','경쟁','명령']},
+    {w:'dignity',a:0,c:['존엄','손잡이','격노','친척']},
+    {w:'immature',a:3,c:['솔','뚜렷한','진공의','미숙한']},
+    {w:'spot',a:0,c:['장소','퓨즈','습기','철학적인']},
+    {w:'ubiquitous',a:2,c:['~의 진술을 마치다','예약하다','어디에나 있는','성명']},
+    {w:'foundation',a:1,c:['전문가','토대','남용하다','껍질이 딱딱한']},
+    {w:'reflect',a:2,c:['유지하다','영양분을 주다','반영하다','겉보기에는']},
+    {w:'laboratory',a:1,c:['성분','실험실','정신의','금지하다']},
+    {w:'obligation',a:3,c:['거미집','도구','여윈','의무']},
+    {w:'laundry',a:1,c:['~으로 여기다','세탁소','힘','출발하다']},
+    {w:'geography',a:1,c:['중대한','지리학','정복하다','웅변의']},
+    {w:'suppose',a:0,c:['생각하다','제출하다','한뼘','능력']},
+    {w:'latitude',a:1,c:['조종하다','위도','구조','거리']},
+    {w:'clarity',a:3,c:['홍수','방어하다','과장','명료함']},
+    {w:'acute',a:0,c:['극심한','적도','관점','괴롭히기']},
+    {w:'biologist',a:3,c:['포용하다','근시의','일화','생물학자']},
+    {w:'fake',a:0,c:['가짜의','난폭하게 운전하다','웃음','선두']},
+    {w:'eliminate',a:0,c:['제거하다','음향의','적자','가볍게 던지다']},
+    {w:'participant',a:1,c:['보존하다','참가자','알고 있는','생생한']},
+    {w:'contact',a:2,c:['지시적인','중세의','접촉','결속력 있는']},
+    {w:'respectively',a:1,c:['경쟁','각각','그릇된 인식','부여하다']},
+    {w:'equivalent',a:3,c:['물에 빠져 죽다','타자','자유','동등한']},
+    {w:'refreshment',a:3,c:['편의시설','협상하다','~와 충돌하다','다과']},
+    {w:'substantive',a:2,c:['항의','잔인한','실질적인','무지']},
+    {w:'botanist',a:3,c:['희박한 가능성','실제의','부가의','식물학자']},
+    {w:'novelty',a:3,c:['최대','항아리','야망','신기한 것']},
+    {w:'therapy',a:1,c:['현상','치료','물의','존경']},
+    {w:'reinforce',a:3,c:['예상하다','결정하다','전략','강화하다']},
+    {w:'instruct',a:2,c:['향상시키는','방법','지시하다','공식화하다']},
+    {w:'vocal',a:3,c:['비평','태아','처리','목소리의']},
+    {w:'strength',a:2,c:['공상','음색','힘','침착하게 기다리다']},
+    {w:'astronomer',a:2,c:['똑바로 선','식민지로 만들다','천문학자','장관의']},
+    {w:'monetary',a:3,c:['폭발','정도','점차적으로','화폐의']},
+    {w:'greed',a:1,c:['검열','탐욕','완전히','위반']},
+    {w:'convey',a:3,c:['~을 줄이다','실제의','좌절한','운반하다']},
+    {w:'mechanical',a:0,c:['기계로 작동되는','철학적인','제재','~의 반환을 요구하다']},
+    {w:'release',a:1,c:['외과수술의','방출하다','괴롭히기','손바닥']},
+    {w:'electronic',a:3,c:['강의','주의하는','포용하다','전자의']},
+    {w:'dispute',a:2,c:['구성하다','친척','분쟁','읽고 쓸 줄 아는']},
+    {w:'substitute',a:2,c:['명령적인','탈출','대체하다','놀라움']},
+    {w:'integrate',a:2,c:['키','가입하다','통합하다','과소 평가하다']},
+    {w:'engage',a:2,c:['희박한 가능성','효율적인','종사하다','진공의']},
+    {w:'venture',a:3,c:['전망','결심하다','별로 크지 않은','과감히~을 하다']},
+    {w:'reform',a:3,c:['친밀한','정확히 찾아내다','악명높은','개혁']},
+    {w:'zoologist',a:1,c:['환호하다','동물학자','기우는','발전']},
+    {w:'extrinsic',a:3,c:['육체 노동의','충돌하다','몇 대몇의','외적인']},
+    {w:'remind',a:2,c:['범주','착수','상기시키다','휘젓다']},
+    {w:'provoke',a:0,c:['유발하다','~으로 변하다','이용하다','방해하다']},
+    {w:'tactic',a:0,c:['전술','감소하다','피로','두꺼운']},
+    {w:'involuntary',a:1,c:['겉모습','무심결의','맹렬한','연간의']},
+    {w:'chemist',a:2,c:['채용하다','초래하다','화학자','중대한']},
+    {w:'thirst',a:2,c:['접근','탐험','목마름','격려하다']},
+    {w:'privileged',a:0,c:['특권이 있는','착용하다','퇴직하다','출생지의']},
+  ],
+  24: [
+    {w:'defect',a:2,c:['인공의','두꺼운','결점','이용도']},
+    {w:'multiple',a:3,c:['~의 아래에 있다','유감','두루마리','다수의']},
+    {w:'assemble',a:3,c:['장난','치수','특징','모으다']},
+    {w:'get even with',a:0,c:['앙갚음하다(take revenge on)','실험실','미끄러지다','찬란한']},
+    {w:'patriot',a:3,c:['넓은','말에 타다','채택하다','애국자']},
+    {w:'narrative',a:0,c:['이야기의','세련된','웅변의','대안']},
+    {w:'claim',a:2,c:['표현하다','물러나다','요구하다','~와 동행하다']},
+    {w:'scope',a:1,c:['~가 되다','범위','불모의','침착하게 기다리다']},
+    {w:'surrender',a:2,c:['광고의','덜다','포기하다','감옥']},
+    {w:'resort',a:2,c:['조종사','~에 종사하다','의지하다','개체']},
+    {w:'cuisine',a:3,c:['책임있는','의식','갑자기','요리']},
+    {w:'margin',a:0,c:['여백','호소하다','군대','경직된']},
+    {w:'neutral',a:1,c:['일관성있는','중립의','인내심을 잃다','시행하다']},
+    {w:'sibling',a:0,c:['형제자매','섞다','비틀다','방법']},
+    {w:'forecast',a:0,c:['예상하다','화','불꽃놀이','환대']},
+    {w:'discern',a:3,c:['일반국민','엄청난','냄새','식별하다']},
+    {w:'pollination',a:2,c:['나직이 속삭이다','손톱','수분작용','비생산적인']},
+    {w:'get through with',a:0,c:['(일을) 끝마치다','송어','방송','양립 가능성']},
+    {w:'reconciliation',a:0,c:['화해','뛰어난','정의로운','현미경']},
+    {w:'ultimate',a:0,c:['최후의','동맹하다','모순','건전한']},
+    {w:'painstaking',a:1,c:['증거','힘이 드는','불에 타다','약탈자']},
+    {w:'misdirect',a:3,c:['원정','득점','병사','엉뚱한 방향(곳)으로']},
+    {w:'flexibility',a:3,c:['공개하다','약한','과장하다','유연성']},
+    {w:'label',a:1,c:['홍수','상표','우선권','~는 말할 필요도 없이']},
+    {w:'get along with',a:1,c:['조정하다','~와 사이좋게 지내다','고요한','정중한']},
+    {w:'permit',a:2,c:['완전히','광대한','허락하다','화살']},
+    {w:'verbal',a:0,c:['말의','~을 경유하여','송어','~라고 부르다']},
+    {w:'anthropologist',a:3,c:['인정하다','자산','정체를 밝히다','인류학자']},
+    {w:'intrinsic',a:2,c:['더미','믿을수 없는','본질적인','짧음']},
+    {w:'sensory',a:0,c:['지각의','방아쇠','의상','구두의']},
+    {w:'obtain',a:2,c:['불일치','혁신','얻다','장관의']},
+    {w:'verge',a:0,c:['테두리','재목','고난','등록하다']},
+    {w:'opportunity',a:2,c:['화산의','장애가 있는','좋은기회','점차적으로']},
+    {w:'reward',a:1,c:['동기','보상','전시하다','집중하다']},
+    {w:'cherish',a:2,c:['억지로 시키다','등록하다','소중히 하다','˜보다 한 수 더 뜨다']},
+    {w:'potential',a:1,c:['실험실','가능성이 있는','생략하다','해석']},
+    {w:'spotlight',a:1,c:['(물건.장소를) 둘러싸다','주목','진짜의','닻']},
+    {w:'simulate',a:0,c:['흉내내다','촉진하다','꺼림','구체']},
+    {w:'temporal',a:1,c:['~에 널리 퍼지다','일시적인','접촉','살다']},
+    {w:'enlighten',a:3,c:['문자 해독','연방 정부의','사회학','계몽하다']},
+    {w:'investigation',a:2,c:['수리하다','순환','수사','진공의']},
+    {w:'soothing',a:1,c:['~에 종사하다','마음을 진정시키는','중퇴하다(quit','생략']},
+    {w:'get on with',a:1,c:['생태적인','사이좋게 지내다','평가하다','무지']},
+    {w:'harsh',a:1,c:['폐렴','가혹한','환상','~는 말할 필요도 없이']},
+    {w:'offspring',a:2,c:['연관성','주요산물','자식','실행하다']},
+    {w:'radical',a:1,c:['가로질러 갔다','근본적인','우회로','빠지다']},
+    {w:'shift',a:3,c:['연상하다','옷을 입히다','나무줄기','이동하다']},
+    {w:'shortsighted',a:0,c:['근시의','파괴하다','확장','올리다']},
+    {w:'starvation',a:1,c:['너그러운','아사','설명하다','끝내다']},
+    {w:'get away with',a:1,c:['방법','~하고도 무사하다','추구하다','중간의']},
+    {w:'versatile',a:2,c:['추론하다','의식하고 있는','다재 다능한','다양성']},
+    {w:'cling',a:0,c:['달라붙다','대조','김을 내다','찬성하지 않다']},
+    {w:'profile',a:0,c:['옆 모습','껍질을 벗기다','안정된','회사의']},
+    {w:'wholesome',a:0,c:['건전한','양심','파편','직사각형']},
+    {w:'notorious',a:2,c:['잔인한','배를 젓다','악명높은','만족시키다']},
+  ],
+  25: [
+    {w:'certificate',a:1,c:['닻','증명서','지루한','목수']},
+    {w:'reside',a:3,c:['퇴직하다','생생한','모으다','거주하다']},
+    {w:'revolution',a:0,c:['혁명','기뻐하다','재단사','영원히']},
+    {w:'component',a:0,c:['구성 요소','녹슬다','감정','계승']},
+    {w:'detail',a:2,c:['그림자','방','세부사항','아주 멋진']},
+    {w:'fix',a:3,c:['연결하다','참가자','읽고 쓸 줄 아는','고치다']},
+    {w:'present',a:2,c:['사실대로 말하자면','~을 존경하다','출석하고있는','시인']},
+    {w:'swing',a:2,c:['재능이 있는','끊임없는','그네','(가격 등이) 변동하다']},
+    {w:'reserve',a:3,c:['중대한','상쾌한','도시의','예약하다']},
+    {w:'excite',a:2,c:['이력서','단언하다','흥분시키다','굉장히 멋진']},
+    {w:'fuzzy',a:2,c:['연대순의','시끄러운','흐릿한','장치']},
+    {w:'hierarchy',a:0,c:['계급구조','편의시설','곤충','건전한']},
+    {w:'fair',a:1,c:['비참','공평한','민주주의','통합하다']},
+    {w:'ashamed',a:1,c:['옷감','부끄러운','포함하다','해결']},
+    {w:'destiny',a:2,c:['테','예상하다','운명','자비로운']},
+    {w:'pretend',a:3,c:['미숙한','좌절한','지배하다','가장하다']},
+    {w:'admire',a:3,c:['통로','나머지','경영간부','존경하다']},
+    {w:'genetic',a:0,c:['유전자의','정신과 의사','황폐화시키다','~하는 경향이 있는']},
+    {w:'conscious',a:0,c:['의식하고 있는','조정하다','이국적인','수리하다']},
+    {w:'interest',a:1,c:['뒤쫓다','이익','혹성','처음의']},
+    {w:'appropriate',a:3,c:['협력하다','불일치','후원자','적당한']},
+    {w:'chamber',a:3,c:['연속체','늘리다','예의 바른','방']},
+    {w:'diameter',a:3,c:['발명의 재주','직면하다','압도적인','직경']},
+    {w:'recover',a:1,c:['허락하다','회복하다','정의','약']},
+    {w:'renewal',a:1,c:['내포하다','갱신','감소하다','기둥']},
+    {w:'critical',a:3,c:['명령','쾅닫다','서식지','위급한']},
+    {w:'civilization',a:3,c:['분류하다','총계의','계속유지하다','문명']},
+    {w:'magnitude',a:3,c:['요구','즐겁게하다','탁월함','규모']},
+    {w:'distinguish',a:3,c:['세다','똑 부러짐','거미집','구별하다']},
+    {w:'assumption',a:0,c:['가정','널리 퍼진','독감','생각지 못한 위험']},
+    {w:'trail',a:3,c:['기하급수적인','참가자','가설','질질 끌다']},
+    {w:'magnification',a:2,c:['명랑한','윤기 있는 머리','확대','껍질이 딱딱한']},
+    {w:'exaggeration',a:2,c:['침식하다','주로','과장','접근하다']},
+    {w:'atmosphere',a:3,c:['신호를 넣다','새겨진 글자','의미하다','대기']},
+    {w:'underestimate',a:2,c:['짖다','계급구조','과소 평가하다','보상']},
+    {w:'eventually',a:1,c:['접근하다','마침내','과정','이국적인']},
+    {w:'rejoice',a:3,c:['평판','위임','섭취','기뻐하다']},
+    {w:'haunt',a:3,c:['판지상자','실행하다','우아함','(유령이)출몰하다']},
+    {w:'misleading',a:0,c:['오도하는','나직이 속삭이다','필사적인','간청하다']},
+    {w:'spontaneous',a:2,c:['연루','적도','자발적인','변화']},
+    {w:'sophistication',a:0,c:['지적 교양','적자','식물','새롭게 하다']},
+    {w:'inferior',a:3,c:['아사','안정된','환호하다','열등한']},
+    {w:'facility',a:0,c:['편의시설','남아 있는','겉모습','아주 멋진']},
+    {w:'enlargement',a:0,c:['확대','목소리의','마당','경영하다']},
+    {w:'metaphor',a:0,c:['은유','종','선거','주로']},
+    {w:'extension',a:0,c:['확장','치수','생태적인','문자 해독']},
+    {w:'vegetation',a:0,c:['식물','긴','표면','정의하다']},
+    {w:'sociable',a:3,c:['정체','사람들','적당한','사교적인']},
+    {w:'ruin',a:3,c:['정기구독','주식','억제','파멸하다']},
+    {w:'theory',a:3,c:['추론하다','결합시키다','삼키다','이론']},
+    {w:'temporary',a:1,c:['지적 교양','일시적인','올리다','다수의']},
+    {w:'offensive',a:3,c:['불일치','통계치','가전제품','불쾌한']},
+    {w:'rhyme',a:1,c:['적의','(시의)각운','응시하다','껍질을 벗기다']},
+    {w:'tribe',a:1,c:['화난','부족','편견','(고통의)경감']},
+    {w:'fit',a:0,c:['적합한','연한 고기','위반하는','방수의']},
+  ],
+  26: [
+    {w:'invade',a:3,c:['범위','자비로운','호기심','침략하다']},
+    {w:'envision',a:3,c:['되풀이하는','편견','경의를 표하다','(장래의 일등을)상상하다']},
+    {w:'oppose',a:3,c:['사로잡히다','명령','중퇴하다(quit','반대하다']},
+    {w:'assign',a:2,c:['언론인','잔인한','할당하다','작은']},
+    {w:'typical',a:2,c:['확인하다','과감한','전형적인','내던지다']},
+    {w:'work on',a:2,c:['전원의','진흙','~에 종사하다','배달하다']},
+    {w:'fate',a:3,c:['~하는 경향이 있는','쌓아올리다','빈자리','운명']},
+    {w:'assure',a:1,c:['따르다','확신시키다','한뼘','비난하다']},
+    {w:'manage',a:1,c:['명령적인','관리하다','∼을 헤치고 나아가다','탁월함']},
+    {w:'identity',a:3,c:['유아','증명서','다수의','정체']},
+    {w:'advance',a:2,c:['인내심을 잃다','물을 빼다','진보','장기간으로']},
+    {w:'authentic',a:2,c:['최대화 하다','직물','진정한','대조']},
+    {w:'process',a:3,c:['큰 슬픔','출석하고있는','개연성이없는','과정']},
+    {w:'council',a:1,c:['명료함','의회','무지','진수시키다']},
+    {w:'validate',a:2,c:['구두의','중력','입증하다','설득하다']},
+    {w:'prefer',a:2,c:['확신시키다','운하','더 좋아하다','중대한']},
+    {w:'widespread',a:3,c:['예상하다','전쟁이 일어나다','지각의','널리 퍼진']},
+    {w:'proper',a:0,c:['적합한','허영심이 강한','방법','나무줄기']},
+    {w:'evolution',a:0,c:['발전','얕은','물러나다','사라지다']},
+    {w:'erode',a:0,c:['침식하다','내향성인 사람','채널','동등한']},
+    {w:'scarce',a:3,c:['성큼성큼 걷다','멈추다','계좌','부족한']},
+    {w:'index',a:2,c:['고통을 겪다','장기간으로','색인','해결']},
+    {w:'slaughter',a:3,c:['다치게하다','~보다오래가다','이해하다','도살']},
+    {w:'commitment',a:3,c:['상당한','소홀히 하다','적용','헌신']},
+    {w:'maximize',a:1,c:['정도','최대화 하다','불꽃','진정인']},
+    {w:'context',a:0,c:['배경','파편','지시하다','제한']},
+    {w:'explosion',a:3,c:['나아가다','분리된','지원하다','폭발']},
+    {w:'improve',a:2,c:['상징하다','혜택','향상시키다','~을 대신하다']},
+    {w:'contamination',a:0,c:['오염','~을 인가하다','시행하다','상처']},
+    {w:'govern',a:0,c:['통치하다','김을 내다','연결하다','모으다']},
+    {w:'significance',a:3,c:['저항하는','모으다','시간을 벌다','의의']},
+    {w:'hand in',a:3,c:['노동인구','해충','손바닥','제출하다']},
+    {w:'acoustic',a:3,c:['토론','유죄 판결이 날 때까지 무죄인','억제','음향의']},
+    {w:'infect',a:0,c:['감염시키다','움츠리다','~을 책임지다','비만']},
+    {w:'criminal',a:3,c:['부화하다','모순','인공의','범죄자']},
+    {w:'pandemic',a:1,c:['일반의','유행병','풍부함','확신시키다']},
+    {w:'consequence',a:0,c:['결과','적자','자갈','내부의']},
+    {w:'intimidate',a:3,c:['막다','낙담한','어울리다','~을 위협하다']},
+    {w:'justice',a:0,c:['정의','의심하는','팽창시키다','살금살금 기다']},
+    {w:'leak',a:3,c:['관광','일상의 일','본질적인','누출']},
+    {w:'anger',a:0,c:['화','기쁨','사투리','여유가 있다']},
+    {w:'addiction',a:3,c:['여행','산들바람','곡식','중독']},
+    {w:'civil',a:2,c:['기준','동료','시민의','보존하다']},
+    {w:'mechanism',a:0,c:['메커니즘','관련있는','유전자의','구부리다']},
+    {w:'reverse',a:0,c:['반대의','일그러지게하다','통로','잠재 의식']},
+    {w:'spectacular',a:1,c:['총계의','장관의','연대순의','기만적인']},
+    {w:'heighten',a:3,c:['뒤섞다','멈추다','이성','높이다']},
+    {w:'dimension',a:2,c:['수정하다','노예','치수','경쟁']},
+    {w:'article',a:1,c:['반복하다','기사','결속','가로질러 갔다']},
+    {w:'outcome',a:0,c:['결과','믿을 수 있는','자격을 주다','통지']},
+    {w:'address',a:2,c:['제한하다','반사하다','주소','완전한']},
+    {w:'figure out',a:2,c:['주름지다','꺼지다','알다','야망']},
+    {w:'priority',a:3,c:['일축하다','축소','거대한','우선권']},
+    {w:'enroll in',a:3,c:['부정의','관련있는','설계','등록하다']},
+    {w:'look up',a:3,c:['치수','전염성의','고수하다','위를 쳐다보다']},
+  ],
+  27: [
+    {w:'emotion',a:0,c:['정서','옷감','혁명','실제의']},
+    {w:'implicit',a:3,c:['잡아찢다','파편','정신과 의사','암묵적인']},
+    {w:'confidence',a:1,c:['최대','신뢰','파괴','찬란한']},
+    {w:'flight',a:0,c:['비행','중세의','이타주의','철학']},
+    {w:'resume',a:1,c:['기억','이력서','기초','담그다']},
+    {w:'breed',a:2,c:['뛰어나다','열망하는','번식하다','끔찍한']},
+    {w:'contract',a:0,c:['계약','촉진하다','황야','대체하다']},
+    {w:'take responsibility',a:1,c:['기만적인','책임지다','비평가','다양성']},
+    {w:'receipt',a:3,c:['자극','수직의','고정 관념','수령']},
+    {w:'lyric',a:1,c:['삭감','가사','소스','파산한']},
+    {w:'conventional',a:2,c:['제거하다','부재','관습적인','고통을 겪다']},
+    {w:'statistic',a:0,c:['통계','침해','저지하다','계획']},
+    {w:'spear',a:2,c:['별개의','회상','창','거리']},
+    {w:'subsequent',a:1,c:['인정하다','다음의','표면의','모으다']},
+    {w:'immune',a:2,c:['이동하다','증발시키다','면역된','홍수']},
+    {w:'protest',a:0,c:['항의','구조','준비하다','함유하다']},
+    {w:'take office',a:2,c:['거절하다','규모축소','취임하다','정서']},
+    {w:'alternative',a:0,c:['대안','떨어질 수 없는','으르렁거리다','개혁']},
+    {w:'textile',a:2,c:['달성하다','주장하다','직물','호기심']},
+    {w:'individual',a:1,c:['발표하다','개별의','숫자','말못하는']},
+    {w:'thread',a:0,c:['실','결점','해치다','항아리']},
+    {w:'generous',a:1,c:['뛰어나다','후한','옷을 입히다','면허증']},
+    {w:'stride',a:0,c:['성큼성큼 걷다','끼워 넣다','빼기','경직된']},
+    {w:'diploma',a:1,c:['원정','졸업증서','기근','전형적인']},
+    {w:'dumb',a:2,c:['합리적인','보내다','말못하는','충돌하다']},
+    {w:'portable',a:1,c:['위도','휴대할수 있는','잘 익은','~하기로 되어 있는']},
+    {w:'comprise',a:2,c:['차량','출발','~을 구성하다','주위를 둘러보다']},
+    {w:'practical',a:0,c:['실용적인','따르다','선택을 하다','활동적인']},
+    {w:'policy',a:0,c:['정책','식욕을 잃다','독특한 외모','(~와) 관계가 없는']},
+    {w:'brief',a:3,c:['사기','자식','지성','짧은']},
+    {w:'loose',a:3,c:['자손','조심하다','만장일치로','느슨한']},
+    {w:'route',a:2,c:['무딘','관광','길','굽다']},
+    {w:'external',a:0,c:['외부의','테','지퍼로 잠그다','똑 부러짐']},
+    {w:'bark',a:2,c:['결심하다','토론','짖다','협력하다']},
+    {w:'uncover',a:2,c:['파산하다','붙잡다','밝히다','도']},
+    {w:'necessary',a:0,c:['필요한','금지','기대게하다','지구']},
+    {w:'take a risk',a:1,c:['거절하다','위험을 무릅쓰다','저항하다','주장하다']},
+    {w:'attach',a:0,c:['붙이다','규칙적인','타락하다','허락하다']},
+    {w:'prophecy',a:2,c:['진짜의','어울리다','예언','보존하다']},
+    {w:'confirm',a:0,c:['확인하다','그릇','유형의','교외']},
+    {w:'formulate',a:0,c:['공식화하다','격려하다','촉진하다','운송하다']},
+    {w:'consult',a:3,c:['챙겨두다','차지하다','토의하다','상의하다']},
+    {w:'rational',a:1,c:['~에 익숙해진','이성적인','체육관','명료함']},
+    {w:'trend',a:1,c:['산출하다','경향','~하기를 학수고대하다','좋은기회']},
+    {w:'fundamental',a:3,c:['성장하여 벗어나다','정체를 밝히다','강화하다','근본적인']},
+    {w:'fare',a:1,c:['몸짓','운임','생산하다','녹슬다']},
+    {w:'take advantage',a:3,c:['책임있는','높이다','조직하다','이용하다']},
+    {w:'publish',a:0,c:['출판하다','행동하다','의뢰인','안으로']},
+    {w:'victimize',a:1,c:['감정','피해를 주다','빈자리','기구']},
+    {w:'pitfall',a:3,c:['단순한','정체','의제','생각지 못한 위험']},
+    {w:'ecology',a:2,c:['배반','전략','생태학','풍요하게하다']},
+    {w:'merchant',a:2,c:['화난','의의','상인','미묘한']},
+    {w:'take account',a:3,c:['신학','필수 조건','전적으로','고려하다']},
+    {w:'termination',a:0,c:['종료','해결','특허','부푼 것']},
+    {w:'territory',a:1,c:['직면하다','영토','공동 사회의','일반국민']},
+  ],
+  28: [
+    {w:'expel',a:3,c:['피할 수 없는','자발적인','부화하다','추방하다']},
+    {w:'imprison',a:1,c:['은유','수감하다','처음의','판지상자']},
+    {w:'increase',a:1,c:['발표','증가','살금살금 들어오다','멈추다']},
+    {w:'figure',a:2,c:['탈출','제일의','숫자','방사능']},
+    {w:'compress',a:0,c:['압축하다','충돌하다','적용','불평하다']},
+    {w:'invoke',a:3,c:['결심하다','억지로 시키다','평가하다','호소하다']},
+    {w:'gloomy',a:0,c:['우울한','민주주의','조정','운동의']},
+    {w:'permanent',a:0,c:['영구적인','결국 ~임이 밝혀지다','진흙','주름지다']},
+    {w:'alien',a:2,c:['나오다','지원하다','이방인','공간적인']},
+    {w:'basement',a:0,c:['지하층','수령','철학적인','신성한']},
+    {w:'meadow',a:0,c:['목초지','용어','읽고 쓸 줄 아는','과장하다']},
+    {w:'cohesive',a:1,c:['물질','결속력 있는','상인','언급하다']},
+    {w:'tremendous',a:3,c:['조심하다','조심','물리학자','엄청난']},
+    {w:'blunt',a:0,c:['무딘','전의','철자를 쓰다','우아함']},
+    {w:'sacred',a:2,c:['추정하다','식물학자','신성한','생태적인']},
+    {w:'confront',a:3,c:['채용하다','비율','이성적인','직면하다']},
+    {w:'volume',a:0,c:['음량','고려하다','상','연기하다']},
+    {w:'notification',a:3,c:['실행하다','조치를 취하다','경향','통지']},
+    {w:'chore',a:2,c:['독특한 외모','분명히 하다','허드렛 일','기둥']},
+    {w:'estate',a:2,c:['창조하다','절차적 정당성','재산','설명']},
+    {w:'vibrate',a:1,c:['눈의','흔들리다','출석하고있는','닦다']},
+    {w:'earn',a:2,c:['나빠지다','바꾸다','돈을 벌다','휘파람을 불다']},
+    {w:'observe',a:2,c:['의뢰인','대폭적으로 인하하다','알아채다','관련있는']},
+    {w:'harvest',a:2,c:['초과하다','장치','수확','외교']},
+    {w:'range',a:3,c:['식민지로 만들다','필수적인','불만족스러운','범위']},
+    {w:'illustrate',a:1,c:['재산','설명하다','마지못해 하는','의뢰인']},
+    {w:'discord',a:0,c:['불일치','과소 평가하다','동료','횃불']},
+    {w:'conservative',a:0,c:['보수적인','얽히게하다','병','놀라움']},
+    {w:'occur',a:3,c:['이동성이 있는','민감한','장기의','발생하다']},
+    {w:'bounce',a:1,c:['계몽하다','튀다','심리학','진공의']},
+    {w:'announcement',a:0,c:['공고','지하층','식별하다','미신']},
+    {w:'statement',a:0,c:['성명','증명하다','전문용어','덜다']},
+    {w:'indication',a:1,c:['가축화','지시','축하연','향상시키다']},
+    {w:'due',a:2,c:['부푼 것','굽다','~하기로 되어 있는','분']},
+    {w:'obsess',a:0,c:['집착하다','바치다','제거하다','비율']},
+    {w:'contestant',a:0,c:['콘테스트 참가자','결속','이론적으로 타당한 이유','비틀거리다']},
+    {w:'endow',a:1,c:['새기다','부여하다','산림파괴','더럽히다']},
+    {w:'deviation',a:1,c:['표면','이례','구성','유형의']},
+    {w:'candidate',a:1,c:['공급하다','지원자','연대순의','적의']},
+    {w:'enhance',a:0,c:['향상시키다','본질적인','간섭','수혜자']},
+    {w:'incident',a:1,c:['바꾸다','작은 사건','격려하다','수지를 맞추다']},
+    {w:'prioritize',a:2,c:['유사성','제조하다','우선순위를 매기다','송아지장딴지']},
+    {w:'attract',a:3,c:['능가하다','연역하다','일축하다','끌다']},
+    {w:'artificial',a:2,c:['빨갛게 불타다','승객','인공의','명확히']},
+    {w:'hesitate',a:3,c:['수사','발표','다수','주저하다']},
+    {w:'voluntary',a:2,c:['귀찮게하다','초과하다','자발적인','되찾다']},
+    {w:'qualify',a:3,c:['(어떤 것의) 변형','선언','타협','자격을 주다']},
+    {w:'brochure',a:2,c:['이기적임','적응시키다','(안내광고용) 책자','섭취']},
+    {w:'dash',a:1,c:['밑에 깔린','내던지다','유행병','지우다']},
+    {w:'declaration',a:1,c:['출석하고있는','선언','연기하다','직경']},
+    {w:'tax',a:1,c:['목적지','세금','노력하다','연방 정부의']},
+    {w:'patent',a:0,c:['특허','장애가 있는','유리한 점','경제']},
+    {w:'device',a:2,c:['불쾌한','전진하다','장치','비틀다']},
+    {w:'determine',a:2,c:['흘끗 봄','(시의)각운','결정하다','검사']},
+    {w:'intrigue',a:2,c:['전통문화유산','오두막집','흥미를 자아내다','주로']},
+  ],
+  29: [
+    {w:'cut down on',a:3,c:['놀라움','참조','비율','~을 줄이다']},
+    {w:'cut off',a:1,c:['덫','잘라내다','범위','흥분하다']},
+    {w:'stubbornness',a:3,c:['적극적으로','귀찮게하다','외딴','완고']},
+    {w:'anonymous',a:2,c:['들어 올리다','순환','익명의','주의를 흩뜨리다']},
+    {w:'integral',a:1,c:['고요한','필수적인','~와 동행하다','잡아채다']},
+    {w:'tolerant',a:3,c:['살이찌다','불꽃놀이','여행','관대한']},
+    {w:'cut in on',a:2,c:['치료','거리','끼어들다','잣다']},
+    {w:'astonishment',a:1,c:['~을 ~와 구별하다','놀람','과감한','~의 진술을 마치다']},
+    {w:'register',a:3,c:['특수한','잠시','(~와) 관계가 없는','등록하다']},
+    {w:'momentarily',a:0,c:['잠시','겁을 먹은','복잡한','구성하다']},
+    {w:'household',a:1,c:['능가하다','가족','발음하다','박수갈채']},
+    {w:'antibody',a:2,c:['다수','더럽히다','항체','소송을 제기하다']},
+    {w:'span',a:1,c:['주점','한뼘','변화','상담가']},
+    {w:'award',a:1,c:['양','상','직사각형','영원히']},
+    {w:'underlying',a:0,c:['밑에 깔린','흥미를 자아내다','앙갚음하다(take revenge on)','부가의']},
+    {w:'distraction',a:3,c:['축하','두루마리','꺼지다','주의 산만']},
+    {w:'separate',a:0,c:['분리된','구부리다','자극','반환']},
+    {w:'impair',a:0,c:['해치다','끔찍한','오두막집','설립하다']},
+    {w:'righteous',a:1,c:['약해지다','정의로운','차별하다','(법적도덕적인) 의무']},
+    {w:'scribbled',a:3,c:['~을 경멸하다','구성 요소','~을 내려놓다','갈겨쓰다']},
+    {w:'pessimism',a:2,c:['새기다','신화','염세주의','해석']},
+    {w:'plumber',a:2,c:['~와 동행하다','쳐부수다','배관공','피해를 주다']},
+    {w:'benefit',a:1,c:['만장일치로','혜택','제공하다','부식하다']},
+    {w:'inject',a:3,c:['누출','이기적임','마침내','주입하다']},
+    {w:'rehabilitate',a:2,c:['나란한','태아','재활시키다','변명을 하다']},
+    {w:'canal',a:2,c:['두려워하여','움직이지 않는','운하','중대한']},
+    {w:'behavior',a:2,c:['압도적인','불변의','행동','전통문화유산']},
+    {w:'patron',a:3,c:['부패','계단','구분하다','후원자']},
+    {w:'resist',a:0,c:['저항하다','신호','연속체','전원의']},
+    {w:'predominate',a:1,c:['요인','우세하다','작동시키다','균일한']},
+    {w:'liberal',a:3,c:['안정된','타협','책임지다','자유주의적인']},
+    {w:'author',a:1,c:['규칙적인','저자','침해하다','허락하다']},
+    {w:'commerce',a:3,c:['엉뚱한 방향(곳)으로','완전히 폐지하다','발췌','상업']},
+    {w:'tissue',a:1,c:['묘사','생물의 조직','유명인','길']},
+    {w:'variety',a:2,c:['태도','훈육하다','다양성','필요한']},
+    {w:'reassure',a:0,c:['안심시키다','벌하다','인정하다','능력']},
+    {w:'appeal',a:3,c:['금지하다','일반의','해적','호소하다']},
+    {w:'resolution',a:1,c:['의뢰인','해결','전문직','진정한']},
+    {w:'incentive',a:2,c:['친족 혈족 관계','보행자','동기','방향 결정']},
+    {w:'cut across',a:3,c:['점','살금살금 기다','상의하다','가로질러 갔다']},
+    {w:'pinpoint',a:3,c:['게으른','오염','필수 조건','정확히 찾아내다']},
+    {w:'duty',a:3,c:['공급하다','잘라내다','일관성있는','(법적도덕적인) 의무']},
+    {w:'intellect',a:2,c:['분리된','나머지','지성','개념']},
+    {w:'corporation',a:3,c:['더러움','파도','제안하다','회사']},
+    {w:'ally',a:2,c:['촉진하다','형제자매','동맹하다','방사능']},
+    {w:'peel',a:2,c:['임대료','전염성의','껍질을 벗기다','점차적으로']},
+    {w:'slot',a:1,c:['장비를 갖추다','홈','경영간부','주의를 흩뜨리다']},
+    {w:'achieve',a:3,c:['착수','여윈','분','이루다']},
+    {w:'candid',a:1,c:['엉뚱한 방향(곳)으로','솔직한','대참사','합판']},
+    {w:'empty',a:3,c:['연대순의','보통의','구조','비어있는']},
+    {w:'devastate',a:1,c:['개별의','황폐화시키다','전진하다','염려하는']},
+    {w:'exotic',a:0,c:['이국적인','중대한','제한','수지를 맞추다']},
+    {w:'rebellion',a:3,c:['고독한','분리하다','표현하다','반란']},
+    {w:'instinct',a:2,c:['물러나다','홈','본능','가혹한']},
+    {w:'cut out',a:1,c:['숫자','~을 잘라내다','더미','유형의']},
+  ],
+  30: [
+    {w:'exhibit',a:3,c:['등록하다','적당한','감소','전시하다']},
+    {w:'radioactive',a:3,c:['기르다','게으른','목적','방사능의']},
+    {w:'nominate',a:3,c:['지루한','불쾌한','숨','추천하다']},
+    {w:'crucial',a:3,c:['전통적인','담그다','견고한','중대한']},
+    {w:'junk',a:0,c:['고물','전염성의','유익','구성']},
+    {w:'apply',a:0,c:['지원하다','운명','충격','길']},
+    {w:'descendant',a:0,c:['자손','주목할 만한','열등한','홍수']},
+    {w:'orientation',a:0,c:['방향 결정','운반하다','손잡이','등록하다']},
+    {w:'discrepancy',a:2,c:['떠돌아다니다','논증하다','모순','정리하다']},
+    {w:'relative',a:0,c:['친척','억누르다','참가자','꽃']},
+    {w:'diagnose',a:0,c:['진단하다','장기간으로','날것의','거절하다']},
+    {w:'creep',a:0,c:['살금살금 기다','최소의','절차적 정당성','진보']},
+    {w:'comprehend',a:0,c:['이해하다','결과','시간을 벌다','최소']},
+    {w:'wait patiently',a:0,c:['침착하게 기다리다','떠서','냉장','도구']},
+    {w:'emphasis',a:1,c:['소송을 제기하다','강조','더럽히다','폭발하다']},
+    {w:'announce',a:0,c:['발표하다','놀란','철사','잠복 중인']},
+    {w:'shame publicly',a:3,c:['익명의','증가','유행','공개적으로 망신을 주다']},
+    {w:'feat',a:3,c:['수지를 맞추다','몇 대몇의','충돌하다','위업']},
+    {w:'charitable',a:0,c:['자선의','~의 탓으로 돌리다','조사하다','침식하다']},
+    {w:'solid',a:1,c:['비율','고체의','연기하다','화폐의']},
+    {w:'superstition',a:0,c:['미신','후원자','접근하다','소중히 하다']},
+    {w:'scramble',a:3,c:['짐','증발시키다','실제의','뒤섞다']},
+    {w:'principal',a:3,c:['최소','결국 ~임이 밝혀지다','은유','주요한']},
+    {w:'preoccupation',a:0,c:['몰두','거절하다','지우다','반사하다']},
+    {w:'growl',a:1,c:['개별의','으르렁거리다','빈정대는','장점']},
+    {w:'merit',a:0,c:['장점','이론','차량','사라지다']},
+    {w:'patch',a:1,c:['지속적으로','헝겊 조각','유감','순환']},
+    {w:'secure',a:2,c:['시끄러운','안심시키다','확보하다','침식']},
+    {w:'abolish completely',a:2,c:['금지하다','노력하다','완전히 폐지하다','진수시키다']},
+    {w:'deliberate',a:2,c:['보행자','호기심','의도적인','긴']},
+    {w:'revitalization',a:2,c:['말할 필요도 없이','일시적인','활성화','계단']},
+    {w:'fertility',a:3,c:['~하는 경향이 있는','확보하다','분류하다','비옥']},
+    {w:'chemistry',a:1,c:['옹호','화학','바꾸다','증발시키다']},
+    {w:'drive recklessly',a:0,c:['난폭하게 운전하다','상기하다','치과 의사','타격']},
+    {w:'whisper softly',a:1,c:['살다','나직이 속삭이다','분석하다','더 좋아하다']},
+    {w:'loss',a:1,c:['경배하다','손실','분석하다','분별있는']},
+    {w:'exploit',a:2,c:['유형의','생명의','착취하다','주요산물']},
+    {w:'rural',a:1,c:['입법','전원의','예의범절','동등한']},
+    {w:'phenomenon',a:3,c:['준비하다','이국적인','반사하다','현상']},
+    {w:'automatic',a:3,c:['재간있는','회의','공평한','자동의']},
+    {w:'interval',a:2,c:['경쟁','경매','간격','생생한']},
+    {w:'intensive',a:1,c:['거짓말','강한','발명의 재주','생물학자']},
+    {w:'favor',a:0,c:['친절한 행위','보급','오염','일시적인']},
+    {w:'gather',a:3,c:['강한','후자의','~에 널리 퍼지다','모으다']},
+    {w:'manufacture',a:1,c:['낙담한','제조하다','모으다','일그러지게하다']},
+    {w:'symptom',a:3,c:['개체','떨다','엉뚱한 방향(곳)으로','증상']},
+    {w:'leap',a:3,c:['군대','가로질러 갔다','측면','도약']},
+    {w:'review',a:3,c:['(등받이가없는)의자','양','음향의','재검토']},
+    {w:'aesthetic',a:0,c:['미적인','˜보다 한 수 더 뜨다','복잡한','뒤']},
+    {w:'enthusiasm',a:0,c:['열정','풍부하다','변장','격렬한']},
+    {w:'revise',a:1,c:['자세히살펴보다','수정하다','반응','재난']},
+    {w:'omit',a:2,c:['연수','악순환','생략하다','위반하는']},
+    {w:'agriculture',a:3,c:['복잡한','씨를 뿌리다','부가의','농업']},
+    {w:'discriminate',a:0,c:['차별하다','먼옛날의','화나게하다','문자 해독']},
+    {w:'verse',a:3,c:['언론인','일으키다','발음하다','운문']},
+  ],
+  31: [
+    {w:'garage',a:3,c:['통합하다','적합한','보증하다','차고']},
+    {w:'theme',a:0,c:['주제','발명품','소화하다','낙천주의']},
+    {w:'display',a:3,c:['그림자','자비로운','지역','전시하다']},
+    {w:'overweight',a:0,c:['과체중의','여명','불의','근거없는 이야기']},
+    {w:'proof',a:3,c:['소매','삭제하다','희생','증거']},
+    {w:'recollection',a:0,c:['기억','저항하는','뻣뻣한','공급하다']},
+    {w:'supply',a:1,c:['연결하다','공급하다','규칙성','화나게하다']},
+    {w:'intimate',a:0,c:['친밀한','고안하다','인종의','조종사']},
+    {w:'complementary',a:0,c:['보충적인','노동인구','꺼림','영향을 미치다']},
+    {w:'beholder',a:2,c:['독립한','초조한','지켜보는 사람','자비로운']},
+    {w:'sustain',a:0,c:['지속하다','전문의','공간적인','복종']},
+    {w:'virtual',a:3,c:['이용도','유행병','감소하다','가상의']},
+    {w:'uplifting',a:1,c:['물을 빼다','향상시키는','지위','기반시설']},
+    {w:'oblige',a:1,c:['제외하다','의무를 지우다','방법','초래하다']},
+    {w:'forgiving',a:1,c:['상호 작용','너그러운','(소리등을) 크게 하다','빨갛게 불타다']},
+    {w:'enrich',a:1,c:['번창하다','풍요하게하다','경배하다','파멸하다']},
+    {w:'reduction',a:3,c:['진수시키다','비판하다','고치다','축소']},
+    {w:'domesticated',a:0,c:['길들여진','전문직','이발사','군대']},
+    {w:'plot',a:2,c:['보증','이용도','음모','동시대의']},
+    {w:'static',a:0,c:['정적인','지성','일시적인','흥미를 자아내다']},
+    {w:'grain',a:1,c:['살다','곡식','성취하다','분명한']},
+    {w:'inevitable',a:0,c:['불가피한','재산','작은','되풀이하는']},
+    {w:'pile',a:1,c:['산들바람','더미','표류하여','준비하다']},
+    {w:'subtraction',a:3,c:['거대한','찬란한','나직이 속삭이다','빼기']},
+    {w:'threat',a:0,c:['위협','본질','가정','불경기']},
+    {w:'wander',a:0,c:['떠돌아다니다','제안하다','일시적인','예술의']},
+    {w:'module',a:2,c:['물다','길','모듈','재능이 있는']},
+    {w:'practice',a:3,c:['저지하다','감소하다','솔선하다','실행하다']},
+    {w:'polite',a:3,c:['제한하다','문의하다','자손','공손한']},
+    {w:'found',a:3,c:['~에 접근하다','지지하다','갑자기','설립하다']},
+    {w:'downsizing',a:1,c:['기사','규모축소','치과 의사','분']},
+    {w:'erroneously',a:0,c:['실수로','속이 빈','넓은','전문직']},
+    {w:'bend',a:1,c:['적합한','구부리다','희생','다수의']},
+    {w:'credible',a:1,c:['내부의','신용할 수 있는','난파선','채널']},
+    {w:'headquarters',a:1,c:['정신의','본부','짐','직관']},
+    {w:'species',a:0,c:['종','빼기','기록보관소','방']},
+    {w:'recommend',a:1,c:['그림자','추천하다','책임있는','야망']},
+    {w:'reluctant',a:1,c:['수혜자','마지못해 하는','필요한','비평가']},
+    {w:'diminution',a:1,c:['투표하다','감소','합창단','지출']},
+    {w:'involve',a:3,c:['유전자의','빠른','폐렴','관여하다']},
+    {w:'heritage',a:3,c:['범죄자','무질서','재개발','전통문화유산']},
+    {w:'negotiate',a:3,c:['전망','논리 정연한','발생','협상하다']},
+    {w:'mood',a:2,c:['매우드문','초래하다','기분','시간을 벌다']},
+    {w:'considerable',a:0,c:['상당한','턱','전통문화유산','거미집']},
+    {w:'cutback',a:3,c:['일','엄격','약해지다','삭감']},
+    {w:'subconscious',a:2,c:['문의하다','충격','잠재 의식','의회']},
+    {w:'anchor',a:3,c:['면역된','풍습','~를 가속화하다','닻']},
+    {w:'contain',a:1,c:['다양한','함유하다','부정의','갈라진 금']},
+    {w:'flood',a:1,c:['유기체의','홍수','경의를 표하다','기름진 음식']},
+    {w:'produce',a:1,c:['가파른','생산하다','후자의','분리하다']},
+    {w:'optical',a:1,c:['먹이','눈의','격려하다','조심']},
+    {w:'entertain',a:3,c:['탐험','친절한 행위','관점','즐겁게하다']},
+    {w:'sort',a:3,c:['정리하다','솔선하다','정체를 밝히다','종류']},
+    {w:'competence',a:0,c:['능력','갈라진 금','문지르다','창조하다']},
+    {w:'theology',a:1,c:['운하','신학','재정의','시력']},
+  ],
+  32: [
+    {w:'allot',a:3,c:['단서','퍼뜨리다','유아원','할당하다']},
+    {w:'apt',a:2,c:['관찰','치과 의사','~하는 경향이 있는','도구']},
+    {w:'migrant',a:2,c:['피하다','활동적인','이주하는','주다']},
+    {w:'pneumonia',a:1,c:['부패','폐렴','빼기','쓰레기']},
+    {w:'ambiguous',a:3,c:['참다','비서','적당한','애매한']},
+    {w:'appliance',a:0,c:['가전제품','주저하다','장애','쌓아올리다']},
+    {w:'superior',a:0,c:['우월한','연간의','필수 조건','방향 결정']},
+    {w:'aggravate',a:0,c:['악화시키다','오랫동안 지속되는','규칙성','숫자']},
+    {w:'accuse',a:1,c:['구성하다','비난하다','움츠리다','전진하다']},
+    {w:'discuss',a:2,c:['암','부족','토의하다','동맹하다']},
+    {w:'break out',a:0,c:['전쟁이 일어나다','길','활동적인','흐름']},
+    {w:'edit',a:0,c:['편집하다','강조','근거없는 이야기','해적']},
+    {w:'commodity',a:1,c:['오염시키다','상품','버리다','임금']},
+    {w:'bless',a:2,c:['설득하다','변장','축복하다','연방 정부의']},
+    {w:'complex',a:2,c:['폐지하다','안개','복잡한','정당화하다']},
+    {w:'privilege',a:0,c:['특권','주다','모으다','~을 ~와 구별하다']},
+    {w:'break into',a:2,c:['구체','주로','침입하다','충분한']},
+    {w:'create',a:0,c:['창조하다','포용하다','~ 할생각이 있는','설립하다']},
+    {w:'expenditure',a:3,c:['부화하다','빠른','요금','지출']},
+    {w:'breeze',a:1,c:['가정','산들바람','화나게하다','파산하다']},
+    {w:'bias',a:1,c:['규칙성','편견','완전히 폐지하다','다투다']},
+    {w:'extinction',a:2,c:['동물학자','노동조합','멸종','성미가 맞지 않는']},
+    {w:'equation',a:2,c:['보충적인','압도하다','방정식','방법']},
+    {w:'substance',a:2,c:['타협','교활한','물질','화난']},
+    {w:'restraint',a:1,c:['수치스러운','억제','교리','허락하다']},
+    {w:'sneak',a:0,c:['살금살금 들어오다','법적 타당성','~을 내려놓다','신용할 수 있는']},
+    {w:'divert',a:3,c:['모방','함축적인','일화','바꾸다']},
+    {w:'concern',a:2,c:['전진하다','평가하다','관계가 있다','문의하다']},
+    {w:'legal',a:0,c:['적법한','없어서는 안 될','힘','면역된']},
+    {w:'consume',a:0,c:['소비하다','고민','구분하다','혁명']},
+    {w:'essential',a:3,c:['면허증','버리다','결합을 끊다','필수적인']},
+    {w:'category',a:0,c:['범주','기하급수적인','힘이 드는','작동시키다']},
+    {w:'confer',a:0,c:['주다','언론인','모호','지우다']},
+    {w:'prepare',a:2,c:['회사','경계하는','준비하다','불변의']},
+    {w:'literature',a:0,c:['문학','맹렬한','상징하다','삭감']},
+    {w:'deprive',a:2,c:['사로잡히다','발생하다','박탈하다','청각의']},
+    {w:'animate',a:3,c:['침투하다','변화','동경하다','활기를 띠게하다']},
+    {w:'fault',a:2,c:['횃불','맛','결점','제한하다']},
+    {w:'obvious',a:1,c:['고수하다','명백한','작동시키다','공격하다']},
+    {w:'establish',a:2,c:['번영','제도','설립하다','해충']},
+    {w:'transparent',a:1,c:['층','투명한','뜨다','외교']},
+    {w:'refrigeration',a:1,c:['강의','냉장','뒤쫓다','막다']},
+    {w:'content',a:2,c:['금지하다','반대하다','내용','생물의 조직']},
+    {w:'remarkable',a:0,c:['놀라운','명료함','뇌물','잣다']},
+    {w:'keen',a:1,c:['혁신','열망하는','원인','지구']},
+    {w:'mind',a:2,c:['붙이다','결과','마음','지역']},
+    {w:'oxygen',a:0,c:['산소','포즈','끊임없는','구매']},
+    {w:'break through',a:3,c:['간청하다','말할 필요도 없이','우아함','∼을 헤치고 나아가다']},
+    {w:'option',a:1,c:['특수한','선택','복제하다','묶다']},
+    {w:'break up with',a:3,c:['승객','영역','솔','~와 결별하다']},
+    {w:'despair',a:2,c:['꺼림','시간엄수','절망','운명']},
+    {w:'audience',a:0,c:['청중','남용하다','흥분하다','본능']},
+    {w:'alteration',a:3,c:['관념','물다','날것의','변화']},
+    {w:'break down',a:2,c:['축복하다','달라붙다','깨다','빈번한']},
+    {w:'constraint',a:2,c:['혁신하다','개별의','제약','물러나다']},
+  ],
+  33: [
+    {w:'simultaneously',a:1,c:['적법한','동시에','음량','이익을 내다']},
+    {w:'communal',a:0,c:['공동 사회의','배 위에','유명인','주목']},
+    {w:'distinction',a:3,c:['부족','수평선','줏대없는','구별']},
+    {w:'sequence',a:2,c:['예언','~을 설치하다','연속','누출']},
+    {w:'ceremony',a:2,c:['부정의','최소','의식','불안해 하는']},
+    {w:'rotation',a:1,c:['발표','교대','상속하다','빈번한']},
+    {w:'application',a:1,c:['진동','적용','필요','바다의']},
+    {w:'literate',a:1,c:['적응력','읽고 쓸 줄 아는','도약','열망하는']},
+    {w:'vertical',a:3,c:['해결하다','그네','조각하다','수직의']},
+    {w:'adversity',a:3,c:['자존심을 억누르다','퇴직하다','중세의','역경']},
+    {w:'tourism',a:1,c:['감염시키다','관광','이해하다','운동']},
+    {w:'preoccupied',a:0,c:['사로잡힌','옮기다','식사를 하다','허락하다']},
+    {w:'overlook',a:3,c:['부여하다','~에 종사하다','학생','내려다보다']},
+    {w:'archaeologist',a:3,c:['생략','장식하다','안심시키다','고고학자']},
+    {w:'refined',a:3,c:['정직한','유리한 점','끔찍한','세련된']},
+    {w:'notion',a:1,c:['냄새','관념','목초지','풍부하다']},
+    {w:'outgrow',a:3,c:['정기구독','자세','공급하다','성장하여 벗어나다']},
+    {w:'stain',a:2,c:['여유가 있다','폭발','더럽히다','간섭']},
+    {w:'bankrupt',a:3,c:['정교한','행위','해방하다','파산한']},
+    {w:'circular',a:3,c:['보증하다','모욕하다','겁을 먹은','원의']},
+    {w:'classify',a:1,c:['나머지','분류하다','테','포함하다']},
+    {w:'translation',a:1,c:['후원자','번역','위기','추방하다']},
+    {w:'summit',a:0,c:['정상','미식가','소아과 의사','몰두한']},
+    {w:'sphere',a:0,c:['구체','콘테스트 참가자','강력한','재목']},
+    {w:'vigor',a:0,c:['활력','충분함','차별하다','조심']},
+    {w:'hold up',a:0,c:['~를 집어들다','일시적인','다가오는','완전히 폐지하다']},
+    {w:'hold over',a:0,c:['~을 연장하다','채널','아주 멋진','인식']},
+    {w:'betrayal',a:1,c:['동일한','배반','실행하다','일시적인']},
+    {w:'shrink',a:0,c:['줄어들다','숨 쉬다','비추다','직사각형의']},
+    {w:'unrivaled',a:1,c:['절망','무적의','마음속에 품다','추천하다']},
+    {w:'anticipate',a:3,c:['격렬한','긁다','주인','예상하다']},
+    {w:'expand',a:1,c:['선두','팽창시키다','괴롭히기','고수하다']},
+    {w:'tragedy',a:0,c:['비극','예상','억누르다','대안']},
+    {w:'realm',a:2,c:['편집자','간결한','영역','의무']},
+    {w:'trek',a:2,c:['일반국민','복종','여행','건축']},
+    {w:'halt',a:0,c:['멈추다','분리된','도약','자격을 주다']},
+    {w:'declining',a:0,c:['기우는','오도하는','허드렛 일','중세의']},
+    {w:'hold out',a:3,c:['~에 접근하다','근시의','상식','내밀다']},
+    {w:'similarity',a:2,c:['일치하다','무질서','유사','더러움']},
+    {w:'expertise',a:1,c:['덜다','전문적 기술','선발','연수']},
+    {w:'compose',a:2,c:['진수시키다','혁명','구성하다','유아원']},
+    {w:'strive',a:2,c:['느슨한','신체적 외모','분투하다','진수시키다']},
+    {w:'unveil',a:2,c:['법적 타당성','의식','밝히다','도래']},
+    {w:'explore',a:1,c:['주인','탐험하다','~를 집어들다','낙담한']},
+    {w:'transmit',a:0,c:['보내다','이주하는','동맹','어디에나 있는']},
+    {w:'brevity',a:2,c:['열정','비행','짧음','가전제품']},
+    {w:'province',a:0,c:['도','장관의','목적','독특한 외모']},
+    {w:'contempt',a:1,c:['감정','경멸','가구','염세주의']},
+    {w:'molecule',a:0,c:['분자','근거없는 이야기','살아남다','떠서']},
+    {w:'imaginary',a:1,c:['벗기다','가상의','칭찬하다','~의 진술을 마치다']},
+    {w:'hold on',a:3,c:['증인','등록하다','더러움','계속 잡고 있다']},
+    {w:'afloat',a:2,c:['대조','지위','떠서','합판']},
+    {w:'suburb',a:3,c:['신속한','항생 물질','중간의','교외']},
+    {w:'hold back',a:3,c:['중세의','한가롭게 거닐다','읽고 쓸 줄 아는','자제하다']},
+    {w:'promote',a:1,c:['휘파람을 불다','촉진하다','사로잡히다','반환']},
+  ],
+  34: [
+    {w:'reclaim',a:0,c:['~의 반환을 요구하다','출판하다','연관성','감옥']},
+    {w:'modest',a:1,c:['신용할 수 있는','별로 크지 않은','회사의','가구']},
+    {w:'exponential',a:2,c:['초과근무','차량','기하급수적인','화폐의']},
+    {w:'dual',a:3,c:['분자','파편','방향 결정','둘의']},
+    {w:'emission',a:0,c:['내뿜음','진동','정의하다','모양']},
+    {w:'medium',a:0,c:['중간의','실행하다','통로','희박한 가망']},
+    {w:'deem',a:0,c:['~라고 여기다','통찰력','수분작용','위협']},
+    {w:'substantial',a:3,c:['높은 가능성','~보다오래가다','시들다','상당한']},
+    {w:'propel',a:0,c:['추진하다','원고','필사적인','실수로']},
+    {w:'toss',a:2,c:['내려다보다','흔들리다','가볍게 던지다','재간있는']},
+    {w:'startled',a:1,c:['연수','깜짝 놀란','주로','선택']},
+    {w:'devise',a:3,c:['절대적인','지루한','본부','고안하다']},
+    {w:'inherent',a:3,c:['평가하다','새기다','지휘자','내재된']},
+    {w:'intellectually',a:2,c:['과장','활동적인','지적으로','채용하다']},
+    {w:'allocate',a:2,c:['갑자기','타고난','할당하다','협동']},
+    {w:'misplace',a:2,c:['치다','다음의','잘못 놓다','매료된']},
+    {w:'firework',a:0,c:['불꽃놀이','화나게 하다','보행자','출발']},
+    {w:'bureaucracy',a:3,c:['취임하다','빈자리','뽑다','관료정치']},
+    {w:'adaptability',a:2,c:['계획','동시대의','적응력','쓰레기']},
+    {w:'kinship',a:2,c:['선거','차량','친족 혈족 관계','주관적인']},
+    {w:'physicist',a:1,c:['추상적인','물리학자','연대순의','식민지']},
+    {w:'urgent',a:2,c:['감소하다','노력','긴급한','강의']},
+    {w:'moderate',a:0,c:['적당한','감각 기관','시끄러운','재해']},
+    {w:'stroll',a:3,c:['세금','모듈','가짜의','한가롭게 거닐다']},
+    {w:'definitely',a:1,c:['길을 찾다','명확히','환영','지적으로']},
+    {w:'dormant',a:2,c:['송어','오도하는','잠복 중인','배경']},
+    {w:'mischief',a:3,c:['~을 증거로 제출하다','내포하다','주의를 흩뜨리다','장난']},
+    {w:'invariable',a:1,c:['침해하다','불변의','병','이용도']},
+    {w:'launch',a:2,c:['반응','배제','출시하다','보존하다']},
+    {w:'reflection',a:2,c:['영향을 미치다','신용할 수 있는','반영','뻣뻣한']},
+    {w:'attentive',a:1,c:['피드백','주의하는','발생하다','~의 밑을 파다']},
+    {w:'gradual',a:1,c:['등록하다','점진적인','침투하다','직관']},
+    {w:'perspective',a:1,c:['희박한 가능성','관점','숨','예상하다']},
+    {w:'notify',a:3,c:['반환','본질적인','모방','알리다']},
+    {w:'poem',a:3,c:['생태적인','기초','한가롭게 거닐다','시']},
+    {w:'debris',a:0,c:['파편','수리하다','이성적인','수사']},
+    {w:'innovation',a:0,c:['혁신','고려하다','도','재해']},
+    {w:'awesome',a:3,c:['지친','상품','결정하다','굉장히 멋진']},
+    {w:'aquarium',a:0,c:['수족관','공동의','상호의','줄다']},
+    {w:'overtime',a:1,c:['영원히','초과근무','시끄러운','자세']},
+    {w:'excel',a:1,c:['희박한 가능성','뛰어나다','극장','마지못해 하는']},
+    {w:'ambiguity',a:1,c:['형제자매','모호','항의','평가하다']},
+    {w:'fragment',a:3,c:['길들여진','시대에 뒤떨어진','살금살금 기다','파편']},
+    {w:'biosphere',a:1,c:['타고난','생물권','투쟁하다','깜짝 놀란']},
+    {w:'plunge',a:0,c:['감소하다','폐물이 된','채널','스위치']},
+    {w:'institution',a:0,c:['제도','운동','상쾌한','연주회']},
+    {w:'hug',a:1,c:['기우는','껴안다','상담가','시들다']},
+    {w:'regret',a:1,c:['일으키다','유감','(일을) 끝마치다','근시의']},
+    {w:'recital',a:0,c:['연주회','닻','~라고 부르다','보증하다']},
+    {w:'glow',a:1,c:['간격','빨갛게 불타다','지속적으로','찬성하지 않다']},
+    {w:'posture',a:1,c:['타당한','자세','가상의','항체']},
+    {w:'clarify',a:0,c:['분명히 하다','찬성하지 않다','인정하다','정반대의']},
+    {w:'gourmet',a:3,c:['축하하다','쾅닫다','장치','미식가']},
+    {w:'belly',a:1,c:['빠지다','배','소아과 의사','처방하다']},
+    {w:'humanitarian',a:2,c:['제한하다','추론하다','인도주의적인','혁신하다']},
+  ],
+  35: [
+    {w:'curb',a:2,c:['악명높은','간결한','억제하다','구두의']},
+    {w:'shape',a:1,c:['재판관','모양','위험','지시적인']},
+    {w:'capacity',a:2,c:['배로 가다','기대다','능력','퍼뜨리다']},
+    {w:'prolonged',a:1,c:['조절하다','장기적인','신속한','납득시키다']},
+    {w:'stall',a:0,c:['상품 진열대','자세','다과','우회로']},
+    {w:'intend',a:3,c:['이루다','최소','연주회','의도하다']},
+    {w:'deny',a:3,c:['연방 정부의','끼어들다','수사','부인하다']},
+    {w:'outperform',a:0,c:['능가하다','의도하다','열이나게','상식']},
+    {w:'tremble',a:0,c:['떨다','제공하다','잘못 놓다','미신']},
+    {w:'fatal',a:3,c:['먹이를 주다','불변의','소아과 의사','치명적인']},
+    {w:'depressed',a:2,c:['신의','차고','낙담한','해안']},
+    {w:'recent',a:0,c:['최근의','충분함','신념','쳐부수다']},
+    {w:'migrate',a:1,c:['화폐의','이주하다','보급','피드백']},
+    {w:'congratulate',a:2,c:['실제의','움켜쥐다','축하하다','부인하다']},
+    {w:'confuse',a:3,c:['이성','무지','친절한 행위','혼동하다']},
+    {w:'alternate',a:1,c:['전자의','번갈아 하다','경제','경의를 표하다']},
+    {w:'nonsense',a:2,c:['~을 경멸하다','경향','무의미한 말','재목']},
+    {w:'correspond',a:0,c:['일치하다','의의','장학금','유창하게']},
+    {w:'persuade',a:0,c:['설득하다','알다','냄새','간청하다']},
+    {w:'stable',a:1,c:['공포','안정된','~을 ~와 구별하다','정의로운']},
+    {w:'rigid',a:2,c:['정밀한','동시에','경직된','도전']},
+    {w:'fellow',a:2,c:['천장','~라고 부르다','동료의','증명하다']},
+    {w:'terrifying',a:2,c:['분수','음향의','무서운','변명을 하다']},
+    {w:'astronaut',a:0,c:['우주비행사','경향','치수','경영간부']},
+    {w:'slave',a:3,c:['축소','보행자','의뢰인','노예']},
+    {w:'tackle',a:2,c:['충분함','특권','다루다','설치하다']},
+    {w:'inclined',a:3,c:['항체','~를 집어들다','충분함','~ 할생각이 있는']},
+    {w:'revenue',a:1,c:['신호','수입','상당한','약화시키다']},
+    {w:'embed',a:3,c:['단서','계단','영역','끼워 넣다']},
+    {w:'bowl',a:0,c:['그릇','무의미한 말','계속 잡고 있다','횃불']},
+    {w:'violation',a:1,c:['관념','위반','기만적인','지각의']},
+    {w:'scratch',a:3,c:['손실','표류하여','혁명','긁다']},
+    {w:'pest',a:2,c:['상당한','견디어내다','해충','우선권']},
+    {w:'slam',a:1,c:['거절하다','쾅닫다','미덕','강한']},
+    {w:'fright',a:1,c:['상속하다','공포','옆 모습','앉아 있는 시간이 많은']},
+    {w:'outlast',a:3,c:['그네','무색하게 하다','안정된','~보다오래가다']},
+    {w:'dull',a:2,c:['장대한','흥미를 자아내다','무딘','~을 인가하다']},
+    {w:'harm',a:0,c:['해','옮기다','속이 빈','창조하다']},
+    {w:'identify',a:2,c:['동료','전쟁이 일어나다','정체를 밝히다','움츠리다']},
+    {w:'outlive',a:2,c:['휴대할수 있는','기초','살아남다','의도하다']},
+    {w:'medieval',a:2,c:['요인','연상하다','중세의','꺼림']},
+    {w:'dump',a:0,c:['버리다','생물학자','생물의 조직','잠재 의식']},
+    {w:'stretch',a:3,c:['간결한','공포','보수적인','펴다']},
+    {w:'outnumber',a:2,c:['생각지 못한 위험','친척','수적으로 이기다','놀란']},
+    {w:'philosophy',a:0,c:['철학','비평','오도하는','연약한']},
+    {w:'outwit',a:2,c:['금지하다','신진의','˜보다 한 수 더 뜨다','회사']},
+    {w:'democracy',a:3,c:['유사성','풍부한','은유','민주주의']},
+    {w:'pose',a:0,c:['포즈','곱하다','유사','생산하다']},
+    {w:'empathetic',a:2,c:['뒤','얕은','감정이입의','포즈']},
+    {w:'versus',a:0,c:['몇 대몇의','도덕적인','삽화','의제']},
+    {w:'approach',a:0,c:['~에 접근하다','~하는 경향이 있는','되풀이 하다','특권']},
+    {w:'abstract',a:2,c:['목소리의','뒤','추상적인','접촉']},
+    {w:'microscope',a:2,c:['지시적인','외딴','현미경','일으키다']},
+    {w:'injured',a:1,c:['널리 알려지다','상처 입은','똑바로 선','간청하다']},
+    {w:'victim',a:0,c:['희생','기계로 작동되는','공개하다','이민자']},
+  ],
+  36: [
+    {w:'divorce',a:2,c:['모으다','선거구','이혼','쪼개다']},
+    {w:'equator',a:1,c:['일반국민','적도','운동의','의심하는']},
+    {w:'descent',a:0,c:['하강','그네','위험','제한하다']},
+    {w:'rub',a:1,c:['증명하다','문지르다','물러나다','추정하다']},
+    {w:'to say nothing of',a:2,c:['나무줄기','완전히','~는 말할 필요도 없이','흥분시키다']},
+    {w:'investigate',a:0,c:['조사하다','수확','가로질러 갔다','붕괴']},
+    {w:'diversity',a:1,c:['제조하다','다양성','사과','건설하다']},
+    {w:'intent',a:2,c:['획기적 발전','수지를 맞추다','결심한','도구']},
+    {w:'term',a:2,c:['치과 의사','조직하다','용어','적응시키다']},
+    {w:'attitude',a:2,c:['다치게하다','근본적인','자세','양']},
+    {w:'factor',a:2,c:['허드렛 일','수리하다','요인','수입']},
+    {w:'military',a:2,c:['복잡한','표면의','군대','풍경']},
+    {w:'needless to say',a:2,c:['기분','종사하다','말할 필요도 없이','옆 모습']},
+    {w:'parliament',a:3,c:['내향성인 사람','공포','기만적인','의회']},
+    {w:'speak well of',a:0,c:['칭찬하다','격렬한','통찰력','구성하다']},
+    {w:'stroke',a:2,c:['거래','해임','타격','상기시키다']},
+    {w:'resemble',a:2,c:['대로','정신의','닮다','열정']},
+    {w:'disconnect',a:1,c:['남아 있는','결합을 끊다','찬성하지 않다','계급에 따른']},
+    {w:'prevent',a:1,c:['교외','막다','전문용어','인플레이션']},
+    {w:'pillar',a:0,c:['기둥','오두막집','쌓아올리다','움츠리다']},
+    {w:'relieve',a:0,c:['덜다','중대한','옷을 입히다','균일한']},
+    {w:'challenge',a:0,c:['도전','~하기 쉬운','생물권','닦다']},
+    {w:'clumsy',a:3,c:['조각하다','명령','낙담한','서투른']},
+    {w:'vulnerable',a:1,c:['축복하다','약한','맡기다','생생한']},
+    {w:'barber',a:0,c:['이발사','물질','대로','썩다']},
+    {w:'elaborate',a:1,c:['촉진하다','정교한','주위를 둘러보다','구조']},
+    {w:'attack',a:1,c:['확인하다','공격하다','계단','그네']},
+    {w:'organism',a:0,c:['유기체','내포하다','생물권','정적']},
+    {w:'upcoming',a:1,c:['~라고 여기다','다가오는','오두막집','끌다']},
+    {w:'so to speak',a:0,c:['이를테면','이익을 내다','앉아 있는 시간이 많은','후한']},
+    {w:'primitive',a:3,c:['장점','진행 중인','~할 수 있게 하다','원시적인']},
+    {w:'chase',a:1,c:['다양성','뒤쫓다','혀','유혹하다']},
+    {w:'desperate',a:3,c:['부여하다','연결하다','속삭임','필사적인']},
+    {w:'spineless',a:2,c:['공포','독립한','줏대없는','쳐부수다']},
+    {w:'punish',a:0,c:['벌하다','극장','판지상자','매달다']},
+    {w:'flu',a:3,c:['의제','상','문자 해독','독감']},
+    {w:'implement',a:1,c:['노동인구','실행하다','~을 ~와 구별하다','믿을수 없는']},
+    {w:'nail',a:3,c:['인공의','소송을 제기하다','무질서','손톱']},
+    {w:'coast',a:3,c:['주목하다','배심원단','장난','해안']},
+    {w:'misconception',a:2,c:['동등한','감정이입의','그릇된 인식','삼키다']},
+    {w:'speak ill of',a:3,c:['번영','요리','악화되다','~에 대해 안 좋게 말하다']},
+    {w:'steep',a:3,c:['일상의 일','입법','외적인','가파른']},
+    {w:'warning',a:0,c:['경고','퇴직하다','성큼성큼 걷다','적당한']},
+    {w:'to tell the truth',a:3,c:['수확','부끄러운','항아리','사실대로 말하자면']},
+    {w:'brilliant',a:1,c:['길들여진','찬란한','재산','반환']},
+    {w:'choir',a:1,c:['곱하다','합창단','예상하다','비평']},
+    {w:'inform',a:1,c:['집어올리다','알리다','유지하다','바꾸다']},
+    {w:'agent',a:3,c:['증가','정리하다','도시의','대리인']},
+    {w:'sauce',a:1,c:['담수','소스','꽃','진정인']},
+    {w:'inscription',a:1,c:['혜택','새겨진 글자','과장하다','희생']},
+    {w:'gravity',a:2,c:['역설','남아 있는','중력','곤충']},
+    {w:'fascinated',a:0,c:['매료된','천문학','기대다','빼앗다']},
+    {w:'stack',a:0,c:['쌓아올리다','예산','정도','주목하다']},
+    {w:'region',a:2,c:['엄격한','비극','지역','속이 빈']},
+    {w:'enable',a:1,c:['연한 고기','~할 수 있게 하다','되풀이하는','짧은']},
+    {w:'predator',a:0,c:['약탈자','빠른','위급한','제한하다']},
+  ],
+  37: [
+    {w:'altruism',a:3,c:['토의하다','흐릿한','애정','이타주의']},
+    {w:'reluctance',a:3,c:['예상하다','일으키다','전시하다','꺼림']},
+    {w:'turn out',a:3,c:['묻다','나직이 속삭이다','애국자','결국 ~임이 밝혀지다']},
+    {w:'linearly',a:3,c:['외과수술의','풍족한','시끄러운','연속적으로']},
+    {w:'turn to',a:0,c:['~가 되다','기계장치','의심하는','거주하다']},
+    {w:'turn in',a:3,c:['얼굴 생김새','빈자리','흘끗 봄','~으로 변하다']},
+    {w:'scheme',a:0,c:['계획','모호한','시대에 뒤떨어진','무적의']},
+    {w:'aboard',a:2,c:['해골','잠재 의식','배 위에','의도하지 않게']},
+    {w:'secretary',a:1,c:['이론적으로 타당한 이유','비서','둘의','헌신']},
+    {w:'ongoing',a:1,c:['파괴하다','진행 중인','착수','수확']},
+    {w:'regulate',a:1,c:['보수적인','규제하다','필수적인','경작하다']},
+    {w:'turn up',a:0,c:['볼륨을 높이다','게으른','다양성','삼키다']},
+    {w:'multiply',a:2,c:['분류하다','허락하다','곱하다','거주하다']},
+    {w:'run-down',a:3,c:['공격하다','위협','혹성','지친']},
+    {w:'reveal',a:0,c:['폭로하다','회전하다','장치','친절한 행위']},
+    {w:'solidarity',a:0,c:['결속','오두막집','삽화','작은']},
+    {w:'ingenuity',a:1,c:['결심하다','발명의 재주','시끄러운','철학적인']},
+    {w:'mention',a:3,c:['정중한','거절하다','끌어내다','언급하다']},
+    {w:'entail',a:3,c:['이주하는','할당하다','수족관','일으키다']},
+    {w:'flesh',a:3,c:['지역','기대','혁신하다','살']},
+    {w:'starve',a:3,c:['특권','촉진하다','방법','굶주리다']},
+    {w:'method',a:1,c:['이성적인','방법','무의미한 말','자유롭게 하다']},
+    {w:'lodge',a:2,c:['외과의사','최대화 하다','오두막집','맛']},
+    {w:'gradually',a:1,c:['정상','점차적으로','다양성','연기하다']},
+    {w:'essence',a:1,c:['두려워하다','본질','명랑한','여행']},
+    {w:'ensure',a:0,c:['보장하다','활용하다','명백한','조사하다']},
+    {w:'derive',a:2,c:['오만한','발표','~에서 비롯되다','영원히']},
+    {w:'dub',a:1,c:['이발사','~라고 부르다','성숙한','공급하다']},
+    {w:'sponsor',a:2,c:['각각','연역하다','후원자','알다']},
+    {w:'cooperate',a:2,c:['주창하다','목소리의','협력하다','최후의']},
+    {w:'panic',a:2,c:['이용하다','진흙','공포','창']},
+    {w:'advertising',a:0,c:['광고의','잠시','유형의','보상하다']},
+    {w:'astronomy',a:0,c:['천문학','반대의','부분','반란']},
+    {w:'associate',a:0,c:['연상하다','과체중의','벗기다','분별있는']},
+    {w:'dialect',a:1,c:['유능한','사투리','일치하다','강력한']},
+    {w:'phrase',a:1,c:['비난하다','구','유혹하다','혜택']},
+    {w:'quantity',a:2,c:['영역','잘 익은','양','실망한']},
+    {w:'lift',a:2,c:['위업','기하급수적인','들어 올리다','결백한']},
+    {w:'afford',a:3,c:['온화한','~에 대해 안 좋게 말하다','적합한','여유가 있다']},
+    {w:'segment',a:3,c:['직사각형의','표현하다','항생 물질','부분']},
+    {w:'endeavor',a:2,c:['결정','알리다','노력','결심한']},
+    {w:'burden',a:2,c:['원시적인','즉석에서','부담','저축하다']},
+    {w:'feverishly',a:2,c:['붓다','떨어질 수 없는','열이나게','불만족스러운']},
+    {w:'analyze',a:1,c:['화살','분석하다','꽃','상징하다']},
+    {w:'sign',a:1,c:['올리다','신호','결심한','효율적인']},
+    {w:'weave',a:3,c:['해석','분류하다','민주주의','짜다']},
+    {w:'recipient',a:2,c:['여명','인식의','수혜자','의례에 따르는']},
+    {w:'stillness',a:1,c:['자유롭게 하다','정적','발전','총계의']},
+    {w:'confess',a:3,c:['고물','휴대할수 있는','의례에 따르는','인정하다']},
+    {w:'turn down',a:3,c:['위반','방사능','솔직한','(소리온도등을)낮추다']},
+    {w:'various',a:0,c:['다양한','회사의','선거','미끄러지다']},
+    {w:'authorize',a:0,c:['~을 인가하다','주인','결백한','지성']},
+    {w:'branch',a:3,c:['알고 있는','토론','외과수술의','나뭇가지']},
+    {w:'mount',a:1,c:['아주 훌륭한','말에 타다','근본적인','능력']},
+    {w:'access',a:0,c:['접근','장비를 갖추다','질질끌다','손잡이']},
+  ],
+  38: [
+    {w:'shovel',a:2,c:['대조','외딴','삽','휘젓다']},
+    {w:'journalist',a:0,c:['언론인','썩다','달성하다','친밀한']},
+    {w:'feature',a:0,c:['특징','구별하다','텅 빈','원정']},
+    {w:'client',a:3,c:['교외','말기의','수령','의뢰인']},
+    {w:'agenda',a:3,c:['(주조용의) 틀','다가오는','저항하다','의제']},
+    {w:'obesity',a:3,c:['법적 타당성','요청','대로','비만']},
+    {w:'stunned',a:3,c:['위반하는','빨다','해방하다','놀라는']},
+    {w:'represent',a:1,c:['바다표범','상징하다','할인','돌리다']},
+    {w:'superficial appearance',a:2,c:['증거','주소','겉모습','~을 잘라내다']},
+    {w:'trait',a:3,c:['생물의 조직','풍부한','희미해지다','특성']},
+    {w:'renowned',a:3,c:['파도','편집자','지출','유명한']},
+    {w:'compromise',a:0,c:['타협','정확히 찾아내다','감소','희박한 가망']},
+    {w:'incidental',a:2,c:['껍질을 벗기다','위협','부수하여 일어나는','적법한']},
+    {w:'postpone',a:3,c:['쓸다','생략하다','설명하다','연기하다']},
+    {w:'fountain',a:1,c:['자동의','분수','해충','자존심을 억누르다']},
+    {w:'innocent',a:1,c:['불꽃놀이','결백한','지각하다','맛']},
+    {w:'boundary',a:0,c:['경계','~을 구성하다','파도','도래']},
+    {w:'firm',a:0,c:['견고한','환영','액체','안으로']},
+    {w:'cottage',a:2,c:['되돌려주다','계단','오두막집','주위의 사정']},
+    {w:'numerous',a:2,c:['(관심활동)영역','항구','다수의','뚜렷한']},
+    {w:'ceiling',a:0,c:['천장','기근','화석','염세주의']},
+    {w:'express',a:3,c:['영토','운동','더 좋아하다','표현하다']},
+    {w:'commonsense',a:1,c:['효율적인','상식','계획','온화한']},
+    {w:'facial appearance',a:3,c:['흐릿한','경작하다','투명한','얼굴 생김새']},
+    {w:'physical appearance',a:3,c:['묻다','~을 설치하다','정신과 의사','신체적 외모']},
+    {w:'hasten',a:3,c:['병사','삽화','순회','촉진하다']},
+    {w:'liberty',a:1,c:['마음속에 품다','자유','특수한','부분적인']},
+    {w:'private',a:0,c:['개인적인','가축화','본질','비만']},
+    {w:'cue',a:1,c:['요금','단서','열망하는','상업']},
+    {w:'previous',a:1,c:['비용','이전의','구성','대안']},
+    {w:'selection',a:3,c:['성미가 맞지 않는','출판하다','염세주의','선발']},
+    {w:'shabby appearance',a:2,c:['입법','테','초라한 외모','송어']},
+    {w:'tire',a:1,c:['야망','타이어','선정적인','짜내다']},
+    {w:'workshop',a:1,c:['중대한','연수','증가','일시적인']},
+    {w:'criticism',a:3,c:['복잡한','말에 타다','되풀이 하다','비평']},
+    {w:'provide',a:3,c:['읽고 쓸 줄 아는','노력하다','횃불','공급하다']},
+    {w:'vague',a:1,c:['전적으로','모호한','이해하다','지적 교양']},
+    {w:'declare',a:1,c:['이성적인','선언하다','공급하다','단순한']},
+    {w:'nurture',a:2,c:['최소의','~하기 시작하다','기르다','유선형의']},
+    {w:'insight',a:1,c:['공포','통찰력','거꾸로','필수적인']},
+    {w:'peculiar appearance',a:2,c:['정서','액체','독특한 외모','발명의 재주']},
+    {w:'scare',a:2,c:['고집','정책','놀라게 하다','미묘한']},
+    {w:'popular',a:3,c:['동기','감정이입의','생각하다','인기 있는']},
+    {w:'comply',a:3,c:['촉진하다','수직의','보충적인','준수하다']},
+    {w:'horizon',a:3,c:['장관의','산문','문학의','수평선']},
+    {w:'accurate',a:1,c:['자애','정확한','그릇','스위치']},
+    {w:'beware',a:1,c:['주저하는','조심하다','가사','관여하다']},
+    {w:'borrow',a:3,c:['모욕하다','빈정대는','불경기','빌리다']},
+    {w:'jury',a:2,c:['국면','축하하다','배심원단','~는 말할 필요도 없이']},
+    {w:'cease',a:3,c:['빈곤','가슴설레게하다','막다','그만두다']},
+    {w:'chin',a:3,c:['원고','팁','설득하다','턱']},
+    {w:'deteriorate',a:0,c:['악화되다','사이좋게 지내다','인종의','팁']},
+    {w:'altogether',a:2,c:['손실','파산하다','전적으로','주점']},
+    {w:'peculiar',a:0,c:['독특한','(주조용의) 틀','최소의','변장']},
+    {w:'dictate',a:2,c:['해방하다','필사적인','받아쓰기를 하다','직물']},
+  ],
+  39: [
+    {w:'debate',a:2,c:['줄다','풍족한','토론','결점']},
+    {w:'solution',a:2,c:['기둥','자동의','해결','가리키다']},
+    {w:'conserve',a:2,c:['음색','추상적인','보존하다','수정하다']},
+    {w:'pave',a:2,c:['무의미한 말','기반시설','(도로를)포장하다','홍수']},
+    {w:'erase',a:1,c:['휘젓다','지우다','상대','보충적인']},
+    {w:'fatigue',a:2,c:['주의하다','보증','피로','방아쇠']},
+    {w:'sensitive',a:1,c:['잡담','민감한','장치','장난']},
+    {w:'dissolve',a:3,c:['발췌','기구','신호','녹이다']},
+    {w:'purchase',a:2,c:['상품','마지못해 하는','구매','유익']},
+    {w:'sigh',a:1,c:['조종사','한숨','별개의','모순']},
+    {w:'cunning',a:1,c:['일','교활한','나오다','~하는 경향이 있는']},
+    {w:'sour',a:2,c:['물에 빠져 죽다','굶주리다','신','식욕']},
+    {w:'convert',a:3,c:['방법','치수','표준','바꾸다']},
+    {w:'normal',a:1,c:['구걸하다','정상의','감정','펴다']},
+    {w:'irritate',a:0,c:['짜증나게 하다','환상','방해하다','친구']},
+    {w:'paw',a:2,c:['지원자','편집하다','발','덫']},
+    {w:'response',a:1,c:['동시에','반응','인류학자','결속력 있는']},
+    {w:'ambition',a:0,c:['야망','해결','방법','시도']},
+    {w:'exposure',a:0,c:['폭로','함유하다','비율','표류하다']},
+    {w:'export',a:3,c:['실용적인','존경하다','굳건한','수출하다']},
+    {w:'apparatus',a:1,c:['버리다','기구','해결','깜박거리는']},
+    {w:'archive',a:3,c:['항해','추측','(학교 수업의) 교시','기록보관소']},
+    {w:'outset',a:1,c:['식욕을 잃다','착수','결점','정신']},
+    {w:'intelligent',a:3,c:['세련된','추정하다','내려다보다','지능이 높은']},
+    {w:'fluid',a:2,c:['지원하다','신의','액체','남아 있는']},
+    {w:'tongue',a:0,c:['혀','지능이 높은','(시의)각운','무딘']},
+    {w:'dexterous',a:3,c:['공개하다','숨','경배하다','솜씨 좋은']},
+    {w:'suspend',a:2,c:['소중히 간직된','결합시키다','매달다','홍수']},
+    {w:'insect',a:2,c:['은유','병','곤충','삼키다']},
+    {w:'orient',a:1,c:['참가자','동양','생략하다','조종하다']},
+    {w:'imperative',a:3,c:['닦다','취임하다','존엄','명령적인']},
+    {w:'ingenious',a:3,c:['정신','손잡이','노동조합','재간있는']},
+    {w:'endangered',a:1,c:['가로질러 갔다','멸종위기에 처한','줄다','정적']},
+    {w:'indicate',a:2,c:['대조','~을 인가하다','가리키다','소비하다']},
+    {w:'rip',a:0,c:['잡아찢다','논증하다','비극적인','널리 퍼진']},
+    {w:'proficient',a:2,c:['서식지','무심결의','숙달된','유효하게 하다']},
+    {w:'clothe',a:2,c:['주위의 사정','~가 되다','옷을 입히다','특수한']},
+    {w:'department',a:1,c:['살다','부서','닦다','유연한']},
+    {w:'expedition',a:2,c:['결과','편견','탐험','적당한']},
+    {w:'caution',a:2,c:['매우 낮은 가능성','확대','조심','각각']},
+    {w:'coincide',a:2,c:['방향 결정','증발시키다','일치하다','방어하다']},
+    {w:'theater',a:1,c:['힘','극장','오랫동안 지속되는','해임']},
+    {w:'bother',a:2,c:['화해','즉시의','귀찮게하다','빨다']},
+    {w:'drastic',a:2,c:['~ 할생각이 있는','차고','과감한','경영하다']},
+    {w:'evident',a:0,c:['눈에 잘띄는','공급하다','삽화','비난하다']},
+    {w:'cope',a:1,c:['삽입하다','대처하다','적합한','의도하다']},
+    {w:'receptor',a:0,c:['감각 기관','눈의','배로 가다','배 위에']},
+    {w:'ignorance',a:1,c:['으르렁거리다','무지','신속히','제출하다']},
+    {w:'conversely',a:2,c:['해골','바꾸다','거꾸로','더러움']},
+    {w:'collapse',a:0,c:['붕괴하다','피하다','건축','높이다']},
+    {w:'rectangle',a:2,c:['기구','안개','직사각형','부서']},
+    {w:'rear',a:0,c:['뒤','풍습','감사하는','알고 있는']},
+    {w:'architecture',a:2,c:['오두막집','거미집','건축','통찰력']},
+    {w:'troop',a:3,c:['기준','왈칵 흘러나오다','이전의','군대']},
+    {w:'crude',a:2,c:['군대','귀찮게하다','조잡한','신학']},
+  ],
+  40: [
+    {w:'torch',a:2,c:['의무를 지우다','상처 입은','횃불','공포']},
+    {w:'intermediate',a:3,c:['항의','여행','증상','중급의']},
+    {w:'escape',a:2,c:['모방하다','포용하다','탈출','들어 올리다']},
+    {w:'dispose',a:2,c:['중고의','진동','처리','동정적인']},
+    {w:'heredity',a:2,c:['완전한','무너지다','유전','약한']},
+    {w:'prescribe',a:0,c:['처방하다','인식의','적당한','들어 올리다']},
+    {w:'compel',a:0,c:['강요하다','점차적으로','전망','정체']},
+    {w:'stool',a:3,c:['무지','검색하다','가축화','(등받이가없는)의자']},
+    {w:'analogy',a:3,c:['~을 설치하다','점','희박한 가망','유사성']},
+    {w:'skeleton',a:2,c:['일치하다','공개하다','해골','물에 빠져 죽다']},
+    {w:'spread',a:2,c:['기둥','안으로','퍼뜨리다','둘러싸다']},
+    {w:'border',a:3,c:['번식하다','높이다','대폭적으로 인하하다','국경']},
+    {w:'disease',a:1,c:['줄다','병','흥분시키다','찬란한']},
+    {w:'rely',a:2,c:['파괴적인','발언','기대다','제한']},
+    {w:'hybrid',a:0,c:['잡종','심리학','이혼','투명한']},
+    {w:'split',a:0,c:['쪼개다','행동하다','순환','다과']},
+    {w:'oval',a:3,c:['정상','신뢰','수사','타원형']},
+    {w:'roast',a:1,c:['동일한','굽다','기근','이발사']},
+    {w:'breakdown',a:3,c:['기록보관소','회전하다','식민지','붕괴']},
+    {w:'shrug',a:3,c:['물을 빼다','보존하다','그릇된 생각','움츠리다']},
+    {w:'graduate',a:1,c:['과체중의','졸업하다','표면','올리다']},
+    {w:'exaggerate',a:1,c:['방','과장하다','분별있는','선두']},
+    {w:'retain',a:0,c:['유지하다','허드렛 일','거래','창']},
+    {w:'contest',a:1,c:['유쾌한','경쟁','테','파멸하다']},
+    {w:'subtle',a:3,c:['도래','먹이','최후의','미묘한']},
+    {w:'scream',a:3,c:['기대다','(짐승의)무리','지구','소리치다']},
+    {w:'plain',a:1,c:['영토','분명한','잣다','해안']},
+    {w:'carve',a:2,c:['대처하다','특성','조각하다','타협']},
+    {w:'entitle',a:2,c:['동일한','발표하다','부르다','비난하다']},
+    {w:'discipline',a:2,c:['언짢게 생각하는','책임지다','훈육하다','특권']},
+    {w:'degree',a:1,c:['의식','정도','아끼다','흉내내다']},
+    {w:'ordinary',a:2,c:['충분함','전문의','보통의','억압하다']},
+    {w:'antibiotic',a:0,c:['항생 물질','고려하다','음량','홈']},
+    {w:'spiral',a:2,c:['중대한','합창단','악순환','벌하다']},
+    {w:'relevance',a:3,c:['위급한','우회로','고정 관념','연관성']},
+    {w:'gymnasium',a:1,c:['매우드문','체육관','이용하다','더 좋아하다']},
+    {w:'passage',a:0,c:['통로','중독','부서','마침내']},
+    {w:'status',a:0,c:['지위','병','결정','울타리']},
+    {w:'commission',a:3,c:['주장하다','흔들리다','예상','위임']},
+    {w:'belongings',a:2,c:['상식','축하연','소유물','발표하다']},
+    {w:'fabric',a:2,c:['여행','접근하다','옷감','해안']},
+    {w:'fulfill',a:2,c:['연상하다','이타주의','이행하다','여윈']},
+    {w:'witness',a:0,c:['증인','전적으로','비탈','슬퍼하다']},
+    {w:'disabled',a:3,c:['잠복 중인','보증하다','갈라진 금','장애가 있는']},
+    {w:'stripe',a:2,c:['자갈','꽃','줄무늬','묘사하다']},
+    {w:'conflict',a:0,c:['갈등','하강','삭감','절망']},
+    {w:'fragile',a:3,c:['낙담한','기계로 작동되는','신','부서지기 쉬운']},
+    {w:'exclude',a:1,c:['제거하다','제외하다','가전제품','잔인한']},
+    {w:'arbitrary',a:3,c:['가뭄','고물','군대','임의적인']},
+    {w:'mature',a:2,c:['겉모습','예산을 세우다','성숙한','묘사']},
+    {w:'rob',a:1,c:['모방하다','강탈하다','득점','시간엄수']},
+    {w:'utterly',a:2,c:['맛','경의를 표하다','완전히','밑에 깔린']},
+    {w:'outrage',a:1,c:['진행 중인','분노','허락하다','쓰레기']},
+    {w:'embryo',a:0,c:['태아','붙잡다','생태적인','제도']},
+    {w:'desert',a:0,c:['사막','감히~하다','철학적인','설립하다']},
+  ],
+};
+// ═══════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════
+const STORAGE_KEY = 'vocaclinic_v3';
+const MAX_DAY = 40;
+
+let state = {
+  questions: [],   // [{day, word, answer, choices}]
+  idx: 0,
+  results: [],     // 'correct'|'wrong'|'skip' per question
+  answered: [],    // true/false per question
+  dayStart: 1,
+  dayEnd: 1,
+};
+
+// ═══════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════
+function init() {
+  // 셀렉트 박스 채우기
+  const ss = document.getElementById('sel-start');
+  const se = document.getElementById('sel-end');
+  for (let d = 1; d <= MAX_DAY; d++) {
+    const o1 = new Option(`Day ${d}`, d);
+    const o2 = new Option(`Day ${d}`, d);
+    ss.appendChild(o1);
+    se.appendChild(o2);
+  }
+  se.value = MAX_DAY;
+  updateRangeInfo();
+
+  // 저장된 데이터 확인
+  const saved = loadSave();
+  if (saved && saved.questions && saved.idx > 0 && saved.idx < saved.questions.length) {
+    showModal(saved);
+  }
+}
+
+function updateRangeInfo() {
+  const s = parseInt(document.getElementById('sel-start').value);
+  const e = parseInt(document.getElementById('sel-end').value);
+  const end = Math.max(s, e);
+  document.getElementById('sel-end').value = end;
+  const days = end - s + 1;
+  let words = 0;
+  for (let d = s; d <= end; d++) {
+    words += (DAYS[d] || []).length;
+  }
+  document.getElementById('info-days').textContent = days;
+  document.getElementById('info-words').textContent = words;
+}
+
+// ═══════════════════════════════════════════════
+//  SAVE / LOAD
+// ═══════════════════════════════════════════════
+function save() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch(e) {}
+}
+
+function loadSave() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch(e) { return null; }
+}
+
+function clearSave() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+}
+
+// ═══════════════════════════════════════════════
+//  MODAL
+// ═══════════════════════════════════════════════
+let _savedState = null;
+
+function showModal(saved) {
+  _savedState = saved;
+  const prog = `Day ${saved.dayStart}~${saved.dayEnd} | ${saved.idx}/${saved.questions.length}문제 진행 중`;
+  document.getElementById('modal-body').innerHTML =
+    `저장된 학습 기록이 있습니다.<br><small style="color:var(--gold-light)">${prog}</small><br><br>이어서 풀까요?`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+function modalNew() {
+  clearSave();
+  _savedState = null;
+  document.getElementById('modal').classList.add('hidden');
+}
+
+function modalContinue() {
+  document.getElementById('modal').classList.add('hidden');
+  if (_savedState) {
+    state = _savedState;
+    // 셀렉트 동기화
+    document.getElementById('sel-start').value = state.dayStart;
+    document.getElementById('sel-end').value = state.dayEnd;
+    updateRangeInfo();
+    showQuiz();
+    renderQuestion();
+  }
+}
+
+// ═══════════════════════════════════════════════
+//  QUIZ START
+// ═══════════════════════════════════════════════
+function startQuiz() {
+  const s = parseInt(document.getElementById('sel-start').value);
+  const e = Math.max(s, parseInt(document.getElementById('sel-end').value));
+
+  const questions = [];
+  for (let d = s; d <= e; d++) {
+    const day = DAYS[d] || [];
+    day.forEach(q => {
+      questions.push({ day: d, word: q.w, answer: q.a, choices: q.c });
+    });
+  }
+
+  if (questions.length === 0) return;
+
+  state = {
+    questions,
+    idx: 0,
+    results: new Array(questions.length).fill(null),
+    answered: new Array(questions.length).fill(false),
+    dayStart: s,
+    dayEnd: e,
+  };
+
+  save();
+  showQuiz();
+  renderQuestion();
+}
+
+// ═══════════════════════════════════════════════
+//  SCREEN NAV
+// ═══════════════════════════════════════════════
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+function showQuiz() { showScreen('screen-quiz'); }
+function showResult() { showScreen('screen-result'); }
+function showStart() { showScreen('screen-start'); }
+
+// ═══════════════════════════════════════════════
+//  RENDER QUESTION
+// ═══════════════════════════════════════════════
+function renderQuestion() {
+  const q = state.questions[state.idx];
+  const total = state.questions.length;
+  const done = state.idx;
+
+  // Progress
+  const pct = total > 0 ? (done / total * 100) : 0;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = `${done + 1} / ${total}`;
+
+  // Day badge
+  document.getElementById('q-day-badge').textContent = `Day ${q.day}`;
+
+  // Word
+  document.getElementById('q-word').textContent = q.word;
+
+  // Choices — className 먼저 초기화한 뒤 innerHTML 설정
+  const btns = document.querySelectorAll('#choices-grid .choice-btn');
+  btns.forEach((btn, i) => {
+    btn.className = 'choice-btn';
+    btn.disabled = false;
+    btn.onclick = () => choose(i);
+    btn.innerHTML = `<span class="choice-num">${i + 1}</span><span>${q.choices[i]}</span>`;
+  });
+
+  // q-num, q-sub 업데이트
+  document.getElementById('q-num').textContent = `No.${state.idx + 1}`;
+  document.getElementById('q-sub').textContent = `백신 보카 · Day ${q.day} · #${state.idx + 1}`;
+
+  // Back button
+  document.getElementById('btn-back').disabled = (state.idx === 0);
+}
+
+// ═══════════════════════════════════════════════
+//  CHOOSE
+// ═══════════════════════════════════════════════
+let _choosing = false;
+
+function choose(idx) {
+  if (_choosing) return;
+  const q = state.questions[state.idx];
+  const btns = document.querySelectorAll('#choices-grid .choice-btn');
+
+  btns.forEach(b => { b.disabled = true; });
+
+  if (idx === q.answer) {
+    btns[idx].classList.add('correct');
+    state.results[state.idx] = 'correct';
+  } else {
+    btns[idx].classList.add('wrong');
+    btns[q.answer].classList.add('reveal');
+    state.results[state.idx] = 'wrong';
+  }
+
+  state.answered[state.idx] = true;
+  save();
+
+  _choosing = true;
+  setTimeout(() => {
+    _choosing = false;
+    advance();
+  }, 350);
+}
+
+function skipQuestion() {
+  if (_choosing) return;
+  state.results[state.idx] = 'skip';
+  state.answered[state.idx] = true;
+  save();
+  advance();
+}
+
+function advance() {
+  state.idx++;
+  if (state.idx >= state.questions.length) {
+    clearSave();
+    buildResult();
+    showResult();
+  } else {
+    renderQuestion();
+  }
+}
+
+// ═══════════════════════════════════════════════
+//  GO BACK
+// ═══════════════════════════════════════════════
+function goBack() {
+  if (state.idx === 0) return;
+  state.idx--;
+  state.results[state.idx] = null;
+  state.answered[state.idx] = false;
+  save();
+  renderQuestion();
+}
+
+// ═══════════════════════════════════════════════
+//  RESULT
+// ═══════════════════════════════════════════════
+function buildResult() {
+  const total = state.questions.length;
+  const correct = state.results.filter(r => r === 'correct').length;
+  const wrong = state.results.filter(r => r === 'wrong').length;
+  const skip = state.results.filter(r => r === 'skip').length;
+  const pct = total > 0 ? correct / total : 0;
+
+  document.getElementById('result-subtitle').textContent =
+    `Day ${state.dayStart}${state.dayStart !== state.dayEnd ? ' ~ Day ' + state.dayEnd : ''} 완료`;
+
+  // Ring
+  const circumference = 2 * Math.PI * 64; // ≈402
+  const offset = circumference * (1 - pct);
+  setTimeout(() => {
+    document.getElementById('ring-circle').style.strokeDashoffset = offset;
+    const color = pct >= 0.8 ? '#27ae60' : pct >= 0.5 ? 'var(--gold)' : '#e74c3c';
+    document.getElementById('ring-circle').style.stroke = color;
+  }, 100);
+
+  document.getElementById('ring-score-text').textContent = correct;
+  document.getElementById('ring-total-text').textContent = `/ ${total}문제`;
+
+  // Stats
+  document.getElementById('stat-correct').textContent = correct;
+  document.getElementById('stat-wrong').textContent = wrong;
+  document.getElementById('stat-skip').textContent = skip;
+
+  // List
+  const list = document.getElementById('result-list');
+  list.innerHTML = '';
+  state.questions.forEach((q, i) => {
+    const res = state.results[i] || 'skip';
+    const item = document.createElement('div');
+    item.className = `result-item ${res}-item`;
+
+    const icon = res === 'correct' ? '✅' : res === 'wrong' ? '❌' : '➡️';
+    const meaningText = q.choices[q.answer];
+
+    item.innerHTML = `
+      <span class="result-icon">${icon}</span>
+      <span class="result-word">${q.word}</span>
+      <span class="result-meaning ${res === 'correct' ? 'correct-ans' : ''}">${meaningText}</span>
+    `;
+    list.appendChild(item);
+  });
+}
+
+function goHome() {
+  showStart();
+  updateRangeInfo();
+}
+
+// ═══════════════════════════════════════════════
+//  BOOT
+// ═══════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
